@@ -1,7 +1,7 @@
 CC=g++
 CFLAGS=-std=c++17
 
-INCLUDECADMIUM=-I../../include/cadmium
+INCLUDECADMIUM=-I../cadmium
 
 #CREATE BIN AND BUILD FOLDERS TO SAVE THE COMPILED FILES DURING RUNTIME
 bin_folder := $(shell mkdir -p bin)
