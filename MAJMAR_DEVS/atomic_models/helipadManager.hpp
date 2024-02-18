@@ -22,21 +22,21 @@ namespace cadmium::assignment1 {
 
 		// Declare model-specific variables
 		bool stop;
-		bool heloLeaving;
+		bool heloLoading;
 		bool requesting;
 		int currHeloID;
 		
 		
 		// Set the default values for the state constructor for this specific model
-		HelipadManagerState(): sigma(0), stop(false), heloLeaving(false), requesting(true), currHeloID(-1){};
+		HelipadManagerState(): sigma(0), stop(false), heloLoading(false), requesting(true), currHeloID(-1){};
 	};
 
 	std::ostream& operator<<(std::ostream &out, const HelipadManagerState& state) {
-		if (state.heloLeaving){
-			out << ",Helo: " << state.currHeloID << "is at ES";
+		if (state.heloLoading){
+			out << ",Helo: " << state.currHeloID << "is at the ES";
 		} else {
 			out << ",No helos are at ES";
-		}
+		} 
 		if (state.stop == true){
 			out << ",Stopped evacuating people";
 		}
@@ -106,12 +106,12 @@ namespace cadmium::assignment1 {
 			void internalTransition(HelipadManagerState& state) const override {
 				if (!state.stop){
 					if (!state.requesting){
-						if (state.heloLeaving){
-							state.heloLeaving = false;
+						if (state.heloLoading){
+							state.heloLoading = false;
 							state.requesting = true;
 							state.sigma = 0;
 						} else {
-							state.heloLeaving = true;
+							state.heloLoading = true;
 							state.sigma = timeToLoad;
 						}
 					} else {
@@ -152,7 +152,7 @@ namespace cadmium::assignment1 {
 				
 				if(!inHQ->empty()){
 					for( const auto x : inHQ->getBag()){
-						if (state.heloLeaving == false){
+						if (state.heloLoading == false){
 							state.currHeloID = x.heloID;
 							state.sigma = 0;
 						} else {
@@ -174,7 +174,7 @@ namespace cadmium::assignment1 {
 			void output(const HelipadManagerState& state) const override {
 				if (!state.stop){
 					if (!state.requesting){
-						if (state.heloLeaving){
+						if (state.heloLoading){
 							outHelo->addMessage(HeloInfo{state.currHeloID, false});
 						} else {
 							outEM->addMessage(HeloInfo{state.currHeloID, false});

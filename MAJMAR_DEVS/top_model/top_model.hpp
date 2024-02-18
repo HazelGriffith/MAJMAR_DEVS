@@ -10,15 +10,10 @@
 #include <cassert>
 
 // We include any models that are directly contained within this coupled model
-#include "../atomic_models/evacuee.hpp"
-#include "../atomic_models/evacueeManager.hpp"
-#include "../atomic_models/filterES.hpp"
-#include "../atomic_models/filterEvac.hpp"
-#include "../atomic_models/filterLoc.hpp"
+#include "HelicopterCoupledModel.hpp"
+#include "EvacueeCoupledModel.hpp"
+#include "EvacuationSiteModel.hpp"
 #include "../atomic_models/fol.hpp"
-#include "../atomic_models/helicopter.hpp"
-#include "../atomic_models/helicopterQueue.hpp"
-#include "../atomic_models/helipadManager.hpp"
 
 // data structures
 #include "../data_structures/heloInfo.hpp"
@@ -33,126 +28,73 @@ namespace cadmium::assignment1 {
 
 
             // Declare and initialize all controller models (non-input/output)
-			vector<shared_ptr<Evacuee>> evacueeModels;
-			vector<shared_ptr<FilterLoc>> filterLocs;
+			double timeToLoad = 15;
+			vector<shared_ptr<HelicopterCoupled>> heloCoupledModels;
+			int numOfHelos = 2;
+			vector<shared_ptr<EvacueeCoupled>> evacueeCoupledModels;
 			vector<EvacInfo> evacuees;
+			int numOfWhite = 10;
+			int numOfGreen = 10;
+			int numOfYellow = 5;
+			int numOfRed = 5;
+			int numOfBlack = 1;
 			int i = 0;
 			int initial = i+1;
-			for (i = initial; i < initial+10; i++){
+			for (i = initial; i < initial+numOfWhite; i++){
 				string id = to_string(i);
-				evacueeModels.push_back(addComponent<Evacuee>("evacuee"+id, i, 'W'));
-
+				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'W'));
 				evacuees.push_back(EvacInfo{i,-1,false,'W'});
-
-				filterLocs.push_back(addComponent<FilterLoc>("filterLoc"+id, i));
-
 			}
 			initial = i+1;
-			cout << "FIRES" << endl;
-			for (i = initial; i < initial+10; i++){
-				
+			for (i = initial; i < initial+numOfGreen; i++){
 				string id = to_string(i);
-
-				evacueeModels.push_back(addComponent<Evacuee>("evacuee"+id, i, 'G'));
-
+				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'G'));
 				evacuees.push_back(EvacInfo{i,-1,false,'G'});
-				
-				filterLocs.push_back(addComponent<FilterLoc>("filterLoc"+id, i));
-				
 			}
 			initial = i+1;
-			cout << "FIRES" << endl;
-			for (i = initial; i < initial+5; i++){
-				
+			for (i = initial; i < initial+numOfYellow; i++){
 				string id = to_string(i);
-
-				evacueeModels.push_back(addComponent<Evacuee>("evacuee"+id, i, 'Y'));
-
+				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'Y'));
 				evacuees.push_back(EvacInfo{i,-1,false,'Y'});
-
-				filterLocs.push_back(addComponent<FilterLoc>("filterLoc"+id, i));
-
-
 			}
 			initial = i+1;
-			cout << "FIRES" << endl;
-			for (i = initial; i < initial+5; i++){
-
+			for (i = initial; i < initial+numOfRed; i++){
 				string id = to_string(i);
-
-				evacueeModels.push_back(addComponent<Evacuee>("evacuee"+id, i, 'R'));
-
+				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'R'));
 				evacuees.push_back(EvacInfo{i,-1,false,'R'});
-
-				filterLocs.push_back(addComponent<FilterLoc>("filterLoc"+id, i));
-
 			}
 			initial = i+1;
-			cout << "FIRES" << endl;
-			for (i = initial; i < initial+1; i++){
+			for (i = initial; i < initial+numOfBlack; i++){
 				string id = to_string(i);
-
-				evacueeModels.push_back(addComponent<Evacuee>("evacuee"+id, i, 'B'));
-
+				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'B'));
 				evacuees.push_back(EvacInfo{i,-1,false,'B'});
-
-				filterLocs.push_back(addComponent<FilterLoc>("filterLoc"+id, i));
-
 			}
-			cout << "FIRES" << endl;
-			shared_ptr<Helicopter> helo1 = addComponent<Helicopter>("helicopter1", 1);
-
-			shared_ptr<Helicopter> helo2 = addComponent<Helicopter>("helicopter2", 2);
-
-			shared_ptr<FilterES> filterES1 = addComponent<FilterES>("filterES1", 1);
-
-			shared_ptr<FilterES> filterES2 = addComponent<FilterES>("filterES2", 2);
-
-			shared_ptr<FilterEvac> filterEvac1 = addComponent<FilterEvac>("filterEvac1", 1);
-
-			shared_ptr<FilterEvac> filterEvac2 = addComponent<FilterEvac>("filterEvac2", 2);
+			
+			for (int j = 1; j < numOfHelos+1; j++){
+				string id = to_string(j);
+				heloCoupledModels.push_back(addComponent<HelicopterCoupled>("helicopterCoupled"+id, j));
+			}
 
 			shared_ptr<FOL> fol = addComponent<FOL>("FOL");
 
-			shared_ptr<HelipadManager> helipadManager = addComponent<HelipadManager>("helipadManager", 15.0);
-
-			shared_ptr<HelicopterQueue> helicopterQueue = addComponent<HelicopterQueue>("helicopterQueue");
-
-			shared_ptr<EvacueeManager> evacueeManager = addComponent<EvacueeManager>("evacueeManager", evacuees);
-			cout << "FIRES" << endl;
+			shared_ptr<EvacuationSite> evacuationSite = addComponent<EvacuationSite>("EvacuationSite", timeToLoad, evacuees);
 			
-            // Declare and initialize all simulated input files (these must exist in the file system before compilation)
-
-            // Connect the input files to the rest of the simulation with coupling
+            // Connect the models with coupling
 			
-			for (int i = 0; i < evacueeModels.size(); i++){
-				addCoupling(filterLocs[i]->out,evacueeModels[i]->in);
-				addCoupling(helo1->outEvac,filterLocs[i]->in);
-				addCoupling(helo2->outEvac,filterLocs[i]->in);
-				addCoupling(evacueeManager->outEvac,filterLocs[i]->in);
-				addCoupling(evacueeModels[i]->outHelo,filterEvac1->in);
-				addCoupling(evacueeModels[i]->outHelo,filterEvac2->in);
-				addCoupling(evacueeModels[i]->outFOL,fol->in);
-				addCoupling(evacueeModels[i]->outES,evacueeManager->inEvac);
+			for (int i = 0; i < evacueeCoupledModels.size(); i++){
+				for (int j = 0; j < heloCoupledModels.size(); j++){
+					addCoupling(heloCoupledModels[j]->outEvac,evacueeCoupledModels[i]->in);
+					addCoupling(evacueeCoupledModels[i]->outHelo,heloCoupledModels[j]->inEvac);
+				}
+				addCoupling(evacueeCoupledModels[i]->outFOL,fol->in);
+				addCoupling(evacueeCoupledModels[i]->outES,evacuationSite->inEvac);
+				addCoupling(evacuationSite->outEvac,evacueeCoupledModels[i]->in);
 			}
-			cout << "FIRES" << endl;
-			addCoupling(helo1->outES,helicopterQueue->inHelo);
-			addCoupling(helo2->outES,helicopterQueue->inHelo);
-			addCoupling(filterES1->out,helo1->inES);
-			addCoupling(filterES2->out,helo2->inES);
-			addCoupling(filterEvac1->out,helo1->inEvac);
-			addCoupling(filterEvac2->out,helo2->inEvac);
 			
-			addCoupling(helicopterQueue->outHelo,filterES1->in);
-			addCoupling(helicopterQueue->outHelo,filterES2->in);
-			addCoupling(helicopterQueue->outHM,helipadManager->inHQ);
-			
-			addCoupling(helipadManager->outHelo,filterES1->in);
-			addCoupling(helipadManager->outHelo,filterES2->in);
-			addCoupling(helipadManager->outHQ,helicopterQueue->inHM);
-			addCoupling(helipadManager->outEM,evacueeManager->inHelo);
-			
-			addCoupling(evacueeManager->outHM,helipadManager->inEM);
+			for (int i = 0; i < heloCoupledModels.size(); i++){
+				addCoupling(heloCoupledModels[i]->outES,evacuationSite->inHelo);
+				addCoupling(evacuationSite->outHelo,heloCoupledModels[i]->inES);
+			}
 			
         }
     };

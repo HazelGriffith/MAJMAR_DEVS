@@ -61,7 +61,7 @@ namespace cadmium::assignment1 {
 
 			// Input ports
 			Port<EvacInfo> inEvac;
-			Port<HeloInfo> inHelo;
+			Port<HeloInfo> inHM;
 
 			// Output ports
 			Port<EvacInfo> outEvac;
@@ -87,7 +87,7 @@ namespace cadmium::assignment1 {
 
 				// Input Ports
 				inEvac  = addInPort<EvacInfo>("inEvac");
-				inHelo  = addInPort<HeloInfo>("inHelo");
+				inHM  = addInPort<HeloInfo>("inHM");
 
 				// Output Ports
 				outEvac = addOutPort<EvacInfo>("outEvac");
@@ -208,8 +208,8 @@ namespace cadmium::assignment1 {
 					state.sigma = numeric_limits<double>::infinity();
 				}
 				
-				if(!inHelo->empty()){
-					vector<HeloInfo> x = inHelo->getBag();
+				if(!inHM->empty()){
+					vector<HeloInfo> x = inHM->getBag();
 					if (x.size() > 1){
 						assert(("Too many helos arriving", false));
 					} else {
@@ -264,7 +264,7 @@ namespace cadmium::assignment1 {
 										break;
 								}
 							}
-							if (state.capacityTaken != 0){
+							if (state.capacityTaken > 0){
 								state.evacueesLoading = true;
 							} 
 							state.capacityTaken = 0;

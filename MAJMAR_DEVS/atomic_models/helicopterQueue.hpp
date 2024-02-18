@@ -98,14 +98,18 @@ namespace cadmium::assignment1 {
 			 * @param state reference to the current state of the model.
 			 */
 			void internalTransition(HelicopterQueueState& state) const override {
-				if (state.needHelo){
-					if (!state.waitingForHelo){
-						state.needHelo = false;
-						state.helosWaiting.erase(state.helosWaiting.begin());
-						if (state.helosWaiting.empty()){
-							state.waitingForHelo = true;
+				if (!state.stop){
+					if (state.needHelo){
+						if (!state.waitingForHelo){
+							state.needHelo = false;
+							state.helosWaiting.erase(state.helosWaiting.begin());
+							if (state.helosWaiting.empty()){
+								state.waitingForHelo = true;
+							}
 						}
 					}
+				} else {
+					state.helosWaiting.clear();
 				}
 				state.sigma = numeric_limits<double>::infinity();
 			}
