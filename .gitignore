@@ -1,2 +1,9 @@
 
 *.exe
+*.o
+*.exe
+MAJMAR_DEVS/bin/MAIN.exe
+MAJMAR_DEVS/bin/MAIN.exe.stackdump
+MAJMAR_DEVS/build/evacInfo.o
+MAJMAR_DEVS/build/heloInfo.o
+MAJMAR_DEVS/build/main.o
