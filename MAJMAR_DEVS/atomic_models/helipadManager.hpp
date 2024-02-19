@@ -119,7 +119,13 @@ namespace cadmium::assignment1 {
 						state.sigma = numeric_limits<double>::infinity();
 					}
 				} else {
-					state.sigma = numeric_limits<double>::infinity();
+					if (state.heloLoading){
+						state.heloLoading = false;
+						state.sigma = numeric_limits<double>::infinity();;
+					} else {
+						state.heloLoading = true;
+						state.sigma = timeToLoad;
+					}
 				}
 			}
 
@@ -146,7 +152,7 @@ namespace cadmium::assignment1 {
 						assert(("Too many stop msgs", false));
 					} else {
 						state.stop = x[0];
-						state.sigma = 0;
+						state.sigma -= e;
 					}
 				}
 				
@@ -183,7 +189,9 @@ namespace cadmium::assignment1 {
 						outHQ->addMessage(false);
 					}
 				} else {
-					outHelo->addMessage(HeloInfo{state.currHeloID, true});
+					if (state.heloLoading){
+						outHelo->addMessage(HeloInfo{state.currHeloID, true});
+					}
 					outHQ->addMessage(true);
 				}
 			}

@@ -30,14 +30,14 @@ namespace cadmium::assignment1 {
             // Declare and initialize all controller models (non-input/output)
 			double timeToLoad = 15;
 			vector<shared_ptr<HelicopterCoupled>> heloCoupledModels;
-			int numOfHelos = 2;
+			int numOfHelos = 5;
 			vector<shared_ptr<EvacueeCoupled>> evacueeCoupledModels;
 			vector<EvacInfo> evacuees;
-			int numOfWhite = 10;
-			int numOfGreen = 10;
-			int numOfYellow = 5;
-			int numOfRed = 5;
-			int numOfBlack = 1;
+			int numOfWhite = 0;
+			int numOfGreen = 0;
+			int numOfYellow = 31;
+			int numOfRed = 0;
+			int numOfBlack = 0;
 			int i = 0;
 			int initial = i+1;
 			for (i = initial; i < initial+numOfWhite; i++){

@@ -1,0 +1,2976 @@
+time,model_id,model_name,port_name,data
+0,1,FOL,,
+
+0,3,filterEvac,,
+
+0,4,filterES,,
+
+0,5,helicopter,,,Helicopter 4 is unloading people at the FOL and has 0 spots taken
+
+0,7,filterEvac,,
+
+0,8,filterES,,
+
+0,9,helicopter,,,Helicopter 3 is unloading people at the FOL and has 0 spots taken
+
+0,11,filterEvac,,
+
+0,12,filterES,,
+
+0,13,helicopter,,,Helicopter 2 is unloading people at the FOL and has 0 spots taken
+
+0,15,filterEvac,,
+
+0,16,filterES,,
+
+0,17,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+0,19,filterEvac,,
+
+0,20,filterES,,
+
+0,21,helicopter,,,Helicopter 5 is unloading people at the FOL and has 0 spots taken
+
+0,23,filterLoc,,
+
+0,24,evacuee,,,Evacuee 33 in triage state: Y is at the evacuation site
+
+0,26,filterLoc,,
+
+0,27,evacuee,,,Evacuee 32 in triage state: Y is at the evacuation site
+
+0,29,filterLoc,,
+
+0,30,evacuee,,,Evacuee 23 in triage state: Y is at the evacuation site
+
+0,32,filterLoc,,
+
+0,33,evacuee,,,Evacuee 18 in triage state: Y is at the evacuation site
+
+0,35,filterLoc,,
+
+0,36,evacuee,,,Evacuee 21 in triage state: Y is at the evacuation site
+
+0,38,filterLoc,,
+
+0,39,evacuee,,,Evacuee 11 in triage state: Y is at the evacuation site
+
+0,41,filterLoc,,
+
+0,42,evacuee,,,Evacuee 26 in triage state: Y is at the evacuation site
+
+0,44,evacueeManager,,,White: 0,Green: 0,Yellow: 31,Red: 0,Black: 0,Evacuees to Load: 
+
+0,45,helipadManager,,,No helos are at ES
+
+0,46,helicopterQueue,,,No helos are waiting to land
+
+0,48,filterLoc,,
+
+0,49,evacuee,,,Evacuee 10 in triage state: Y is at the evacuation site
+
+0,51,filterLoc,,
+
+0,52,evacuee,,,Evacuee 13 in triage state: Y is at the evacuation site
+
+0,54,filterLoc,,
+
+0,55,evacuee,,,Evacuee 14 in triage state: Y is at the evacuation site
+
+0,57,filterLoc,,
+
+0,58,evacuee,,,Evacuee 8 in triage state: Y is at the evacuation site
+
+0,60,filterLoc,,
+
+0,61,evacuee,,,Evacuee 3 in triage state: Y is at the evacuation site
+
+0,63,filterLoc,,
+
+0,64,evacuee,,,Evacuee 24 in triage state: Y is at the evacuation site
+
+0,66,filterLoc,,
+
+0,67,evacuee,,,Evacuee 27 in triage state: Y is at the evacuation site
+
+0,69,filterLoc,,
+
+0,70,evacuee,,,Evacuee 12 in triage state: Y is at the evacuation site
+
+0,72,filterLoc,,
+
+0,73,evacuee,,,Evacuee 7 in triage state: Y is at the evacuation site
+
+0,75,filterLoc,,
+
+0,76,evacuee,,,Evacuee 6 in triage state: Y is at the evacuation site
+
+0,78,filterLoc,,
+
+0,79,evacuee,,,Evacuee 15 in triage state: Y is at the evacuation site
+
+0,81,filterLoc,,
+
+0,82,evacuee,,,Evacuee 30 in triage state: Y is at the evacuation site
+
+0,84,filterLoc,,
+
+0,85,evacuee,,,Evacuee 9 in triage state: Y is at the evacuation site
+
+0,87,filterLoc,,
+
+0,88,evacuee,,,Evacuee 5 in triage state: Y is at the evacuation site
+
+0,90,filterLoc,,
+
+0,91,evacuee,,,Evacuee 16 in triage state: Y is at the evacuation site
+
+0,93,filterLoc,,
+
+0,94,evacuee,,,Evacuee 22 in triage state: Y is at the evacuation site
+
+0,96,filterLoc,,
+
+0,97,evacuee,,,Evacuee 4 in triage state: Y is at the evacuation site
+
+0,99,filterLoc,,
+
+0,100,evacuee,,,Evacuee 17 in triage state: Y is at the evacuation site
+
+0,102,filterLoc,,
+
+0,103,evacuee,,,Evacuee 29 in triage state: Y is at the evacuation site
+
+0,105,filterLoc,,
+
+0,106,evacuee,,,Evacuee 19 in triage state: Y is at the evacuation site
+
+0,108,filterLoc,,
+
+0,109,evacuee,,,Evacuee 20 in triage state: Y is at the evacuation site
+
+0,111,filterLoc,,
+
+0,112,evacuee,,,Evacuee 25 in triage state: Y is at the evacuation site
+
+0,114,filterLoc,,
+
+0,115,evacuee,,,Evacuee 31 in triage state: Y is at the evacuation site
+
+0,117,filterLoc,,
+
+0,118,evacuee,,,Evacuee 28 in triage state: Y is at the evacuation site
+
+0,24,evacuee,,,Evacuee 33 in triage state: Y is at the evacuation site
+
+0,27,evacuee,,,Evacuee 32 in triage state: Y is at the evacuation site
+
+0,30,evacuee,,,Evacuee 23 in triage state: Y is at the evacuation site
+
+0,33,evacuee,,,Evacuee 18 in triage state: Y is at the evacuation site
+
+0,36,evacuee,,,Evacuee 21 in triage state: Y is at the evacuation site
+
+0,39,evacuee,,,Evacuee 11 in triage state: Y is at the evacuation site
+
+0,42,evacuee,,,Evacuee 26 in triage state: Y is at the evacuation site
+
+0,45,helipadManager,outHQ,0
+0,45,helipadManager,,,No helos are at ES
+
+0,46,helicopterQueue,,,No helos are waiting to land
+
+0,49,evacuee,,,Evacuee 10 in triage state: Y is at the evacuation site
+
+0,52,evacuee,,,Evacuee 13 in triage state: Y is at the evacuation site
+
+0,55,evacuee,,,Evacuee 14 in triage state: Y is at the evacuation site
+
+0,58,evacuee,,,Evacuee 8 in triage state: Y is at the evacuation site
+
+0,61,evacuee,,,Evacuee 3 in triage state: Y is at the evacuation site
+
+0,64,evacuee,,,Evacuee 24 in triage state: Y is at the evacuation site
+
+0,67,evacuee,,,Evacuee 27 in triage state: Y is at the evacuation site
+
+0,70,evacuee,,,Evacuee 12 in triage state: Y is at the evacuation site
+
+0,73,evacuee,,,Evacuee 7 in triage state: Y is at the evacuation site
+
+0,76,evacuee,,,Evacuee 6 in triage state: Y is at the evacuation site
+
+0,79,evacuee,,,Evacuee 15 in triage state: Y is at the evacuation site
+
+0,82,evacuee,,,Evacuee 30 in triage state: Y is at the evacuation site
+
+0,85,evacuee,,,Evacuee 9 in triage state: Y is at the evacuation site
+
+0,88,evacuee,,,Evacuee 5 in triage state: Y is at the evacuation site
+
+0,91,evacuee,,,Evacuee 16 in triage state: Y is at the evacuation site
+
+0,94,evacuee,,,Evacuee 22 in triage state: Y is at the evacuation site
+
+0,97,evacuee,,,Evacuee 4 in triage state: Y is at the evacuation site
+
+0,100,evacuee,,,Evacuee 17 in triage state: Y is at the evacuation site
+
+0,103,evacuee,,,Evacuee 29 in triage state: Y is at the evacuation site
+
+0,106,evacuee,,,Evacuee 19 in triage state: Y is at the evacuation site
+
+0,109,evacuee,,,Evacuee 20 in triage state: Y is at the evacuation site
+
+0,112,evacuee,,,Evacuee 25 in triage state: Y is at the evacuation site
+
+0,115,evacuee,,,Evacuee 31 in triage state: Y is at the evacuation site
+
+0,118,evacuee,,,Evacuee 28 in triage state: Y is at the evacuation site
+
+0,46,helicopterQueue,,,No helos are waiting to land
+
+6.35128,44,evacueeManager,,,White: 0,Green: 0,Yellow: 30,Red: 1,Black: 0,Evacuees to Load: 
+
+6.35128,76,evacuee,outES,Evacuee 6 in triage category Y is not assigned a helicopter
+6.35128,76,evacuee,,,Evacuee 6 in triage state: R is at the evacuation site
+
+15,5,helicopter,,,Helicopter 4 Is going to the evacuation site and has 0 spots taken
+
+15,9,helicopter,,,Helicopter 3 Is going to the evacuation site and has 0 spots taken
+
+15,13,helicopter,,,Helicopter 2 Is going to the evacuation site and has 0 spots taken
+
+15,17,helicopter,,,Helicopter 1 Is going to the evacuation site and has 0 spots taken
+
+15,21,helicopter,,,Helicopter 5 Is going to the evacuation site and has 0 spots taken
+
+26.0625,27,evacuee,outES,Evacuee 32 in triage category Y is not assigned a helicopter
+26.0625,27,evacuee,,,Evacuee 32 in triage state: R is at the evacuation site
+
+26.0625,44,evacueeManager,,,White: 0,Green: 0,Yellow: 29,Red: 2,Black: 0,Evacuees to Load: 
+
+27.3606,44,evacueeManager,,,White: 0,Green: 0,Yellow: 28,Red: 3,Black: 0,Evacuees to Load: 
+
+27.3606,79,evacuee,outES,Evacuee 15 in triage category Y is not assigned a helicopter
+27.3606,79,evacuee,,,Evacuee 15 in triage state: R is at the evacuation site
+
+35.3867,44,evacueeManager,,,White: 0,Green: 0,Yellow: 28,Red: 2,Black: 1,Evacuees to Load: 
+
+35.3867,76,evacuee,outES,Evacuee 6 in triage category R is not assigned a helicopter
+35.3867,76,evacuee,,,Evacuee 6 in triage state: B is at the evacuation site
+
+37.1316,27,evacuee,outES,Evacuee 32 in triage category R is not assigned a helicopter
+37.1316,27,evacuee,,,Evacuee 32 in triage state: B is at the evacuation site
+
+37.1316,44,evacueeManager,,,White: 0,Green: 0,Yellow: 28,Red: 1,Black: 2,Evacuees to Load: 
+
+48.2031,44,evacueeManager,,,White: 0,Green: 0,Yellow: 28,Red: 0,Black: 3,Evacuees to Load: 
+
+48.2031,79,evacuee,outES,Evacuee 15 in triage category R is not assigned a helicopter
+48.2031,79,evacuee,,,Evacuee 15 in triage state: B is at the evacuation site
+
+49.22,30,evacuee,outES,Evacuee 23 in triage category Y is not assigned a helicopter
+49.22,30,evacuee,,,Evacuee 23 in triage state: R is at the evacuation site
+
+49.22,44,evacueeManager,,,White: 0,Green: 0,Yellow: 27,Red: 1,Black: 3,Evacuees to Load: 
+
+50.1651,44,evacueeManager,,,White: 0,Green: 0,Yellow: 26,Red: 2,Black: 3,Evacuees to Load: 
+
+50.1651,82,evacuee,outES,Evacuee 30 in triage category Y is not assigned a helicopter
+50.1651,82,evacuee,,,Evacuee 30 in triage state: R is at the evacuation site
+
+60.0952,44,evacueeManager,,,White: 0,Green: 0,Yellow: 26,Red: 1,Black: 4,Evacuees to Load: 
+
+60.0952,82,evacuee,outES,Evacuee 30 in triage category R is not assigned a helicopter
+60.0952,82,evacuee,,,Evacuee 30 in triage state: B is at the evacuation site
+
+72.2398,33,evacuee,outES,Evacuee 18 in triage category Y is not assigned a helicopter
+72.2398,33,evacuee,,,Evacuee 18 in triage state: R is at the evacuation site
+
+72.2398,44,evacueeManager,,,White: 0,Green: 0,Yellow: 25,Red: 2,Black: 4,Evacuees to Load: 
+
+72.794,44,evacueeManager,,,White: 0,Green: 0,Yellow: 24,Red: 3,Black: 4,Evacuees to Load: 
+
+72.794,85,evacuee,outES,Evacuee 9 in triage category Y is not assigned a helicopter
+72.794,85,evacuee,,,Evacuee 9 in triage state: R is at the evacuation site
+
+96.8788,36,evacuee,outES,Evacuee 21 in triage category Y is not assigned a helicopter
+96.8788,36,evacuee,,,Evacuee 21 in triage state: R is at the evacuation site
+
+96.8788,44,evacueeManager,,,White: 0,Green: 0,Yellow: 23,Red: 4,Black: 4,Evacuees to Load: 
+
+97.9227,44,evacueeManager,,,White: 0,Green: 0,Yellow: 22,Red: 5,Black: 4,Evacuees to Load: 
+
+97.9227,88,evacuee,outES,Evacuee 5 in triage category Y is not assigned a helicopter
+97.9227,88,evacuee,,,Evacuee 5 in triage state: R is at the evacuation site
+
+122.366,39,evacuee,outES,Evacuee 11 in triage category Y is not assigned a helicopter
+122.366,39,evacuee,,,Evacuee 11 in triage state: R is at the evacuation site
+
+122.366,44,evacueeManager,,,White: 0,Green: 0,Yellow: 21,Red: 6,Black: 4,Evacuees to Load: 
+
+122.982,44,evacueeManager,,,White: 0,Green: 0,Yellow: 20,Red: 7,Black: 4,Evacuees to Load: 
+
+122.982,91,evacuee,outES,Evacuee 16 in triage category Y is not assigned a helicopter
+122.982,91,evacuee,,,Evacuee 16 in triage state: R is at the evacuation site
+
+148.771,42,evacuee,outES,Evacuee 26 in triage category Y is not assigned a helicopter
+148.771,42,evacuee,,,Evacuee 26 in triage state: R is at the evacuation site
+
+148.771,44,evacueeManager,,,White: 0,Green: 0,Yellow: 19,Red: 8,Black: 4,Evacuees to Load: 
+
+149.421,44,evacueeManager,,,White: 0,Green: 0,Yellow: 18,Red: 9,Black: 4,Evacuees to Load: 
+
+149.421,94,evacuee,outES,Evacuee 22 in triage category Y is not assigned a helicopter
+149.421,94,evacuee,,,Evacuee 22 in triage state: R is at the evacuation site
+
+165,5,helicopter,outES,Helicopter 4 is evacuating people4
+165,5,helicopter,,,Helicopter 4 is waiting to land at the evacuation site and has 0 spots taken
+
+165,9,helicopter,outES,Helicopter 3 is evacuating people3
+165,9,helicopter,,,Helicopter 3 is waiting to land at the evacuation site and has 0 spots taken
+
+165,13,helicopter,outES,Helicopter 2 is evacuating people2
+165,13,helicopter,,,Helicopter 2 is waiting to land at the evacuation site and has 0 spots taken
+
+165,17,helicopter,outES,Helicopter 1 is evacuating people1
+165,17,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+165,21,helicopter,outES,Helicopter 5 is evacuating people5
+165,21,helicopter,,,Helicopter 5 is waiting to land at the evacuation site and has 0 spots taken
+
+165,46,helicopterQueue,,,5 Helos are waiting to land
+HeloID: 1HeloID: 2HeloID: 3HeloID: 4HeloID: 5
+
+165,4,filterES,,
+
+165,8,filterES,,
+
+165,12,filterES,,
+
+165,16,filterES,,Helicopter 1 is evacuating people1
+
+165,20,filterES,,
+
+165,45,helipadManager,,,No helos are at ES
+
+165,46,helicopterQueue,outHM,Helicopter 1 is evacuating people1
+165,46,helicopterQueue,outHelo,Helicopter 1 is evacuating people1
+165,46,helicopterQueue,,,4 Helos are waiting to land
+HeloID: 2HeloID: 3HeloID: 4HeloID: 5
+
+165,16,filterES,out,Helicopter 1 is evacuating people1
+165,16,filterES,,
+
+165,17,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+165,44,evacueeManager,,,White: 0,Green: 0,Yellow: 18,Red: 6,Black: 4,Evacuees to Load: EvacueeID: 23HeloID: -1Triage Status: R
+EvacueeID: 18HeloID: -1Triage Status: R
+EvacueeID: 9HeloID: -1Triage Status: R
+
+
+165,45,helipadManager,outEM,Helicopter 1 is evacuating people1
+165,45,helipadManager,,,Helo: 1is at the ES
+
+165,17,helicopter,,,Helicopter 1 is loading people at the evacuation site and has 0 spots taken
+
+165,23,filterLoc,,
+
+165,26,filterLoc,,
+
+165,29,filterLoc,,Evacuee 23 in triage category: R is entering helicopter 1
+
+165,32,filterLoc,,Evacuee 18 in triage category: R is entering helicopter 1
+
+165,35,filterLoc,,
+
+165,38,filterLoc,,
+
+165,41,filterLoc,,
+
+165,44,evacueeManager,outEvac,Evacuee 23 in triage category R is assigned helicopter 1
+165,44,evacueeManager,outEvac,Evacuee 18 in triage category R is assigned helicopter 1
+165,44,evacueeManager,outEvac,Evacuee 9 in triage category R is assigned helicopter 1
+165,44,evacueeManager,,,White: 0,Green: 0,Yellow: 18,Red: 6,Black: 4,Evacuees to Load: 
+
+165,48,filterLoc,,
+
+165,51,filterLoc,,
+
+165,54,filterLoc,,
+
+165,57,filterLoc,,
+
+165,60,filterLoc,,
+
+165,63,filterLoc,,
+
+165,66,filterLoc,,
+
+165,69,filterLoc,,
+
+165,72,filterLoc,,
+
+165,75,filterLoc,,
+
+165,78,filterLoc,,
+
+165,81,filterLoc,,
+
+165,84,filterLoc,,Evacuee 9 in triage category: R is entering helicopter 1
+
+165,87,filterLoc,,
+
+165,90,filterLoc,,
+
+165,93,filterLoc,,
+
+165,96,filterLoc,,
+
+165,99,filterLoc,,
+
+165,102,filterLoc,,
+
+165,105,filterLoc,,
+
+165,108,filterLoc,,
+
+165,111,filterLoc,,
+
+165,114,filterLoc,,
+
+165,117,filterLoc,,
+
+165,29,filterLoc,out,Evacuee 23 in triage category R is assigned helicopter 1
+165,29,filterLoc,,
+
+165,30,evacuee,,,Evacuee 23 in triage state: R is entering helicopter 1
+
+165,32,filterLoc,out,Evacuee 18 in triage category R is assigned helicopter 1
+165,32,filterLoc,,
+
+165,33,evacuee,,,Evacuee 18 in triage state: R is entering helicopter 1
+
+165,84,filterLoc,out,Evacuee 9 in triage category R is assigned helicopter 1
+165,84,filterLoc,,
+
+165,85,evacuee,,,Evacuee 9 in triage state: R is entering helicopter 1
+
+165,3,filterEvac,,
+
+165,7,filterEvac,,
+
+165,11,filterEvac,,
+
+165,15,filterEvac,,,Evacuee 9 in triage category: R is entering helicopter 1,Evacuee 18 in triage category: R is entering helicopter 1,Evacuee 23 in triage category: R is entering helicopter 1
+
+165,19,filterEvac,,
+
+165,30,evacuee,outHelo,Evacuee 23 in triage category R is assigned helicopter 1
+165,30,evacuee,,,Evacuee 23 in triage state: R is in helicopter 1
+
+165,33,evacuee,outHelo,Evacuee 18 in triage category R is assigned helicopter 1
+165,33,evacuee,,,Evacuee 18 in triage state: R is in helicopter 1
+
+165,85,evacuee,outHelo,Evacuee 9 in triage category R is assigned helicopter 1
+165,85,evacuee,,,Evacuee 9 in triage state: R is in helicopter 1
+
+165,15,filterEvac,out,Evacuee 9 in triage category R is assigned helicopter 1
+165,15,filterEvac,out,Evacuee 18 in triage category R is assigned helicopter 1
+165,15,filterEvac,out,Evacuee 23 in triage category R is assigned helicopter 1
+165,15,filterEvac,,
+
+165,17,helicopter,,,Helicopter 1 is loading people at the evacuation site and has 9 spots taken
+
+179.036,44,evacueeManager,,,White: 0,Green: 0,Yellow: 17,Red: 7,Black: 4,Evacuees to Load: 
+
+179.036,97,evacuee,outES,Evacuee 4 in triage category Y is not assigned a helicopter
+179.036,97,evacuee,,,Evacuee 4 in triage state: R is at the evacuation site
+
+180,4,filterES,,
+
+180,8,filterES,,
+
+180,12,filterES,,
+
+180,16,filterES,,Helicopter 1 is evacuating people1
+
+180,20,filterES,,
+
+180,45,helipadManager,outHelo,Helicopter 1 is evacuating people1
+180,45,helipadManager,,,No helos are at ES
+
+180,16,filterES,out,Helicopter 1 is evacuating people1
+180,16,filterES,,
+
+180,17,helicopter,,,Helicopter 1 is loading people at the evacuation site and has 9 spots taken
+
+180,45,helipadManager,outHQ,0
+180,45,helipadManager,,,No helos are at ES
+
+180,46,helicopterQueue,,,4 Helos are waiting to land
+HeloID: 2HeloID: 3HeloID: 4HeloID: 5
+
+180,4,filterES,,
+
+180,8,filterES,,
+
+180,12,filterES,,Helicopter 2 is evacuating people2
+
+180,16,filterES,,
+
+180,17,helicopter,,,Helicopter 1 is returning to the FOL and has 9 spots taken
+
+180,20,filterES,,
+
+180,45,helipadManager,,,No helos are at ES
+
+180,46,helicopterQueue,outHM,Helicopter 2 is evacuating people2
+180,46,helicopterQueue,outHelo,Helicopter 2 is evacuating people2
+180,46,helicopterQueue,,,3 Helos are waiting to land
+HeloID: 3HeloID: 4HeloID: 5
+
+180,12,filterES,out,Helicopter 2 is evacuating people2
+180,12,filterES,,
+
+180,13,helicopter,,,Helicopter 2 is waiting to land at the evacuation site and has 0 spots taken
+
+180,44,evacueeManager,,,White: 0,Green: 0,Yellow: 17,Red: 4,Black: 4,Evacuees to Load: EvacueeID: 21HeloID: -1Triage Status: R
+EvacueeID: 5HeloID: -1Triage Status: R
+EvacueeID: 11HeloID: -1Triage Status: R
+
+
+180,45,helipadManager,outEM,Helicopter 2 is evacuating people2
+180,45,helipadManager,,,Helo: 2is at the ES
+
+180,13,helicopter,,,Helicopter 2 is loading people at the evacuation site and has 0 spots taken
+
+180,23,filterLoc,,
+
+180,26,filterLoc,,
+
+180,29,filterLoc,,
+
+180,32,filterLoc,,
+
+180,35,filterLoc,,Evacuee 21 in triage category: R is entering helicopter 2
+
+180,38,filterLoc,,Evacuee 11 in triage category: R is entering helicopter 2
+
+180,41,filterLoc,,
+
+180,44,evacueeManager,outEvac,Evacuee 21 in triage category R is assigned helicopter 2
+180,44,evacueeManager,outEvac,Evacuee 5 in triage category R is assigned helicopter 2
+180,44,evacueeManager,outEvac,Evacuee 11 in triage category R is assigned helicopter 2
+180,44,evacueeManager,,,White: 0,Green: 0,Yellow: 17,Red: 4,Black: 4,Evacuees to Load: 
+
+180,48,filterLoc,,
+
+180,51,filterLoc,,
+
+180,54,filterLoc,,
+
+180,57,filterLoc,,
+
+180,60,filterLoc,,
+
+180,63,filterLoc,,
+
+180,66,filterLoc,,
+
+180,69,filterLoc,,
+
+180,72,filterLoc,,
+
+180,75,filterLoc,,
+
+180,78,filterLoc,,
+
+180,81,filterLoc,,
+
+180,84,filterLoc,,
+
+180,87,filterLoc,,Evacuee 5 in triage category: R is entering helicopter 2
+
+180,90,filterLoc,,
+
+180,93,filterLoc,,
+
+180,96,filterLoc,,
+
+180,99,filterLoc,,
+
+180,102,filterLoc,,
+
+180,105,filterLoc,,
+
+180,108,filterLoc,,
+
+180,111,filterLoc,,
+
+180,114,filterLoc,,
+
+180,117,filterLoc,,
+
+180,35,filterLoc,out,Evacuee 21 in triage category R is assigned helicopter 2
+180,35,filterLoc,,
+
+180,36,evacuee,,,Evacuee 21 in triage state: R is entering helicopter 2
+
+180,38,filterLoc,out,Evacuee 11 in triage category R is assigned helicopter 2
+180,38,filterLoc,,
+
+180,39,evacuee,,,Evacuee 11 in triage state: R is entering helicopter 2
+
+180,87,filterLoc,out,Evacuee 5 in triage category R is assigned helicopter 2
+180,87,filterLoc,,
+
+180,88,evacuee,,,Evacuee 5 in triage state: R is entering helicopter 2
+
+180,3,filterEvac,,
+
+180,7,filterEvac,,
+
+180,11,filterEvac,,,Evacuee 5 in triage category: R is entering helicopter 2,Evacuee 11 in triage category: R is entering helicopter 2,Evacuee 21 in triage category: R is entering helicopter 2
+
+180,15,filterEvac,,
+
+180,19,filterEvac,,
+
+180,36,evacuee,outHelo,Evacuee 21 in triage category R is assigned helicopter 2
+180,36,evacuee,,,Evacuee 21 in triage state: R is in helicopter 2
+
+180,39,evacuee,outHelo,Evacuee 11 in triage category R is assigned helicopter 2
+180,39,evacuee,,,Evacuee 11 in triage state: R is in helicopter 2
+
+180,88,evacuee,outHelo,Evacuee 5 in triage category R is assigned helicopter 2
+180,88,evacuee,,,Evacuee 5 in triage state: R is in helicopter 2
+
+180,11,filterEvac,out,Evacuee 5 in triage category R is assigned helicopter 2
+180,11,filterEvac,out,Evacuee 11 in triage category R is assigned helicopter 2
+180,11,filterEvac,out,Evacuee 21 in triage category R is assigned helicopter 2
+180,11,filterEvac,,
+
+180,13,helicopter,,,Helicopter 2 is loading people at the evacuation site and has 9 spots taken
+
+195,4,filterES,,
+
+195,8,filterES,,
+
+195,12,filterES,,Helicopter 2 is evacuating people2
+
+195,16,filterES,,
+
+195,20,filterES,,
+
+195,45,helipadManager,outHelo,Helicopter 2 is evacuating people2
+195,45,helipadManager,,,No helos are at ES
+
+195,12,filterES,out,Helicopter 2 is evacuating people2
+195,12,filterES,,
+
+195,13,helicopter,,,Helicopter 2 is loading people at the evacuation site and has 9 spots taken
+
+195,45,helipadManager,outHQ,0
+195,45,helipadManager,,,No helos are at ES
+
+195,46,helicopterQueue,,,3 Helos are waiting to land
+HeloID: 3HeloID: 4HeloID: 5
+
+195,4,filterES,,
+
+195,8,filterES,,Helicopter 3 is evacuating people3
+
+195,12,filterES,,
+
+195,13,helicopter,,,Helicopter 2 is returning to the FOL and has 9 spots taken
+
+195,16,filterES,,
+
+195,20,filterES,,
+
+195,45,helipadManager,,,No helos are at ES
+
+195,46,helicopterQueue,outHM,Helicopter 3 is evacuating people3
+195,46,helicopterQueue,outHelo,Helicopter 3 is evacuating people3
+195,46,helicopterQueue,,,2 Helos are waiting to land
+HeloID: 4HeloID: 5
+
+195,8,filterES,out,Helicopter 3 is evacuating people3
+195,8,filterES,,
+
+195,9,helicopter,,,Helicopter 3 is waiting to land at the evacuation site and has 0 spots taken
+
+195,44,evacueeManager,,,White: 0,Green: 0,Yellow: 17,Red: 1,Black: 4,Evacuees to Load: EvacueeID: 16HeloID: -1Triage Status: R
+EvacueeID: 26HeloID: -1Triage Status: R
+EvacueeID: 22HeloID: -1Triage Status: R
+
+
+195,45,helipadManager,outEM,Helicopter 3 is evacuating people3
+195,45,helipadManager,,,Helo: 3is at the ES
+
+195,9,helicopter,,,Helicopter 3 is loading people at the evacuation site and has 0 spots taken
+
+195,23,filterLoc,,
+
+195,26,filterLoc,,
+
+195,29,filterLoc,,
+
+195,32,filterLoc,,
+
+195,35,filterLoc,,
+
+195,38,filterLoc,,
+
+195,41,filterLoc,,Evacuee 26 in triage category: R is entering helicopter 3
+
+195,44,evacueeManager,outEvac,Evacuee 16 in triage category R is assigned helicopter 3
+195,44,evacueeManager,outEvac,Evacuee 26 in triage category R is assigned helicopter 3
+195,44,evacueeManager,outEvac,Evacuee 22 in triage category R is assigned helicopter 3
+195,44,evacueeManager,,,White: 0,Green: 0,Yellow: 17,Red: 1,Black: 4,Evacuees to Load: 
+
+195,48,filterLoc,,
+
+195,51,filterLoc,,
+
+195,54,filterLoc,,
+
+195,57,filterLoc,,
+
+195,60,filterLoc,,
+
+195,63,filterLoc,,
+
+195,66,filterLoc,,
+
+195,69,filterLoc,,
+
+195,72,filterLoc,,
+
+195,75,filterLoc,,
+
+195,78,filterLoc,,
+
+195,81,filterLoc,,
+
+195,84,filterLoc,,
+
+195,87,filterLoc,,
+
+195,90,filterLoc,,Evacuee 16 in triage category: R is entering helicopter 3
+
+195,93,filterLoc,,Evacuee 22 in triage category: R is entering helicopter 3
+
+195,96,filterLoc,,
+
+195,99,filterLoc,,
+
+195,102,filterLoc,,
+
+195,105,filterLoc,,
+
+195,108,filterLoc,,
+
+195,111,filterLoc,,
+
+195,114,filterLoc,,
+
+195,117,filterLoc,,
+
+195,41,filterLoc,out,Evacuee 26 in triage category R is assigned helicopter 3
+195,41,filterLoc,,
+
+195,42,evacuee,,,Evacuee 26 in triage state: R is entering helicopter 3
+
+195,90,filterLoc,out,Evacuee 16 in triage category R is assigned helicopter 3
+195,90,filterLoc,,
+
+195,91,evacuee,,,Evacuee 16 in triage state: R is entering helicopter 3
+
+195,93,filterLoc,out,Evacuee 22 in triage category R is assigned helicopter 3
+195,93,filterLoc,,
+
+195,94,evacuee,,,Evacuee 22 in triage state: R is entering helicopter 3
+
+195,3,filterEvac,,
+
+195,7,filterEvac,,,Evacuee 16 in triage category: R is entering helicopter 3,Evacuee 22 in triage category: R is entering helicopter 3,Evacuee 26 in triage category: R is entering helicopter 3
+
+195,11,filterEvac,,
+
+195,15,filterEvac,,
+
+195,19,filterEvac,,
+
+195,42,evacuee,outHelo,Evacuee 26 in triage category R is assigned helicopter 3
+195,42,evacuee,,,Evacuee 26 in triage state: R is in helicopter 3
+
+195,91,evacuee,outHelo,Evacuee 16 in triage category R is assigned helicopter 3
+195,91,evacuee,,,Evacuee 16 in triage state: R is in helicopter 3
+
+195,94,evacuee,outHelo,Evacuee 22 in triage category R is assigned helicopter 3
+195,94,evacuee,,,Evacuee 22 in triage state: R is in helicopter 3
+
+195,7,filterEvac,out,Evacuee 16 in triage category R is assigned helicopter 3
+195,7,filterEvac,out,Evacuee 22 in triage category R is assigned helicopter 3
+195,7,filterEvac,out,Evacuee 26 in triage category R is assigned helicopter 3
+195,7,filterEvac,,
+
+195,9,helicopter,,,Helicopter 3 is loading people at the evacuation site and has 9 spots taken
+
+210,4,filterES,,
+
+210,8,filterES,,Helicopter 3 is evacuating people3
+
+210,12,filterES,,
+
+210,16,filterES,,
+
+210,20,filterES,,
+
+210,45,helipadManager,outHelo,Helicopter 3 is evacuating people3
+210,45,helipadManager,,,No helos are at ES
+
+210,8,filterES,out,Helicopter 3 is evacuating people3
+210,8,filterES,,
+
+210,9,helicopter,,,Helicopter 3 is loading people at the evacuation site and has 9 spots taken
+
+210,45,helipadManager,outHQ,0
+210,45,helipadManager,,,No helos are at ES
+
+210,46,helicopterQueue,,,2 Helos are waiting to land
+HeloID: 4HeloID: 5
+
+210,4,filterES,,Helicopter 4 is evacuating people4
+
+210,8,filterES,,
+
+210,9,helicopter,,,Helicopter 3 is returning to the FOL and has 9 spots taken
+
+210,12,filterES,,
+
+210,16,filterES,,
+
+210,20,filterES,,
+
+210,45,helipadManager,,,No helos are at ES
+
+210,46,helicopterQueue,outHM,Helicopter 4 is evacuating people4
+210,46,helicopterQueue,outHelo,Helicopter 4 is evacuating people4
+210,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 5
+
+210,4,filterES,out,Helicopter 4 is evacuating people4
+210,4,filterES,,
+
+210,5,helicopter,,,Helicopter 4 is waiting to land at the evacuation site and has 0 spots taken
+
+210,44,evacueeManager,,,White: 0,Green: 0,Yellow: 15,Red: 0,Black: 4,Evacuees to Load: EvacueeID: 4HeloID: -1Triage Status: R
+EvacueeID: 3HeloID: -1Triage Status: Y
+EvacueeID: 7HeloID: -1Triage Status: Y
+
+
+210,45,helipadManager,outEM,Helicopter 4 is evacuating people4
+210,45,helipadManager,,,Helo: 4is at the ES
+
+210,5,helicopter,,,Helicopter 4 is loading people at the evacuation site and has 0 spots taken
+
+210,23,filterLoc,,
+
+210,26,filterLoc,,
+
+210,29,filterLoc,,
+
+210,32,filterLoc,,
+
+210,35,filterLoc,,
+
+210,38,filterLoc,,
+
+210,41,filterLoc,,
+
+210,44,evacueeManager,outEvac,Evacuee 4 in triage category R is assigned helicopter 4
+210,44,evacueeManager,outEvac,Evacuee 3 in triage category Y is assigned helicopter 4
+210,44,evacueeManager,outEvac,Evacuee 7 in triage category Y is assigned helicopter 4
+210,44,evacueeManager,,,White: 0,Green: 0,Yellow: 15,Red: 0,Black: 4,Evacuees to Load: 
+
+210,48,filterLoc,,
+
+210,51,filterLoc,,
+
+210,54,filterLoc,,
+
+210,57,filterLoc,,
+
+210,60,filterLoc,,Evacuee 3 in triage category: Y is entering helicopter 4
+
+210,63,filterLoc,,
+
+210,66,filterLoc,,
+
+210,69,filterLoc,,
+
+210,72,filterLoc,,Evacuee 7 in triage category: Y is entering helicopter 4
+
+210,75,filterLoc,,
+
+210,78,filterLoc,,
+
+210,81,filterLoc,,
+
+210,84,filterLoc,,
+
+210,87,filterLoc,,
+
+210,90,filterLoc,,
+
+210,93,filterLoc,,
+
+210,96,filterLoc,,Evacuee 4 in triage category: R is entering helicopter 4
+
+210,99,filterLoc,,
+
+210,102,filterLoc,,
+
+210,105,filterLoc,,
+
+210,108,filterLoc,,
+
+210,111,filterLoc,,
+
+210,114,filterLoc,,
+
+210,117,filterLoc,,
+
+210,60,filterLoc,out,Evacuee 3 in triage category Y is assigned helicopter 4
+210,60,filterLoc,,
+
+210,61,evacuee,,,Evacuee 3 in triage state: Y is entering helicopter 4
+
+210,72,filterLoc,out,Evacuee 7 in triage category Y is assigned helicopter 4
+210,72,filterLoc,,
+
+210,73,evacuee,,,Evacuee 7 in triage state: Y is entering helicopter 4
+
+210,96,filterLoc,out,Evacuee 4 in triage category R is assigned helicopter 4
+210,96,filterLoc,,
+
+210,97,evacuee,,,Evacuee 4 in triage state: R is entering helicopter 4
+
+210,3,filterEvac,,,Evacuee 3 in triage category: Y is entering helicopter 4,Evacuee 4 in triage category: R is entering helicopter 4,Evacuee 7 in triage category: Y is entering helicopter 4
+
+210,7,filterEvac,,
+
+210,11,filterEvac,,
+
+210,15,filterEvac,,
+
+210,19,filterEvac,,
+
+210,61,evacuee,outHelo,Evacuee 3 in triage category Y is assigned helicopter 4
+210,61,evacuee,,,Evacuee 3 in triage state: Y is in helicopter 4
+
+210,73,evacuee,outHelo,Evacuee 7 in triage category Y is assigned helicopter 4
+210,73,evacuee,,,Evacuee 7 in triage state: Y is in helicopter 4
+
+210,97,evacuee,outHelo,Evacuee 4 in triage category R is assigned helicopter 4
+210,97,evacuee,,,Evacuee 4 in triage state: R is in helicopter 4
+
+210,3,filterEvac,out,Evacuee 3 in triage category Y is assigned helicopter 4
+210,3,filterEvac,out,Evacuee 4 in triage category R is assigned helicopter 4
+210,3,filterEvac,out,Evacuee 7 in triage category Y is assigned helicopter 4
+210,3,filterEvac,,
+
+210,5,helicopter,,,Helicopter 4 is loading people at the evacuation site and has 9 spots taken
+
+211.182,44,evacueeManager,,,White: 0,Green: 0,Yellow: 14,Red: 1,Black: 4,Evacuees to Load: 
+
+211.182,100,evacuee,outES,Evacuee 17 in triage category Y is not assigned a helicopter
+211.182,100,evacuee,,,Evacuee 17 in triage state: R is at the evacuation site
+
+225,4,filterES,,Helicopter 4 is evacuating people4
+
+225,8,filterES,,
+
+225,12,filterES,,
+
+225,16,filterES,,
+
+225,20,filterES,,
+
+225,45,helipadManager,outHelo,Helicopter 4 is evacuating people4
+225,45,helipadManager,,,No helos are at ES
+
+225,4,filterES,out,Helicopter 4 is evacuating people4
+225,4,filterES,,
+
+225,5,helicopter,,,Helicopter 4 is loading people at the evacuation site and has 9 spots taken
+
+225,45,helipadManager,outHQ,0
+225,45,helipadManager,,,No helos are at ES
+
+225,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 5
+
+225,4,filterES,,
+
+225,5,helicopter,,,Helicopter 4 is returning to the FOL and has 9 spots taken
+
+225,8,filterES,,
+
+225,12,filterES,,
+
+225,16,filterES,,
+
+225,20,filterES,,Helicopter 5 is evacuating people5
+
+225,45,helipadManager,,,No helos are at ES
+
+225,46,helicopterQueue,outHM,Helicopter 5 is evacuating people5
+225,46,helicopterQueue,outHelo,Helicopter 5 is evacuating people5
+225,46,helicopterQueue,,,No helos are waiting to land
+
+225,20,filterES,out,Helicopter 5 is evacuating people5
+225,20,filterES,,
+
+225,21,helicopter,,,Helicopter 5 is waiting to land at the evacuation site and has 0 spots taken
+
+225,44,evacueeManager,,,White: 0,Green: 0,Yellow: 12,Red: 0,Black: 4,Evacuees to Load: EvacueeID: 17HeloID: -1Triage Status: R
+EvacueeID: 8HeloID: -1Triage Status: Y
+EvacueeID: 10HeloID: -1Triage Status: Y
+
+
+225,45,helipadManager,outEM,Helicopter 5 is evacuating people5
+225,45,helipadManager,,,Helo: 5is at the ES
+
+225,21,helicopter,,,Helicopter 5 is loading people at the evacuation site and has 0 spots taken
+
+225,23,filterLoc,,
+
+225,26,filterLoc,,
+
+225,29,filterLoc,,
+
+225,32,filterLoc,,
+
+225,35,filterLoc,,
+
+225,38,filterLoc,,
+
+225,41,filterLoc,,
+
+225,44,evacueeManager,outEvac,Evacuee 17 in triage category R is assigned helicopter 5
+225,44,evacueeManager,outEvac,Evacuee 8 in triage category Y is assigned helicopter 5
+225,44,evacueeManager,outEvac,Evacuee 10 in triage category Y is assigned helicopter 5
+225,44,evacueeManager,,,White: 0,Green: 0,Yellow: 12,Red: 0,Black: 4,Evacuees to Load: 
+
+225,48,filterLoc,,Evacuee 10 in triage category: Y is entering helicopter 5
+
+225,51,filterLoc,,
+
+225,54,filterLoc,,
+
+225,57,filterLoc,,Evacuee 8 in triage category: Y is entering helicopter 5
+
+225,60,filterLoc,,
+
+225,63,filterLoc,,
+
+225,66,filterLoc,,
+
+225,69,filterLoc,,
+
+225,72,filterLoc,,
+
+225,75,filterLoc,,
+
+225,78,filterLoc,,
+
+225,81,filterLoc,,
+
+225,84,filterLoc,,
+
+225,87,filterLoc,,
+
+225,90,filterLoc,,
+
+225,93,filterLoc,,
+
+225,96,filterLoc,,
+
+225,99,filterLoc,,Evacuee 17 in triage category: R is entering helicopter 5
+
+225,102,filterLoc,,
+
+225,105,filterLoc,,
+
+225,108,filterLoc,,
+
+225,111,filterLoc,,
+
+225,114,filterLoc,,
+
+225,117,filterLoc,,
+
+225,48,filterLoc,out,Evacuee 10 in triage category Y is assigned helicopter 5
+225,48,filterLoc,,
+
+225,49,evacuee,,,Evacuee 10 in triage state: Y is entering helicopter 5
+
+225,57,filterLoc,out,Evacuee 8 in triage category Y is assigned helicopter 5
+225,57,filterLoc,,
+
+225,58,evacuee,,,Evacuee 8 in triage state: Y is entering helicopter 5
+
+225,99,filterLoc,out,Evacuee 17 in triage category R is assigned helicopter 5
+225,99,filterLoc,,
+
+225,100,evacuee,,,Evacuee 17 in triage state: R is entering helicopter 5
+
+225,3,filterEvac,,
+
+225,7,filterEvac,,
+
+225,11,filterEvac,,
+
+225,15,filterEvac,,
+
+225,19,filterEvac,,,Evacuee 8 in triage category: Y is entering helicopter 5,Evacuee 10 in triage category: Y is entering helicopter 5,Evacuee 17 in triage category: R is entering helicopter 5
+
+225,49,evacuee,outHelo,Evacuee 10 in triage category Y is assigned helicopter 5
+225,49,evacuee,,,Evacuee 10 in triage state: Y is in helicopter 5
+
+225,58,evacuee,outHelo,Evacuee 8 in triage category Y is assigned helicopter 5
+225,58,evacuee,,,Evacuee 8 in triage state: Y is in helicopter 5
+
+225,100,evacuee,outHelo,Evacuee 17 in triage category R is assigned helicopter 5
+225,100,evacuee,,,Evacuee 17 in triage state: R is in helicopter 5
+
+225,19,filterEvac,out,Evacuee 8 in triage category Y is assigned helicopter 5
+225,19,filterEvac,out,Evacuee 10 in triage category Y is assigned helicopter 5
+225,19,filterEvac,out,Evacuee 17 in triage category R is assigned helicopter 5
+225,19,filterEvac,,
+
+225,21,helicopter,,,Helicopter 5 is loading people at the evacuation site and has 9 spots taken
+
+240,4,filterES,,
+
+240,8,filterES,,
+
+240,12,filterES,,
+
+240,16,filterES,,
+
+240,20,filterES,,Helicopter 5 is evacuating people5
+
+240,45,helipadManager,outHelo,Helicopter 5 is evacuating people5
+240,45,helipadManager,,,No helos are at ES
+
+240,20,filterES,out,Helicopter 5 is evacuating people5
+240,20,filterES,,
+
+240,21,helicopter,,,Helicopter 5 is loading people at the evacuation site and has 9 spots taken
+
+240,45,helipadManager,outHQ,0
+240,45,helipadManager,,,No helos are at ES
+
+240,46,helicopterQueue,,,No helos are waiting to land
+
+240,21,helicopter,,,Helicopter 5 is returning to the FOL and has 9 spots taken
+
+240,46,helicopterQueue,,,No helos are waiting to land
+
+244.385,44,evacueeManager,,,White: 0,Green: 0,Yellow: 11,Red: 1,Black: 4,Evacuees to Load: 
+
+244.385,103,evacuee,outES,Evacuee 29 in triage category Y is not assigned a helicopter
+244.385,103,evacuee,,,Evacuee 29 in triage state: R is at the evacuation site
+
+278.711,44,evacueeManager,,,White: 0,Green: 0,Yellow: 10,Red: 2,Black: 4,Evacuees to Load: 
+
+278.711,106,evacuee,outES,Evacuee 19 in triage category Y is not assigned a helicopter
+278.711,106,evacuee,,,Evacuee 19 in triage state: R is at the evacuation site
+
+315.683,44,evacueeManager,,,White: 0,Green: 0,Yellow: 9,Red: 3,Black: 4,Evacuees to Load: 
+
+315.683,109,evacuee,outES,Evacuee 20 in triage category Y is not assigned a helicopter
+315.683,109,evacuee,,,Evacuee 20 in triage state: R is at the evacuation site
+
+330,17,helicopter,outEvac,Evacuee 9 in triage category R is not assigned a helicopter
+330,17,helicopter,outEvac,Evacuee 18 in triage category R is not assigned a helicopter
+330,17,helicopter,outEvac,Evacuee 23 in triage category R is not assigned a helicopter
+330,17,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+330,23,filterLoc,,
+
+330,26,filterLoc,,
+
+330,29,filterLoc,,Evacuee 23 in triage category: R is leaving helicopter 1
+
+330,32,filterLoc,,Evacuee 18 in triage category: R is leaving helicopter 1
+
+330,35,filterLoc,,
+
+330,38,filterLoc,,
+
+330,41,filterLoc,,
+
+330,48,filterLoc,,
+
+330,51,filterLoc,,
+
+330,54,filterLoc,,
+
+330,57,filterLoc,,
+
+330,60,filterLoc,,
+
+330,63,filterLoc,,
+
+330,66,filterLoc,,
+
+330,69,filterLoc,,
+
+330,72,filterLoc,,
+
+330,75,filterLoc,,
+
+330,78,filterLoc,,
+
+330,81,filterLoc,,
+
+330,84,filterLoc,,Evacuee 9 in triage category: R is leaving helicopter 1
+
+330,87,filterLoc,,
+
+330,90,filterLoc,,
+
+330,93,filterLoc,,
+
+330,96,filterLoc,,
+
+330,99,filterLoc,,
+
+330,102,filterLoc,,
+
+330,105,filterLoc,,
+
+330,108,filterLoc,,
+
+330,111,filterLoc,,
+
+330,114,filterLoc,,
+
+330,117,filterLoc,,
+
+330,29,filterLoc,out,Evacuee 23 in triage category R is not assigned a helicopter
+330,29,filterLoc,,
+
+330,30,evacuee,,,Evacuee 23 in triage state: R is entering the FOL
+
+330,32,filterLoc,out,Evacuee 18 in triage category R is not assigned a helicopter
+330,32,filterLoc,,
+
+330,33,evacuee,,,Evacuee 18 in triage state: R is entering the FOL
+
+330,84,filterLoc,out,Evacuee 9 in triage category R is not assigned a helicopter
+330,84,filterLoc,,
+
+330,85,evacuee,,,Evacuee 9 in triage state: R is entering the FOL
+
+330,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R
+
+330,30,evacuee,outFOL,Evacuee 23 in triage category R is not assigned a helicopter
+330,30,evacuee,,,Evacuee 23 in triage state: R is at the FOL
+
+330,33,evacuee,outFOL,Evacuee 18 in triage category R is not assigned a helicopter
+330,33,evacuee,,,Evacuee 18 in triage state: R is at the FOL
+
+330,85,evacuee,outFOL,Evacuee 9 in triage category R is not assigned a helicopter
+330,85,evacuee,,,Evacuee 9 in triage state: R is at the FOL
+
+330,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R
+
+345,13,helicopter,outEvac,Evacuee 5 in triage category R is not assigned a helicopter
+345,13,helicopter,outEvac,Evacuee 11 in triage category R is not assigned a helicopter
+345,13,helicopter,outEvac,Evacuee 21 in triage category R is not assigned a helicopter
+345,13,helicopter,,,Helicopter 2 is unloading people at the FOL and has 0 spots taken
+
+345,17,helicopter,,,Helicopter 1 Is going to the evacuation site and has 0 spots taken
+
+345,23,filterLoc,,
+
+345,26,filterLoc,,
+
+345,29,filterLoc,,
+
+345,32,filterLoc,,
+
+345,35,filterLoc,,Evacuee 21 in triage category: R is leaving helicopter 2
+
+345,38,filterLoc,,Evacuee 11 in triage category: R is leaving helicopter 2
+
+345,41,filterLoc,,
+
+345,48,filterLoc,,
+
+345,51,filterLoc,,
+
+345,54,filterLoc,,
+
+345,57,filterLoc,,
+
+345,60,filterLoc,,
+
+345,63,filterLoc,,
+
+345,66,filterLoc,,
+
+345,69,filterLoc,,
+
+345,72,filterLoc,,
+
+345,75,filterLoc,,
+
+345,78,filterLoc,,
+
+345,81,filterLoc,,
+
+345,84,filterLoc,,
+
+345,87,filterLoc,,Evacuee 5 in triage category: R is leaving helicopter 2
+
+345,90,filterLoc,,
+
+345,93,filterLoc,,
+
+345,96,filterLoc,,
+
+345,99,filterLoc,,
+
+345,102,filterLoc,,
+
+345,105,filterLoc,,
+
+345,108,filterLoc,,
+
+345,111,filterLoc,,
+
+345,114,filterLoc,,
+
+345,117,filterLoc,,
+
+345,35,filterLoc,out,Evacuee 21 in triage category R is not assigned a helicopter
+345,35,filterLoc,,
+
+345,36,evacuee,,,Evacuee 21 in triage state: R is entering the FOL
+
+345,38,filterLoc,out,Evacuee 11 in triage category R is not assigned a helicopter
+345,38,filterLoc,,
+
+345,39,evacuee,,,Evacuee 11 in triage state: R is entering the FOL
+
+345,87,filterLoc,out,Evacuee 5 in triage category R is not assigned a helicopter
+345,87,filterLoc,,
+
+345,88,evacuee,,,Evacuee 5 in triage state: R is entering the FOL
+
+345,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R
+
+345,36,evacuee,outFOL,Evacuee 21 in triage category R is not assigned a helicopter
+345,36,evacuee,,,Evacuee 21 in triage state: R is at the FOL
+
+345,39,evacuee,outFOL,Evacuee 11 in triage category R is not assigned a helicopter
+345,39,evacuee,,,Evacuee 11 in triage state: R is at the FOL
+
+345,88,evacuee,outFOL,Evacuee 5 in triage category R is not assigned a helicopter
+345,88,evacuee,,,Evacuee 5 in triage state: R is at the FOL
+
+345,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R
+
+355.741,44,evacueeManager,,,White: 0,Green: 0,Yellow: 8,Red: 4,Black: 4,Evacuees to Load: 
+
+355.741,112,evacuee,outES,Evacuee 25 in triage category Y is not assigned a helicopter
+355.741,112,evacuee,,,Evacuee 25 in triage state: R is at the evacuation site
+
+360,9,helicopter,outEvac,Evacuee 16 in triage category R is not assigned a helicopter
+360,9,helicopter,outEvac,Evacuee 22 in triage category R is not assigned a helicopter
+360,9,helicopter,outEvac,Evacuee 26 in triage category R is not assigned a helicopter
+360,9,helicopter,,,Helicopter 3 is unloading people at the FOL and has 0 spots taken
+
+360,13,helicopter,,,Helicopter 2 Is going to the evacuation site and has 0 spots taken
+
+360,23,filterLoc,,
+
+360,26,filterLoc,,
+
+360,29,filterLoc,,
+
+360,32,filterLoc,,
+
+360,35,filterLoc,,
+
+360,38,filterLoc,,
+
+360,41,filterLoc,,Evacuee 26 in triage category: R is leaving helicopter 3
+
+360,48,filterLoc,,
+
+360,51,filterLoc,,
+
+360,54,filterLoc,,
+
+360,57,filterLoc,,
+
+360,60,filterLoc,,
+
+360,63,filterLoc,,
+
+360,66,filterLoc,,
+
+360,69,filterLoc,,
+
+360,72,filterLoc,,
+
+360,75,filterLoc,,
+
+360,78,filterLoc,,
+
+360,81,filterLoc,,
+
+360,84,filterLoc,,
+
+360,87,filterLoc,,
+
+360,90,filterLoc,,Evacuee 16 in triage category: R is leaving helicopter 3
+
+360,93,filterLoc,,Evacuee 22 in triage category: R is leaving helicopter 3
+
+360,96,filterLoc,,
+
+360,99,filterLoc,,
+
+360,102,filterLoc,,
+
+360,105,filterLoc,,
+
+360,108,filterLoc,,
+
+360,111,filterLoc,,
+
+360,114,filterLoc,,
+
+360,117,filterLoc,,
+
+360,41,filterLoc,out,Evacuee 26 in triage category R is not assigned a helicopter
+360,41,filterLoc,,
+
+360,42,evacuee,,,Evacuee 26 in triage state: R is entering the FOL
+
+360,90,filterLoc,out,Evacuee 16 in triage category R is not assigned a helicopter
+360,90,filterLoc,,
+
+360,91,evacuee,,,Evacuee 16 in triage state: R is entering the FOL
+
+360,93,filterLoc,out,Evacuee 22 in triage category R is not assigned a helicopter
+360,93,filterLoc,,
+
+360,94,evacuee,,,Evacuee 22 in triage state: R is entering the FOL
+
+360,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R
+
+360,42,evacuee,outFOL,Evacuee 26 in triage category R is not assigned a helicopter
+360,42,evacuee,,,Evacuee 26 in triage state: R is at the FOL
+
+360,91,evacuee,outFOL,Evacuee 16 in triage category R is not assigned a helicopter
+360,91,evacuee,,,Evacuee 16 in triage state: R is at the FOL
+
+360,94,evacuee,outFOL,Evacuee 22 in triage category R is not assigned a helicopter
+360,94,evacuee,,,Evacuee 22 in triage state: R is at the FOL
+
+360,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R
+
+375,5,helicopter,outEvac,Evacuee 3 in triage category Y is not assigned a helicopter
+375,5,helicopter,outEvac,Evacuee 4 in triage category R is not assigned a helicopter
+375,5,helicopter,outEvac,Evacuee 7 in triage category Y is not assigned a helicopter
+375,5,helicopter,,,Helicopter 4 is unloading people at the FOL and has 0 spots taken
+
+375,9,helicopter,,,Helicopter 3 Is going to the evacuation site and has 0 spots taken
+
+375,23,filterLoc,,
+
+375,26,filterLoc,,
+
+375,29,filterLoc,,
+
+375,32,filterLoc,,
+
+375,35,filterLoc,,
+
+375,38,filterLoc,,
+
+375,41,filterLoc,,
+
+375,48,filterLoc,,
+
+375,51,filterLoc,,
+
+375,54,filterLoc,,
+
+375,57,filterLoc,,
+
+375,60,filterLoc,,Evacuee 3 in triage category: Y is leaving helicopter 4
+
+375,63,filterLoc,,
+
+375,66,filterLoc,,
+
+375,69,filterLoc,,
+
+375,72,filterLoc,,Evacuee 7 in triage category: Y is leaving helicopter 4
+
+375,75,filterLoc,,
+
+375,78,filterLoc,,
+
+375,81,filterLoc,,
+
+375,84,filterLoc,,
+
+375,87,filterLoc,,
+
+375,90,filterLoc,,
+
+375,93,filterLoc,,
+
+375,96,filterLoc,,Evacuee 4 in triage category: R is leaving helicopter 4
+
+375,99,filterLoc,,
+
+375,102,filterLoc,,
+
+375,105,filterLoc,,
+
+375,108,filterLoc,,
+
+375,111,filterLoc,,
+
+375,114,filterLoc,,
+
+375,117,filterLoc,,
+
+375,60,filterLoc,out,Evacuee 3 in triage category Y is not assigned a helicopter
+375,60,filterLoc,,
+
+375,61,evacuee,,,Evacuee 3 in triage state: Y is entering the FOL
+
+375,72,filterLoc,out,Evacuee 7 in triage category Y is not assigned a helicopter
+375,72,filterLoc,,
+
+375,73,evacuee,,,Evacuee 7 in triage state: Y is entering the FOL
+
+375,96,filterLoc,out,Evacuee 4 in triage category R is not assigned a helicopter
+375,96,filterLoc,,
+
+375,97,evacuee,,,Evacuee 4 in triage state: R is entering the FOL
+
+375,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y
+
+375,61,evacuee,outFOL,Evacuee 3 in triage category Y is not assigned a helicopter
+375,61,evacuee,,,Evacuee 3 in triage state: Y is at the FOL
+
+375,73,evacuee,outFOL,Evacuee 7 in triage category Y is not assigned a helicopter
+375,73,evacuee,,,Evacuee 7 in triage state: Y is at the FOL
+
+375,97,evacuee,outFOL,Evacuee 4 in triage category R is not assigned a helicopter
+375,97,evacuee,,,Evacuee 4 in triage state: R is at the FOL
+
+375,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y
+
+390,5,helicopter,,,Helicopter 4 Is going to the evacuation site and has 0 spots taken
+
+390,21,helicopter,outEvac,Evacuee 8 in triage category Y is not assigned a helicopter
+390,21,helicopter,outEvac,Evacuee 10 in triage category Y is not assigned a helicopter
+390,21,helicopter,outEvac,Evacuee 17 in triage category R is not assigned a helicopter
+390,21,helicopter,,,Helicopter 5 is unloading people at the FOL and has 0 spots taken
+
+390,23,filterLoc,,
+
+390,26,filterLoc,,
+
+390,29,filterLoc,,
+
+390,32,filterLoc,,
+
+390,35,filterLoc,,
+
+390,38,filterLoc,,
+
+390,41,filterLoc,,
+
+390,48,filterLoc,,Evacuee 10 in triage category: Y is leaving helicopter 5
+
+390,51,filterLoc,,
+
+390,54,filterLoc,,
+
+390,57,filterLoc,,Evacuee 8 in triage category: Y is leaving helicopter 5
+
+390,60,filterLoc,,
+
+390,63,filterLoc,,
+
+390,66,filterLoc,,
+
+390,69,filterLoc,,
+
+390,72,filterLoc,,
+
+390,75,filterLoc,,
+
+390,78,filterLoc,,
+
+390,81,filterLoc,,
+
+390,84,filterLoc,,
+
+390,87,filterLoc,,
+
+390,90,filterLoc,,
+
+390,93,filterLoc,,
+
+390,96,filterLoc,,
+
+390,99,filterLoc,,Evacuee 17 in triage category: R is leaving helicopter 5
+
+390,102,filterLoc,,
+
+390,105,filterLoc,,
+
+390,108,filterLoc,,
+
+390,111,filterLoc,,
+
+390,114,filterLoc,,
+
+390,117,filterLoc,,
+
+390,48,filterLoc,out,Evacuee 10 in triage category Y is not assigned a helicopter
+390,48,filterLoc,,
+
+390,49,evacuee,,,Evacuee 10 in triage state: Y is entering the FOL
+
+390,57,filterLoc,out,Evacuee 8 in triage category Y is not assigned a helicopter
+390,57,filterLoc,,
+
+390,58,evacuee,,,Evacuee 8 in triage state: Y is entering the FOL
+
+390,99,filterLoc,out,Evacuee 17 in triage category R is not assigned a helicopter
+390,99,filterLoc,,
+
+390,100,evacuee,,,Evacuee 17 in triage state: R is entering the FOL
+
+390,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y,EvacueeID 8,Triage Status: Y,EvacueeID 10,Triage Status: Y,EvacueeID 17,Triage Status: R
+
+390,49,evacuee,outFOL,Evacuee 10 in triage category Y is not assigned a helicopter
+390,49,evacuee,,,Evacuee 10 in triage state: Y is at the FOL
+
+390,58,evacuee,outFOL,Evacuee 8 in triage category Y is not assigned a helicopter
+390,58,evacuee,,,Evacuee 8 in triage state: Y is at the FOL
+
+390,100,evacuee,outFOL,Evacuee 17 in triage category R is not assigned a helicopter
+390,100,evacuee,,,Evacuee 17 in triage state: R is at the FOL
+
+390,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y,EvacueeID 8,Triage Status: Y,EvacueeID 10,Triage Status: Y,EvacueeID 17,Triage Status: R
+
+399.45,44,evacueeManager,,,White: 0,Green: 0,Yellow: 7,Red: 5,Black: 4,Evacuees to Load: 
+
+399.45,115,evacuee,outES,Evacuee 31 in triage category Y is not assigned a helicopter
+399.45,115,evacuee,,,Evacuee 31 in triage state: R is at the evacuation site
+
+405,21,helicopter,,,Helicopter 5 Is going to the evacuation site and has 0 spots taken
+
+448.497,44,evacueeManager,,,White: 0,Green: 0,Yellow: 6,Red: 6,Black: 4,Evacuees to Load: 
+
+448.497,118,evacuee,outES,Evacuee 28 in triage category Y is not assigned a helicopter
+448.497,118,evacuee,,,Evacuee 28 in triage state: R is at the evacuation site
+
+495,17,helicopter,outES,Helicopter 1 is evacuating people1
+495,17,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+495,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 1
+
+495,4,filterES,,
+
+495,8,filterES,,
+
+495,12,filterES,,
+
+495,16,filterES,,Helicopter 1 is evacuating people1
+
+495,20,filterES,,
+
+495,45,helipadManager,,,No helos are at ES
+
+495,46,helicopterQueue,outHM,Helicopter 1 is evacuating people1
+495,46,helicopterQueue,outHelo,Helicopter 1 is evacuating people1
+495,46,helicopterQueue,,,No helos are waiting to land
+
+495,16,filterES,out,Helicopter 1 is evacuating people1
+495,16,filterES,,
+
+495,17,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+495,44,evacueeManager,,,White: 0,Green: 0,Yellow: 6,Red: 3,Black: 4,Evacuees to Load: EvacueeID: 29HeloID: -1Triage Status: R
+EvacueeID: 19HeloID: -1Triage Status: R
+EvacueeID: 20HeloID: -1Triage Status: R
+
+
+495,45,helipadManager,outEM,Helicopter 1 is evacuating people1
+495,45,helipadManager,,,Helo: 1is at the ES
+
+495,17,helicopter,,,Helicopter 1 is loading people at the evacuation site and has 0 spots taken
+
+495,23,filterLoc,,
+
+495,26,filterLoc,,
+
+495,29,filterLoc,,
+
+495,32,filterLoc,,
+
+495,35,filterLoc,,
+
+495,38,filterLoc,,
+
+495,41,filterLoc,,
+
+495,44,evacueeManager,outEvac,Evacuee 29 in triage category R is assigned helicopter 1
+495,44,evacueeManager,outEvac,Evacuee 19 in triage category R is assigned helicopter 1
+495,44,evacueeManager,outEvac,Evacuee 20 in triage category R is assigned helicopter 1
+495,44,evacueeManager,,,White: 0,Green: 0,Yellow: 6,Red: 3,Black: 4,Evacuees to Load: 
+
+495,48,filterLoc,,
+
+495,51,filterLoc,,
+
+495,54,filterLoc,,
+
+495,57,filterLoc,,
+
+495,60,filterLoc,,
+
+495,63,filterLoc,,
+
+495,66,filterLoc,,
+
+495,69,filterLoc,,
+
+495,72,filterLoc,,
+
+495,75,filterLoc,,
+
+495,78,filterLoc,,
+
+495,81,filterLoc,,
+
+495,84,filterLoc,,
+
+495,87,filterLoc,,
+
+495,90,filterLoc,,
+
+495,93,filterLoc,,
+
+495,96,filterLoc,,
+
+495,99,filterLoc,,
+
+495,102,filterLoc,,Evacuee 29 in triage category: R is entering helicopter 1
+
+495,105,filterLoc,,Evacuee 19 in triage category: R is entering helicopter 1
+
+495,108,filterLoc,,Evacuee 20 in triage category: R is entering helicopter 1
+
+495,111,filterLoc,,
+
+495,114,filterLoc,,
+
+495,117,filterLoc,,
+
+495,102,filterLoc,out,Evacuee 29 in triage category R is assigned helicopter 1
+495,102,filterLoc,,
+
+495,103,evacuee,,,Evacuee 29 in triage state: R is entering helicopter 1
+
+495,105,filterLoc,out,Evacuee 19 in triage category R is assigned helicopter 1
+495,105,filterLoc,,
+
+495,106,evacuee,,,Evacuee 19 in triage state: R is entering helicopter 1
+
+495,108,filterLoc,out,Evacuee 20 in triage category R is assigned helicopter 1
+495,108,filterLoc,,
+
+495,109,evacuee,,,Evacuee 20 in triage state: R is entering helicopter 1
+
+495,3,filterEvac,,
+
+495,7,filterEvac,,
+
+495,11,filterEvac,,
+
+495,15,filterEvac,,,Evacuee 19 in triage category: R is entering helicopter 1,Evacuee 20 in triage category: R is entering helicopter 1,Evacuee 29 in triage category: R is entering helicopter 1
+
+495,19,filterEvac,,
+
+495,103,evacuee,outHelo,Evacuee 29 in triage category R is assigned helicopter 1
+495,103,evacuee,,,Evacuee 29 in triage state: R is in helicopter 1
+
+495,106,evacuee,outHelo,Evacuee 19 in triage category R is assigned helicopter 1
+495,106,evacuee,,,Evacuee 19 in triage state: R is in helicopter 1
+
+495,109,evacuee,outHelo,Evacuee 20 in triage category R is assigned helicopter 1
+495,109,evacuee,,,Evacuee 20 in triage state: R is in helicopter 1
+
+495,15,filterEvac,out,Evacuee 19 in triage category R is assigned helicopter 1
+495,15,filterEvac,out,Evacuee 20 in triage category R is assigned helicopter 1
+495,15,filterEvac,out,Evacuee 29 in triage category R is assigned helicopter 1
+495,15,filterEvac,,
+
+495,17,helicopter,,,Helicopter 1 is loading people at the evacuation site and has 9 spots taken
+
+510,4,filterES,,
+
+510,8,filterES,,
+
+510,12,filterES,,
+
+510,13,helicopter,outES,Helicopter 2 is evacuating people2
+510,13,helicopter,,,Helicopter 2 is waiting to land at the evacuation site and has 0 spots taken
+
+510,16,filterES,,Helicopter 1 is evacuating people1
+
+510,20,filterES,,
+
+510,45,helipadManager,outHelo,Helicopter 1 is evacuating people1
+510,45,helipadManager,,,No helos are at ES
+
+510,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 2
+
+510,16,filterES,out,Helicopter 1 is evacuating people1
+510,16,filterES,,
+
+510,17,helicopter,,,Helicopter 1 is loading people at the evacuation site and has 9 spots taken
+
+510,45,helipadManager,outHQ,0
+510,45,helipadManager,,,No helos are at ES
+
+510,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 2
+
+510,4,filterES,,
+
+510,8,filterES,,
+
+510,12,filterES,,Helicopter 2 is evacuating people2
+
+510,16,filterES,,
+
+510,17,helicopter,,,Helicopter 1 is returning to the FOL and has 9 spots taken
+
+510,20,filterES,,
+
+510,45,helipadManager,,,No helos are at ES
+
+510,46,helicopterQueue,outHM,Helicopter 2 is evacuating people2
+510,46,helicopterQueue,outHelo,Helicopter 2 is evacuating people2
+510,46,helicopterQueue,,,No helos are waiting to land
+
+510,12,filterES,out,Helicopter 2 is evacuating people2
+510,12,filterES,,
+
+510,13,helicopter,,,Helicopter 2 is waiting to land at the evacuation site and has 0 spots taken
+
+510,44,evacueeManager,,,White: 0,Green: 0,Yellow: 6,Red: 0,Black: 4,Evacuees to Load: EvacueeID: 25HeloID: -1Triage Status: R
+EvacueeID: 31HeloID: -1Triage Status: R
+EvacueeID: 28HeloID: -1Triage Status: R
+
+
+510,45,helipadManager,outEM,Helicopter 2 is evacuating people2
+510,45,helipadManager,,,Helo: 2is at the ES
+
+510,13,helicopter,,,Helicopter 2 is loading people at the evacuation site and has 0 spots taken
+
+510,23,filterLoc,,
+
+510,26,filterLoc,,
+
+510,29,filterLoc,,
+
+510,32,filterLoc,,
+
+510,35,filterLoc,,
+
+510,38,filterLoc,,
+
+510,41,filterLoc,,
+
+510,44,evacueeManager,outEvac,Evacuee 25 in triage category R is assigned helicopter 2
+510,44,evacueeManager,outEvac,Evacuee 31 in triage category R is assigned helicopter 2
+510,44,evacueeManager,outEvac,Evacuee 28 in triage category R is assigned helicopter 2
+510,44,evacueeManager,,,White: 0,Green: 0,Yellow: 6,Red: 0,Black: 4,Evacuees to Load: 
+
+510,48,filterLoc,,
+
+510,51,filterLoc,,
+
+510,54,filterLoc,,
+
+510,57,filterLoc,,
+
+510,60,filterLoc,,
+
+510,63,filterLoc,,
+
+510,66,filterLoc,,
+
+510,69,filterLoc,,
+
+510,72,filterLoc,,
+
+510,75,filterLoc,,
+
+510,78,filterLoc,,
+
+510,81,filterLoc,,
+
+510,84,filterLoc,,
+
+510,87,filterLoc,,
+
+510,90,filterLoc,,
+
+510,93,filterLoc,,
+
+510,96,filterLoc,,
+
+510,99,filterLoc,,
+
+510,102,filterLoc,,
+
+510,105,filterLoc,,
+
+510,108,filterLoc,,
+
+510,111,filterLoc,,Evacuee 25 in triage category: R is entering helicopter 2
+
+510,114,filterLoc,,Evacuee 31 in triage category: R is entering helicopter 2
+
+510,117,filterLoc,,Evacuee 28 in triage category: R is entering helicopter 2
+
+510,111,filterLoc,out,Evacuee 25 in triage category R is assigned helicopter 2
+510,111,filterLoc,,
+
+510,112,evacuee,,,Evacuee 25 in triage state: R is entering helicopter 2
+
+510,114,filterLoc,out,Evacuee 31 in triage category R is assigned helicopter 2
+510,114,filterLoc,,
+
+510,115,evacuee,,,Evacuee 31 in triage state: R is entering helicopter 2
+
+510,117,filterLoc,out,Evacuee 28 in triage category R is assigned helicopter 2
+510,117,filterLoc,,
+
+510,118,evacuee,,,Evacuee 28 in triage state: R is entering helicopter 2
+
+510,3,filterEvac,,
+
+510,7,filterEvac,,
+
+510,11,filterEvac,,,Evacuee 25 in triage category: R is entering helicopter 2,Evacuee 28 in triage category: R is entering helicopter 2,Evacuee 31 in triage category: R is entering helicopter 2
+
+510,15,filterEvac,,
+
+510,19,filterEvac,,
+
+510,112,evacuee,outHelo,Evacuee 25 in triage category R is assigned helicopter 2
+510,112,evacuee,,,Evacuee 25 in triage state: R is in helicopter 2
+
+510,115,evacuee,outHelo,Evacuee 31 in triage category R is assigned helicopter 2
+510,115,evacuee,,,Evacuee 31 in triage state: R is in helicopter 2
+
+510,118,evacuee,outHelo,Evacuee 28 in triage category R is assigned helicopter 2
+510,118,evacuee,,,Evacuee 28 in triage state: R is in helicopter 2
+
+510,11,filterEvac,out,Evacuee 25 in triage category R is assigned helicopter 2
+510,11,filterEvac,out,Evacuee 28 in triage category R is assigned helicopter 2
+510,11,filterEvac,out,Evacuee 31 in triage category R is assigned helicopter 2
+510,11,filterEvac,,
+
+510,13,helicopter,,,Helicopter 2 is loading people at the evacuation site and has 9 spots taken
+
+525,4,filterES,,
+
+525,8,filterES,,
+
+525,9,helicopter,outES,Helicopter 3 is evacuating people3
+525,9,helicopter,,,Helicopter 3 is waiting to land at the evacuation site and has 0 spots taken
+
+525,12,filterES,,Helicopter 2 is evacuating people2
+
+525,16,filterES,,
+
+525,20,filterES,,
+
+525,45,helipadManager,outHelo,Helicopter 2 is evacuating people2
+525,45,helipadManager,,,No helos are at ES
+
+525,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 3
+
+525,12,filterES,out,Helicopter 2 is evacuating people2
+525,12,filterES,,
+
+525,13,helicopter,,,Helicopter 2 is loading people at the evacuation site and has 9 spots taken
+
+525,45,helipadManager,outHQ,0
+525,45,helipadManager,,,No helos are at ES
+
+525,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 3
+
+525,4,filterES,,
+
+525,8,filterES,,Helicopter 3 is evacuating people3
+
+525,12,filterES,,
+
+525,13,helicopter,,,Helicopter 2 is returning to the FOL and has 9 spots taken
+
+525,16,filterES,,
+
+525,20,filterES,,
+
+525,45,helipadManager,,,No helos are at ES
+
+525,46,helicopterQueue,outHM,Helicopter 3 is evacuating people3
+525,46,helicopterQueue,outHelo,Helicopter 3 is evacuating people3
+525,46,helicopterQueue,,,No helos are waiting to land
+
+525,8,filterES,out,Helicopter 3 is evacuating people3
+525,8,filterES,,
+
+525,9,helicopter,,,Helicopter 3 is waiting to land at the evacuation site and has 0 spots taken
+
+525,44,evacueeManager,,,White: 0,Green: 0,Yellow: 3,Red: 0,Black: 4,Evacuees to Load: EvacueeID: 12HeloID: -1Triage Status: Y
+EvacueeID: 13HeloID: -1Triage Status: Y
+EvacueeID: 14HeloID: -1Triage Status: Y
+
+
+525,45,helipadManager,outEM,Helicopter 3 is evacuating people3
+525,45,helipadManager,,,Helo: 3is at the ES
+
+525,9,helicopter,,,Helicopter 3 is loading people at the evacuation site and has 0 spots taken
+
+525,23,filterLoc,,
+
+525,26,filterLoc,,
+
+525,29,filterLoc,,
+
+525,32,filterLoc,,
+
+525,35,filterLoc,,
+
+525,38,filterLoc,,
+
+525,41,filterLoc,,
+
+525,44,evacueeManager,outEvac,Evacuee 12 in triage category Y is assigned helicopter 3
+525,44,evacueeManager,outEvac,Evacuee 13 in triage category Y is assigned helicopter 3
+525,44,evacueeManager,outEvac,Evacuee 14 in triage category Y is assigned helicopter 3
+525,44,evacueeManager,,,White: 0,Green: 0,Yellow: 3,Red: 0,Black: 4,Evacuees to Load: 
+
+525,48,filterLoc,,
+
+525,51,filterLoc,,Evacuee 13 in triage category: Y is entering helicopter 3
+
+525,54,filterLoc,,Evacuee 14 in triage category: Y is entering helicopter 3
+
+525,57,filterLoc,,
+
+525,60,filterLoc,,
+
+525,63,filterLoc,,
+
+525,66,filterLoc,,
+
+525,69,filterLoc,,Evacuee 12 in triage category: Y is entering helicopter 3
+
+525,72,filterLoc,,
+
+525,75,filterLoc,,
+
+525,78,filterLoc,,
+
+525,81,filterLoc,,
+
+525,84,filterLoc,,
+
+525,87,filterLoc,,
+
+525,90,filterLoc,,
+
+525,93,filterLoc,,
+
+525,96,filterLoc,,
+
+525,99,filterLoc,,
+
+525,102,filterLoc,,
+
+525,105,filterLoc,,
+
+525,108,filterLoc,,
+
+525,111,filterLoc,,
+
+525,114,filterLoc,,
+
+525,117,filterLoc,,
+
+525,51,filterLoc,out,Evacuee 13 in triage category Y is assigned helicopter 3
+525,51,filterLoc,,
+
+525,52,evacuee,,,Evacuee 13 in triage state: Y is entering helicopter 3
+
+525,54,filterLoc,out,Evacuee 14 in triage category Y is assigned helicopter 3
+525,54,filterLoc,,
+
+525,55,evacuee,,,Evacuee 14 in triage state: Y is entering helicopter 3
+
+525,69,filterLoc,out,Evacuee 12 in triage category Y is assigned helicopter 3
+525,69,filterLoc,,
+
+525,70,evacuee,,,Evacuee 12 in triage state: Y is entering helicopter 3
+
+525,3,filterEvac,,
+
+525,7,filterEvac,,,Evacuee 12 in triage category: Y is entering helicopter 3,Evacuee 13 in triage category: Y is entering helicopter 3,Evacuee 14 in triage category: Y is entering helicopter 3
+
+525,11,filterEvac,,
+
+525,15,filterEvac,,
+
+525,19,filterEvac,,
+
+525,52,evacuee,outHelo,Evacuee 13 in triage category Y is assigned helicopter 3
+525,52,evacuee,,,Evacuee 13 in triage state: Y is in helicopter 3
+
+525,55,evacuee,outHelo,Evacuee 14 in triage category Y is assigned helicopter 3
+525,55,evacuee,,,Evacuee 14 in triage state: Y is in helicopter 3
+
+525,70,evacuee,outHelo,Evacuee 12 in triage category Y is assigned helicopter 3
+525,70,evacuee,,,Evacuee 12 in triage state: Y is in helicopter 3
+
+525,7,filterEvac,out,Evacuee 12 in triage category Y is assigned helicopter 3
+525,7,filterEvac,out,Evacuee 13 in triage category Y is assigned helicopter 3
+525,7,filterEvac,out,Evacuee 14 in triage category Y is assigned helicopter 3
+525,7,filterEvac,,
+
+525,9,helicopter,,,Helicopter 3 is loading people at the evacuation site and has 9 spots taken
+
+540,4,filterES,,
+
+540,5,helicopter,outES,Helicopter 4 is evacuating people4
+540,5,helicopter,,,Helicopter 4 is waiting to land at the evacuation site and has 0 spots taken
+
+540,8,filterES,,Helicopter 3 is evacuating people3
+
+540,12,filterES,,
+
+540,16,filterES,,
+
+540,20,filterES,,
+
+540,45,helipadManager,outHelo,Helicopter 3 is evacuating people3
+540,45,helipadManager,,,No helos are at ES
+
+540,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 4
+
+540,8,filterES,out,Helicopter 3 is evacuating people3
+540,8,filterES,,
+
+540,9,helicopter,,,Helicopter 3 is loading people at the evacuation site and has 9 spots taken
+
+540,45,helipadManager,outHQ,0
+540,45,helipadManager,,,No helos are at ES
+
+540,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 4
+
+540,4,filterES,,Helicopter 4 is evacuating people4
+
+540,8,filterES,,
+
+540,9,helicopter,,,Helicopter 3 is returning to the FOL and has 9 spots taken
+
+540,12,filterES,,
+
+540,16,filterES,,
+
+540,20,filterES,,
+
+540,45,helipadManager,,,No helos are at ES
+
+540,46,helicopterQueue,outHM,Helicopter 4 is evacuating people4
+540,46,helicopterQueue,outHelo,Helicopter 4 is evacuating people4
+540,46,helicopterQueue,,,No helos are waiting to land
+
+540,4,filterES,out,Helicopter 4 is evacuating people4
+540,4,filterES,,
+
+540,5,helicopter,,,Helicopter 4 is waiting to land at the evacuation site and has 0 spots taken
+
+540,44,evacueeManager,,,White: 0,Green: 0,Yellow: 0,Red: 0,Black: 4,Evacuees to Load: EvacueeID: 24HeloID: -1Triage Status: Y
+EvacueeID: 27HeloID: -1Triage Status: Y
+EvacueeID: 33HeloID: -1Triage Status: Y
+
+
+540,45,helipadManager,outEM,Helicopter 4 is evacuating people4
+540,45,helipadManager,,,Helo: 4is at the ES
+
+540,5,helicopter,,,Helicopter 4 is loading people at the evacuation site and has 0 spots taken
+
+540,23,filterLoc,,Evacuee 33 in triage category: Y is entering helicopter 4
+
+540,26,filterLoc,,
+
+540,29,filterLoc,,
+
+540,32,filterLoc,,
+
+540,35,filterLoc,,
+
+540,38,filterLoc,,
+
+540,41,filterLoc,,
+
+540,44,evacueeManager,outEvac,Evacuee 24 in triage category Y is assigned helicopter 4
+540,44,evacueeManager,outEvac,Evacuee 27 in triage category Y is assigned helicopter 4
+540,44,evacueeManager,outEvac,Evacuee 33 in triage category Y is assigned helicopter 4
+540,44,evacueeManager,outHM,1
+540,44,evacueeManager,,,White: 0,Green: 0,Yellow: 0,Red: 0,Black: 4,Evacuees to Load: 
+
+540,45,helipadManager,,,Helo: 4is at the ES,Stopped evacuating people
+
+540,48,filterLoc,,
+
+540,51,filterLoc,,
+
+540,54,filterLoc,,
+
+540,57,filterLoc,,
+
+540,60,filterLoc,,
+
+540,63,filterLoc,,Evacuee 24 in triage category: Y is entering helicopter 4
+
+540,66,filterLoc,,Evacuee 27 in triage category: Y is entering helicopter 4
+
+540,69,filterLoc,,
+
+540,72,filterLoc,,
+
+540,75,filterLoc,,
+
+540,78,filterLoc,,
+
+540,81,filterLoc,,
+
+540,84,filterLoc,,
+
+540,87,filterLoc,,
+
+540,90,filterLoc,,
+
+540,93,filterLoc,,
+
+540,96,filterLoc,,
+
+540,99,filterLoc,,
+
+540,102,filterLoc,,
+
+540,105,filterLoc,,
+
+540,108,filterLoc,,
+
+540,111,filterLoc,,
+
+540,114,filterLoc,,
+
+540,117,filterLoc,,
+
+540,4,filterES,,Helicopter 4 has stopped
+
+540,8,filterES,,
+
+540,12,filterES,,
+
+540,16,filterES,,
+
+540,20,filterES,,
+
+540,23,filterLoc,out,Evacuee 33 in triage category Y is assigned helicopter 4
+540,23,filterLoc,,
+
+540,24,evacuee,,,Evacuee 33 in triage state: Y is entering helicopter 4
+
+540,45,helipadManager,outHelo,Helicopter 4 has stopped
+540,45,helipadManager,outHQ,1
+540,45,helipadManager,,,No helos are at ES,Stopped evacuating people
+
+540,46,helicopterQueue,,,No helos are waiting to land
+
+540,63,filterLoc,out,Evacuee 24 in triage category Y is assigned helicopter 4
+540,63,filterLoc,,
+
+540,64,evacuee,,,Evacuee 24 in triage state: Y is entering helicopter 4
+
+540,66,filterLoc,out,Evacuee 27 in triage category Y is assigned helicopter 4
+540,66,filterLoc,,
+
+540,67,evacuee,,,Evacuee 27 in triage state: Y is entering helicopter 4
+
+540,3,filterEvac,,,Evacuee 24 in triage category: Y is entering helicopter 4,Evacuee 27 in triage category: Y is entering helicopter 4,Evacuee 33 in triage category: Y is entering helicopter 4
+
+540,4,filterES,out,Helicopter 4 has stopped
+540,4,filterES,,
+
+540,5,helicopter,,,Helicopter 4 is loading people at the evacuation site and has 0 spots taken
+
+540,7,filterEvac,,
+
+540,11,filterEvac,,
+
+540,15,filterEvac,,
+
+540,19,filterEvac,,
+
+540,24,evacuee,outHelo,Evacuee 33 in triage category Y is assigned helicopter 4
+540,24,evacuee,,,Evacuee 33 in triage state: Y is in helicopter 4
+
+540,46,helicopterQueue,,,No helos are waiting to land
+
+540,64,evacuee,outHelo,Evacuee 24 in triage category Y is assigned helicopter 4
+540,64,evacuee,,,Evacuee 24 in triage state: Y is in helicopter 4
+
+540,67,evacuee,outHelo,Evacuee 27 in triage category Y is assigned helicopter 4
+540,67,evacuee,,,Evacuee 27 in triage state: Y is in helicopter 4
+
+540,3,filterEvac,out,Evacuee 24 in triage category Y is assigned helicopter 4
+540,3,filterEvac,out,Evacuee 27 in triage category Y is assigned helicopter 4
+540,3,filterEvac,out,Evacuee 33 in triage category Y is assigned helicopter 4
+540,3,filterEvac,,
+
+540,5,helicopter,,,Helicopter 4 is returning to the FOL and has 9 spots taken
+
+555,21,helicopter,outES,Helicopter 5 is evacuating people5
+555,21,helicopter,,,Helicopter 5 is waiting to land at the evacuation site and has 0 spots taken
+
+555,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 5
+
+555,4,filterES,,
+
+555,8,filterES,,
+
+555,12,filterES,,
+
+555,16,filterES,,
+
+555,20,filterES,,Helicopter 5 has stopped
+
+555,46,helicopterQueue,outHelo,Helicopter 5 has stopped
+555,46,helicopterQueue,,,No helos are waiting to land
+
+555,20,filterES,out,Helicopter 5 has stopped
+555,20,filterES,,
+
+555,21,helicopter,,,Helicopter 5 is waiting to land at the evacuation site and has 0 spots taken
+
+555,21,helicopter,,,Helicopter 5 is returning to the FOL and has 0 spots taken
+
+660,17,helicopter,outEvac,Evacuee 19 in triage category R is not assigned a helicopter
+660,17,helicopter,outEvac,Evacuee 20 in triage category R is not assigned a helicopter
+660,17,helicopter,outEvac,Evacuee 29 in triage category R is not assigned a helicopter
+660,17,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+660,23,filterLoc,,
+
+660,26,filterLoc,,
+
+660,29,filterLoc,,
+
+660,32,filterLoc,,
+
+660,35,filterLoc,,
+
+660,38,filterLoc,,
+
+660,41,filterLoc,,
+
+660,48,filterLoc,,
+
+660,51,filterLoc,,
+
+660,54,filterLoc,,
+
+660,57,filterLoc,,
+
+660,60,filterLoc,,
+
+660,63,filterLoc,,
+
+660,66,filterLoc,,
+
+660,69,filterLoc,,
+
+660,72,filterLoc,,
+
+660,75,filterLoc,,
+
+660,78,filterLoc,,
+
+660,81,filterLoc,,
+
+660,84,filterLoc,,
+
+660,87,filterLoc,,
+
+660,90,filterLoc,,
+
+660,93,filterLoc,,
+
+660,96,filterLoc,,
+
+660,99,filterLoc,,
+
+660,102,filterLoc,,Evacuee 29 in triage category: R is leaving helicopter 1
+
+660,105,filterLoc,,Evacuee 19 in triage category: R is leaving helicopter 1
+
+660,108,filterLoc,,Evacuee 20 in triage category: R is leaving helicopter 1
+
+660,111,filterLoc,,
+
+660,114,filterLoc,,
+
+660,117,filterLoc,,
+
+660,102,filterLoc,out,Evacuee 29 in triage category R is not assigned a helicopter
+660,102,filterLoc,,
+
+660,103,evacuee,,,Evacuee 29 in triage state: R is entering the FOL
+
+660,105,filterLoc,out,Evacuee 19 in triage category R is not assigned a helicopter
+660,105,filterLoc,,
+
+660,106,evacuee,,,Evacuee 19 in triage state: R is entering the FOL
+
+660,108,filterLoc,out,Evacuee 20 in triage category R is not assigned a helicopter
+660,108,filterLoc,,
+
+660,109,evacuee,,,Evacuee 20 in triage state: R is entering the FOL
+
+660,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y,EvacueeID 8,Triage Status: Y,EvacueeID 10,Triage Status: Y,EvacueeID 17,Triage Status: R,EvacueeID 19,Triage Status: R,EvacueeID 20,Triage Status: R,EvacueeID 29,Triage Status: R
+
+660,103,evacuee,outFOL,Evacuee 29 in triage category R is not assigned a helicopter
+660,103,evacuee,,,Evacuee 29 in triage state: R is at the FOL
+
+660,106,evacuee,outFOL,Evacuee 19 in triage category R is not assigned a helicopter
+660,106,evacuee,,,Evacuee 19 in triage state: R is at the FOL
+
+660,109,evacuee,outFOL,Evacuee 20 in triage category R is not assigned a helicopter
+660,109,evacuee,,,Evacuee 20 in triage state: R is at the FOL
+
+660,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y,EvacueeID 8,Triage Status: Y,EvacueeID 10,Triage Status: Y,EvacueeID 17,Triage Status: R,EvacueeID 19,Triage Status: R,EvacueeID 20,Triage Status: R,EvacueeID 29,Triage Status: R
+
+675,13,helicopter,outEvac,Evacuee 25 in triage category R is not assigned a helicopter
+675,13,helicopter,outEvac,Evacuee 28 in triage category R is not assigned a helicopter
+675,13,helicopter,outEvac,Evacuee 31 in triage category R is not assigned a helicopter
+675,13,helicopter,,,Helicopter 2 is unloading people at the FOL and has 0 spots taken
+
+675,17,helicopter,,,Helicopter 1 Is going to the evacuation site and has 0 spots taken
+
+675,23,filterLoc,,
+
+675,26,filterLoc,,
+
+675,29,filterLoc,,
+
+675,32,filterLoc,,
+
+675,35,filterLoc,,
+
+675,38,filterLoc,,
+
+675,41,filterLoc,,
+
+675,48,filterLoc,,
+
+675,51,filterLoc,,
+
+675,54,filterLoc,,
+
+675,57,filterLoc,,
+
+675,60,filterLoc,,
+
+675,63,filterLoc,,
+
+675,66,filterLoc,,
+
+675,69,filterLoc,,
+
+675,72,filterLoc,,
+
+675,75,filterLoc,,
+
+675,78,filterLoc,,
+
+675,81,filterLoc,,
+
+675,84,filterLoc,,
+
+675,87,filterLoc,,
+
+675,90,filterLoc,,
+
+675,93,filterLoc,,
+
+675,96,filterLoc,,
+
+675,99,filterLoc,,
+
+675,102,filterLoc,,
+
+675,105,filterLoc,,
+
+675,108,filterLoc,,
+
+675,111,filterLoc,,Evacuee 25 in triage category: R is leaving helicopter 2
+
+675,114,filterLoc,,Evacuee 31 in triage category: R is leaving helicopter 2
+
+675,117,filterLoc,,Evacuee 28 in triage category: R is leaving helicopter 2
+
+675,111,filterLoc,out,Evacuee 25 in triage category R is not assigned a helicopter
+675,111,filterLoc,,
+
+675,112,evacuee,,,Evacuee 25 in triage state: R is entering the FOL
+
+675,114,filterLoc,out,Evacuee 31 in triage category R is not assigned a helicopter
+675,114,filterLoc,,
+
+675,115,evacuee,,,Evacuee 31 in triage state: R is entering the FOL
+
+675,117,filterLoc,out,Evacuee 28 in triage category R is not assigned a helicopter
+675,117,filterLoc,,
+
+675,118,evacuee,,,Evacuee 28 in triage state: R is entering the FOL
+
+675,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y,EvacueeID 8,Triage Status: Y,EvacueeID 10,Triage Status: Y,EvacueeID 17,Triage Status: R,EvacueeID 19,Triage Status: R,EvacueeID 20,Triage Status: R,EvacueeID 29,Triage Status: R,EvacueeID 25,Triage Status: R,EvacueeID 28,Triage Status: R,EvacueeID 31,Triage Status: R
+
+675,112,evacuee,outFOL,Evacuee 25 in triage category R is not assigned a helicopter
+675,112,evacuee,,,Evacuee 25 in triage state: R is at the FOL
+
+675,115,evacuee,outFOL,Evacuee 31 in triage category R is not assigned a helicopter
+675,115,evacuee,,,Evacuee 31 in triage state: R is at the FOL
+
+675,118,evacuee,outFOL,Evacuee 28 in triage category R is not assigned a helicopter
+675,118,evacuee,,,Evacuee 28 in triage state: R is at the FOL
+
+675,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y,EvacueeID 8,Triage Status: Y,EvacueeID 10,Triage Status: Y,EvacueeID 17,Triage Status: R,EvacueeID 19,Triage Status: R,EvacueeID 20,Triage Status: R,EvacueeID 29,Triage Status: R,EvacueeID 25,Triage Status: R,EvacueeID 28,Triage Status: R,EvacueeID 31,Triage Status: R
+
+690,5,helicopter,outEvac,Evacuee 24 in triage category Y is not assigned a helicopter
+690,5,helicopter,outEvac,Evacuee 27 in triage category Y is not assigned a helicopter
+690,5,helicopter,outEvac,Evacuee 33 in triage category Y is not assigned a helicopter
+690,5,helicopter,,,Helicopter 4 is unloading people at the FOL and has 0 spots taken
+
+690,9,helicopter,outEvac,Evacuee 12 in triage category Y is not assigned a helicopter
+690,9,helicopter,outEvac,Evacuee 13 in triage category Y is not assigned a helicopter
+690,9,helicopter,outEvac,Evacuee 14 in triage category Y is not assigned a helicopter
+690,9,helicopter,,,Helicopter 3 is unloading people at the FOL and has 0 spots taken
+
+690,13,helicopter,,,Helicopter 2 Is going to the evacuation site and has 0 spots taken
+
+690,23,filterLoc,,Evacuee 33 in triage category: Y is leaving helicopter 4
+
+690,26,filterLoc,,
+
+690,29,filterLoc,,
+
+690,32,filterLoc,,
+
+690,35,filterLoc,,
+
+690,38,filterLoc,,
+
+690,41,filterLoc,,
+
+690,48,filterLoc,,
+
+690,51,filterLoc,,Evacuee 13 in triage category: Y is leaving helicopter 3
+
+690,54,filterLoc,,Evacuee 14 in triage category: Y is leaving helicopter 3
+
+690,57,filterLoc,,
+
+690,60,filterLoc,,
+
+690,63,filterLoc,,Evacuee 24 in triage category: Y is leaving helicopter 4
+
+690,66,filterLoc,,Evacuee 27 in triage category: Y is leaving helicopter 4
+
+690,69,filterLoc,,Evacuee 12 in triage category: Y is leaving helicopter 3
+
+690,72,filterLoc,,
+
+690,75,filterLoc,,
+
+690,78,filterLoc,,
+
+690,81,filterLoc,,
+
+690,84,filterLoc,,
+
+690,87,filterLoc,,
+
+690,90,filterLoc,,
+
+690,93,filterLoc,,
+
+690,96,filterLoc,,
+
+690,99,filterLoc,,
+
+690,102,filterLoc,,
+
+690,105,filterLoc,,
+
+690,108,filterLoc,,
+
+690,111,filterLoc,,
+
+690,114,filterLoc,,
+
+690,117,filterLoc,,
+
+690,23,filterLoc,out,Evacuee 33 in triage category Y is not assigned a helicopter
+690,23,filterLoc,,
+
+690,24,evacuee,,,Evacuee 33 in triage state: Y is entering the FOL
+
+690,51,filterLoc,out,Evacuee 13 in triage category Y is not assigned a helicopter
+690,51,filterLoc,,
+
+690,52,evacuee,,,Evacuee 13 in triage state: Y is entering the FOL
+
+690,54,filterLoc,out,Evacuee 14 in triage category Y is not assigned a helicopter
+690,54,filterLoc,,
+
+690,55,evacuee,,,Evacuee 14 in triage state: Y is entering the FOL
+
+690,63,filterLoc,out,Evacuee 24 in triage category Y is not assigned a helicopter
+690,63,filterLoc,,
+
+690,64,evacuee,,,Evacuee 24 in triage state: Y is entering the FOL
+
+690,66,filterLoc,out,Evacuee 27 in triage category Y is not assigned a helicopter
+690,66,filterLoc,,
+
+690,67,evacuee,,,Evacuee 27 in triage state: Y is entering the FOL
+
+690,69,filterLoc,out,Evacuee 12 in triage category Y is not assigned a helicopter
+690,69,filterLoc,,
+
+690,70,evacuee,,,Evacuee 12 in triage state: Y is entering the FOL
+
+690,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y,EvacueeID 8,Triage Status: Y,EvacueeID 10,Triage Status: Y,EvacueeID 17,Triage Status: R,EvacueeID 19,Triage Status: R,EvacueeID 20,Triage Status: R,EvacueeID 29,Triage Status: R,EvacueeID 25,Triage Status: R,EvacueeID 28,Triage Status: R,EvacueeID 31,Triage Status: R,EvacueeID 12,Triage Status: Y,EvacueeID 13,Triage Status: Y,EvacueeID 14,Triage Status: Y,EvacueeID 24,Triage Status: Y,EvacueeID 27,Triage Status: Y,EvacueeID 33,Triage Status: Y
+
+690,24,evacuee,outFOL,Evacuee 33 in triage category Y is not assigned a helicopter
+690,24,evacuee,,,Evacuee 33 in triage state: Y is at the FOL
+
+690,52,evacuee,outFOL,Evacuee 13 in triage category Y is not assigned a helicopter
+690,52,evacuee,,,Evacuee 13 in triage state: Y is at the FOL
+
+690,55,evacuee,outFOL,Evacuee 14 in triage category Y is not assigned a helicopter
+690,55,evacuee,,,Evacuee 14 in triage state: Y is at the FOL
+
+690,64,evacuee,outFOL,Evacuee 24 in triage category Y is not assigned a helicopter
+690,64,evacuee,,,Evacuee 24 in triage state: Y is at the FOL
+
+690,67,evacuee,outFOL,Evacuee 27 in triage category Y is not assigned a helicopter
+690,67,evacuee,,,Evacuee 27 in triage state: Y is at the FOL
+
+690,70,evacuee,outFOL,Evacuee 12 in triage category Y is not assigned a helicopter
+690,70,evacuee,,,Evacuee 12 in triage state: Y is at the FOL
+
+690,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y,EvacueeID 8,Triage Status: Y,EvacueeID 10,Triage Status: Y,EvacueeID 17,Triage Status: R,EvacueeID 19,Triage Status: R,EvacueeID 20,Triage Status: R,EvacueeID 29,Triage Status: R,EvacueeID 25,Triage Status: R,EvacueeID 28,Triage Status: R,EvacueeID 31,Triage Status: R,EvacueeID 12,Triage Status: Y,EvacueeID 13,Triage Status: Y,EvacueeID 14,Triage Status: Y,EvacueeID 24,Triage Status: Y,EvacueeID 27,Triage Status: Y,EvacueeID 33,Triage Status: Y
+
+705,9,helicopter,,,Helicopter 3 Is going to the evacuation site and has 0 spots taken
+
+705,21,helicopter,,,Helicopter 5 is unloading people at the FOL and has 0 spots taken
+
+825,17,helicopter,outES,Helicopter 1 is evacuating people1
+825,17,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+825,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 1
+
+825,4,filterES,,
+
+825,8,filterES,,
+
+825,12,filterES,,
+
+825,16,filterES,,Helicopter 1 has stopped
+
+825,20,filterES,,
+
+825,46,helicopterQueue,outHelo,Helicopter 1 has stopped
+825,46,helicopterQueue,,,No helos are waiting to land
+
+825,16,filterES,out,Helicopter 1 has stopped
+825,16,filterES,,
+
+825,17,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+825,17,helicopter,,,Helicopter 1 is returning to the FOL and has 0 spots taken
+
+840,13,helicopter,outES,Helicopter 2 is evacuating people2
+840,13,helicopter,,,Helicopter 2 is waiting to land at the evacuation site and has 0 spots taken
+
+840,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 2
+
+840,4,filterES,,
+
+840,8,filterES,,
+
+840,12,filterES,,Helicopter 2 has stopped
+
+840,16,filterES,,
+
+840,20,filterES,,
+
+840,46,helicopterQueue,outHelo,Helicopter 2 has stopped
+840,46,helicopterQueue,,,No helos are waiting to land
+
+840,12,filterES,out,Helicopter 2 has stopped
+840,12,filterES,,
+
+840,13,helicopter,,,Helicopter 2 is waiting to land at the evacuation site and has 0 spots taken
+
+840,13,helicopter,,,Helicopter 2 is returning to the FOL and has 0 spots taken
+
+855,9,helicopter,outES,Helicopter 3 is evacuating people3
+855,9,helicopter,,,Helicopter 3 is waiting to land at the evacuation site and has 0 spots taken
+
+855,46,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 3
+
+855,4,filterES,,
+
+855,8,filterES,,Helicopter 3 has stopped
+
+855,12,filterES,,
+
+855,16,filterES,,
+
+855,20,filterES,,
+
+855,46,helicopterQueue,outHelo,Helicopter 3 has stopped
+855,46,helicopterQueue,,,No helos are waiting to land
+
+855,8,filterES,out,Helicopter 3 has stopped
+855,8,filterES,,
+
+855,9,helicopter,,,Helicopter 3 is waiting to land at the evacuation site and has 0 spots taken
+
+855,9,helicopter,,,Helicopter 3 is returning to the FOL and has 0 spots taken
+
+975,17,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+990,13,helicopter,,,Helicopter 2 is unloading people at the FOL and has 0 spots taken
+
+990,1,FOL,,,EvacueeID 9,Triage Status: R,EvacueeID 18,Triage Status: R,EvacueeID 23,Triage Status: R,EvacueeID 5,Triage Status: R,EvacueeID 11,Triage Status: R,EvacueeID 21,Triage Status: R,EvacueeID 16,Triage Status: R,EvacueeID 22,Triage Status: R,EvacueeID 26,Triage Status: R,EvacueeID 3,Triage Status: Y,EvacueeID 4,Triage Status: R,EvacueeID 7,Triage Status: Y,EvacueeID 8,Triage Status: Y,EvacueeID 10,Triage Status: Y,EvacueeID 17,Triage Status: R,EvacueeID 19,Triage Status: R,EvacueeID 20,Triage Status: R,EvacueeID 29,Triage Status: R,EvacueeID 25,Triage Status: R,EvacueeID 28,Triage Status: R,EvacueeID 31,Triage Status: R,EvacueeID 12,Triage Status: Y,EvacueeID 13,Triage Status: Y,EvacueeID 14,Triage Status: Y,EvacueeID 24,Triage Status: Y,EvacueeID 27,Triage Status: Y,EvacueeID 33,Triage Status: Y
+
+990,3,filterEvac,,
+
+990,4,filterES,,
+
+990,5,helicopter,,,Helicopter 4 is unloading people at the FOL and has 0 spots taken
+
+990,7,filterEvac,,
+
+990,8,filterES,,
+
+990,9,helicopter,,,Helicopter 3 is returning to the FOL and has 0 spots taken
+
+990,11,filterEvac,,
+
+990,12,filterES,,
+
+990,13,helicopter,,,Helicopter 2 is unloading people at the FOL and has 0 spots taken
+
+990,15,filterEvac,,
+
+990,16,filterES,,
+
+990,17,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+990,19,filterEvac,,
+
+990,20,filterES,,
+
+990,21,helicopter,,,Helicopter 5 is unloading people at the FOL and has 0 spots taken
+
+990,23,filterLoc,,
+
+990,24,evacuee,,,Evacuee 33 in triage state: Y is at the FOL
+
+990,26,filterLoc,,
+
+990,27,evacuee,,,Evacuee 32 in triage state: B is at the evacuation site
+
+990,29,filterLoc,,
+
+990,30,evacuee,,,Evacuee 23 in triage state: R is at the FOL
+
+990,32,filterLoc,,
+
+990,33,evacuee,,,Evacuee 18 in triage state: R is at the FOL
+
+990,35,filterLoc,,
+
+990,36,evacuee,,,Evacuee 21 in triage state: R is at the FOL
+
+990,38,filterLoc,,
+
+990,39,evacuee,,,Evacuee 11 in triage state: R is at the FOL
+
+990,41,filterLoc,,
+
+990,42,evacuee,,,Evacuee 26 in triage state: R is at the FOL
+
+990,44,evacueeManager,,,White: 0,Green: 0,Yellow: 0,Red: 0,Black: 4,Evacuees to Load: 
+
+990,45,helipadManager,,,No helos are at ES,Stopped evacuating people
+
+990,46,helicopterQueue,,,No helos are waiting to land
+
+990,48,filterLoc,,
+
+990,49,evacuee,,,Evacuee 10 in triage state: Y is at the FOL
+
+990,51,filterLoc,,
+
+990,52,evacuee,,,Evacuee 13 in triage state: Y is at the FOL
+
+990,54,filterLoc,,
+
+990,55,evacuee,,,Evacuee 14 in triage state: Y is at the FOL
+
+990,57,filterLoc,,
+
+990,58,evacuee,,,Evacuee 8 in triage state: Y is at the FOL
+
+990,60,filterLoc,,
+
+990,61,evacuee,,,Evacuee 3 in triage state: Y is at the FOL
+
+990,63,filterLoc,,
+
+990,64,evacuee,,,Evacuee 24 in triage state: Y is at the FOL
+
+990,66,filterLoc,,
+
+990,67,evacuee,,,Evacuee 27 in triage state: Y is at the FOL
+
+990,69,filterLoc,,
+
+990,70,evacuee,,,Evacuee 12 in triage state: Y is at the FOL
+
+990,72,filterLoc,,
+
+990,73,evacuee,,,Evacuee 7 in triage state: Y is at the FOL
+
+990,75,filterLoc,,
+
+990,76,evacuee,,,Evacuee 6 in triage state: B is at the evacuation site
+
+990,78,filterLoc,,
+
+990,79,evacuee,,,Evacuee 15 in triage state: B is at the evacuation site
+
+990,81,filterLoc,,
+
+990,82,evacuee,,,Evacuee 30 in triage state: B is at the evacuation site
+
+990,84,filterLoc,,
+
+990,85,evacuee,,,Evacuee 9 in triage state: R is at the FOL
+
+990,87,filterLoc,,
+
+990,88,evacuee,,,Evacuee 5 in triage state: R is at the FOL
+
+990,90,filterLoc,,
+
+990,91,evacuee,,,Evacuee 16 in triage state: R is at the FOL
+
+990,93,filterLoc,,
+
+990,94,evacuee,,,Evacuee 22 in triage state: R is at the FOL
+
+990,96,filterLoc,,
+
+990,97,evacuee,,,Evacuee 4 in triage state: R is at the FOL
+
+990,99,filterLoc,,
+
+990,100,evacuee,,,Evacuee 17 in triage state: R is at the FOL
+
+990,102,filterLoc,,
+
+990,103,evacuee,,,Evacuee 29 in triage state: R is at the FOL
+
+990,105,filterLoc,,
+
+990,106,evacuee,,,Evacuee 19 in triage state: R is at the FOL
+
+990,108,filterLoc,,
+
+990,109,evacuee,,,Evacuee 20 in triage state: R is at the FOL
+
+990,111,filterLoc,,
+
+990,112,evacuee,,,Evacuee 25 in triage state: R is at the FOL
+
+990,114,filterLoc,,
+
+990,115,evacuee,,,Evacuee 31 in triage state: R is at the FOL
+
+990,117,filterLoc,,
+
+990,118,evacuee,,,Evacuee 28 in triage state: R is at the FOL
+
