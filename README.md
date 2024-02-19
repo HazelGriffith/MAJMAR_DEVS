@@ -8,6 +8,6 @@ make clean: clears the bin and build folders
 
 RUNNING TESTS
 
-From the bin folder open a terminal and run the executable with a single number indicating which test you want to run
+From the bin folder open a terminal and run the executable with a single number indicating which test you want to run. Currently, there are only 2 different tests each.
 
 Example: ./FILTER_LOC_TEST 2
