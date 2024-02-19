@@ -21,8 +21,8 @@ namespace cadmium::assignment1 {
             auto helicopter = addComponent<Helicopter>("Helicopter", 1);
 
             // Declare and initialize all simulated input files (these must exist in the file system before compilation)
-			std::string filepath1 = "../../input_data/helicopter_inEvac_test" + testNumber + "_input.txt";
-			std::string filepath2 = "../../input_data/helicopter_inES_test" + testNumber + "_input.txt";
+			std::string filepath1 = "../input_data/helicopter_inEvac_test" + testNumber + "_input.txt";
+			std::string filepath2 = "../input_data/helicopter_inES_test" + testNumber + "_input.txt";
 			
 			
             auto helicopterInputEvac = addComponent<cadmium::lib::IEStream<EvacInfo>>("HelicopterInputEvac",filepath1.c_str());

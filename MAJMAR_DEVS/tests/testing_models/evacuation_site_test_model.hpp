@@ -23,22 +23,20 @@ namespace cadmium::assignment1 {
 
             // Declare and initialize all controller models (non-input/output)
 			vector<EvacInfo> evacuees;
-			int evacID = 1;
-			for (int i = 0; i < 25; i++){
-				evacuees.push_back(EvacInfo{evacID+i,-1,false,'W'});
-				evacID++;
-			}
+			evacuees.push_back(EvacInfo{1,-1,false,'G'});
+			evacuees.push_back(EvacInfo{2,-1,false,'R'});
 			
 			shared_ptr<EvacuationSite> evacuationSite = addComponent<EvacuationSite>("evacuationSite", 15, evacuees);
 			
-			std::string filepath1 = "../../input_data/evacuee_manager_inEvac_test" + testNumber + "_input.txt";
-			std::string filepath2 = "../../input_data/evacuee_manager_inHelo_test" + testNumber + "_input.txt";
+			std::string filepath1 = "../input_data/evacuation_site_inEvac_test" + testNumber + "_input.txt";
+			std::string filepath2 = "../input_data/evacuation_site_inHelo_test" + testNumber + "_input.txt";
 			
-			auto evacuationSiteInputEvac = addComponent<cadmium::lib::IEStream<EvacInfo>>("EvacueeManagerInputEvac",filepath1.c_str());
-			auto evacuationSiteInputHelo = addComponent<cadmium::lib::IEStream<HeloInfo>>("EvacueeManagerInputHelo",filepath2.c_str());
+			auto evacuationSiteInputEvac = addComponent<cadmium::lib::IEStream<EvacInfo>>("evacuationSiteInputEvac", filepath1.c_str());
+			auto evacuationSiteInputHelo = addComponent<cadmium::lib::IEStream<HeloInfo>>("evacuationSiteInputHelo", filepath2.c_str());
 			
 			addCoupling(evacuationSiteInputEvac->out, evacuationSite->inEvac);
 			addCoupling(evacuationSiteInputHelo->out, evacuationSite->inHelo);
+
         }
     };
 } // namespace cadmium::assignment1

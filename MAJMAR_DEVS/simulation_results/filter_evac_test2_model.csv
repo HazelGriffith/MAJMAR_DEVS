@@ -1,0 +1,15 @@
+time,model_id,model_name,port_name,data
+0,1,filterEvacInput,,0
+0,2,filterEvac,,
+
+0,1,filterEvacInput,out,Evacuee 1 in triage category W is assigned helicopter 3
+0,1,filterEvacInput,,10
+0,2,filterEvac,,
+
+10,1,filterEvacInput,out,Evacuee 2 in triage category W is assigned helicopter 2
+10,1,filterEvacInput,,inf
+10,2,filterEvac,,
+
+10,1,filterEvacInput,,inf
+10,2,filterEvac,,
+

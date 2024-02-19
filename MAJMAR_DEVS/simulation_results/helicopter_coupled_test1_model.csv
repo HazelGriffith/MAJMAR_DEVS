@@ -1,0 +1,70 @@
+time,model_id,model_name,port_name,data
+0,1,helicopterCoupledInputES,,176
+0,2,helicopterCoupledInputEvac,,191
+0,4,filterEvac,,
+
+0,5,filterES,,
+
+0,6,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+15,6,helicopter,,,Helicopter 1 Is going to the evacuation site and has 0 spots taken
+
+165,6,helicopter,outES,Helicopter 1 is evacuating people1
+165,6,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+176,1,helicopterCoupledInputES,out,Helicopter 1 is evacuating people1
+176,1,helicopterCoupledInputES,,15
+176,5,filterES,,Helicopter 1 is evacuating people1
+
+176,5,filterES,out,Helicopter 1 is evacuating people1
+176,5,filterES,,
+
+176,6,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+176,6,helicopter,,,Helicopter 1 is loading people at the evacuation site and has 0 spots taken
+
+191,1,helicopterCoupledInputES,out,Helicopter 1 is evacuating people1
+191,1,helicopterCoupledInputES,,319
+191,2,helicopterCoupledInputEvac,out,Evacuee 1 in triage category G is assigned helicopter 1
+191,2,helicopterCoupledInputEvac,,inf
+191,4,filterEvac,,,Evacuee 1 in triage category: G is entering helicopter 1
+
+191,5,filterES,,Helicopter 1 is evacuating people1
+
+191,4,filterEvac,out,Evacuee 1 in triage category G is assigned helicopter 1
+191,4,filterEvac,,
+
+191,5,filterES,out,Helicopter 1 is evacuating people1
+191,5,filterES,,
+
+191,6,helicopter,,,Helicopter 1 is loading people at the evacuation site and has 1 spots taken
+
+191,6,helicopter,,,Helicopter 1 is returning to the FOL and has 1 spots taken
+
+341,6,helicopter,outEvac,Evacuee 1 in triage category G is not assigned a helicopter
+341,6,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+356,6,helicopter,,,Helicopter 1 Is going to the evacuation site and has 0 spots taken
+
+506,6,helicopter,outES,Helicopter 1 is evacuating people1
+506,6,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+510,1,helicopterCoupledInputES,out,Helicopter 1 has stopped
+510,1,helicopterCoupledInputES,,inf
+510,5,filterES,,Helicopter 1 has stopped
+
+510,5,filterES,out,Helicopter 1 has stopped
+510,5,filterES,,
+
+510,6,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+510,6,helicopter,,,Helicopter 1 is returning to the FOL and has 0 spots taken
+
+510,1,helicopterCoupledInputES,,inf
+510,2,helicopterCoupledInputEvac,,inf
+510,4,filterEvac,,
+
+510,5,filterES,,
+
+510,6,helicopter,,,Helicopter 1 is returning to the FOL and has 0 spots taken
+

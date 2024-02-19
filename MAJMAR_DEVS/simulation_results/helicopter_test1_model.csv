@@ -1,0 +1,42 @@
+time,model_id,model_name,port_name,data
+0,1,HelicopterInputES,,176
+0,2,HelicopterInputEvac,,191
+0,3,Helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+15,3,Helicopter,,,Helicopter 1 Is going to the evacuation site and has 0 spots taken
+
+165,3,Helicopter,outES,Helicopter 1 is evacuating people1
+165,3,Helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+176,1,HelicopterInputES,out,Helicopter 1 is evacuating people1
+176,1,HelicopterInputES,,15
+176,3,Helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+176,3,Helicopter,,,Helicopter 1 is loading people at the evacuation site and has 0 spots taken
+
+191,1,HelicopterInputES,out,Helicopter 1 is evacuating people1
+191,1,HelicopterInputES,,319
+191,2,HelicopterInputEvac,out,Evacuee 1 in triage category G is assigned helicopter 1
+191,2,HelicopterInputEvac,,inf
+191,3,Helicopter,,,Helicopter 1 is loading people at the evacuation site and has 1 spots taken
+
+191,3,Helicopter,,,Helicopter 1 is returning to the FOL and has 1 spots taken
+
+341,3,Helicopter,outEvac,Evacuee 1 in triage category G is not assigned a helicopter
+341,3,Helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+356,3,Helicopter,,,Helicopter 1 Is going to the evacuation site and has 0 spots taken
+
+506,3,Helicopter,outES,Helicopter 1 is evacuating people1
+506,3,Helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+510,1,HelicopterInputES,out,Helicopter 1 has stopped
+510,1,HelicopterInputES,,inf
+510,3,Helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+510,3,Helicopter,,,Helicopter 1 is returning to the FOL and has 0 spots taken
+
+510,1,HelicopterInputES,,inf
+510,2,HelicopterInputEvac,,inf
+510,3,Helicopter,,,Helicopter 1 is returning to the FOL and has 0 spots taken
+

@@ -1,0 +1,19 @@
+time,model_id,model_name,port_name,data
+0,1,folInput,,0
+0,2,fol,,
+
+0,1,folInput,out,Evacuee 1 in triage category R is not assigned a helicopter
+0,1,folInput,,300
+0,2,fol,,,EvacueeID 1,Triage Status: R
+
+0,2,fol,,,EvacueeID 1,Triage Status: R
+
+300,1,folInput,out,Evacuee 3 in triage category G is not assigned a helicopter
+300,1,folInput,,inf
+300,2,fol,,,EvacueeID 1,Triage Status: R,EvacueeID 3,Triage Status: G
+
+300,2,fol,,,EvacueeID 1,Triage Status: R,EvacueeID 3,Triage Status: G
+
+300,1,folInput,,inf
+300,2,fol,,,EvacueeID 1,Triage Status: R,EvacueeID 3,Triage Status: G
+

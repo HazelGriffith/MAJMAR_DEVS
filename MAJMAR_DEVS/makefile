@@ -80,8 +80,11 @@ evacueeTest: main_evacuee_test.o evacInfo.o
 helipadManTest: main_helipad_manager_test.o heloInfo.o
 		$(CC) -g -o bin/HELIPAD_MANAGER_TEST build/main_helipad_manager_test.o build/heloInfo.o
 		
-heloQueueTest: main_helicopter_queue_test.o heloInfo.o
+heloQueueTest: main_helicopter_queue_test.o heloInfo.o evacInfo.o
 		$(CC) -g -o bin/HELO_QUEUE_TEST build/main_helicopter_queue_test.o build/heloInfo.o
+		
+evacSiteTest: main_evacuation_site_test.o heloInfo.o evacInfo.o
+		$(CC) -g -o bin/EVAC_SITE_TEST build/main_evacuation_site_test.o build/heloInfo.o build/evacInfo.o
 		
 simulator: main.o evacInfo.o heloInfo.o
 		$(CC) -g -o bin/MAIN build/main.o build/heloInfo.o build/evacInfo.o

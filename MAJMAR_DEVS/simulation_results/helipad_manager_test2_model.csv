@@ -1,0 +1,39 @@
+time,model_id,model_name,port_name,data
+0,1,HelipadManagerInputHQ,,0
+0,2,HelipadManagerInputEM,,35
+0,3,HelipadManager,,,No helos are at ES
+
+0,1,HelipadManagerInputHQ,out,Helicopter 1 is evacuating people1
+0,1,HelipadManagerInputHQ,,20
+0,3,HelipadManager,outHQ,0
+0,3,HelipadManager,,,No helos are at ES
+
+0,3,HelipadManager,outEM,Helicopter 1 is evacuating people1
+0,3,HelipadManager,,,Helo: 1is at the ES
+
+15,3,HelipadManager,outHelo,Helicopter 1 is evacuating people1
+15,3,HelipadManager,,,No helos are at ES
+
+15,3,HelipadManager,outHQ,0
+15,3,HelipadManager,,,No helos are at ES
+
+20,1,HelipadManagerInputHQ,out,Helicopter 2 is evacuating people2
+20,1,HelipadManagerInputHQ,,inf
+20,3,HelipadManager,,,No helos are at ES
+
+20,3,HelipadManager,outEM,Helicopter 2 is evacuating people2
+20,3,HelipadManager,,,Helo: 2is at the ES
+
+35,2,HelipadManagerInputEM,out,1
+35,2,HelipadManagerInputEM,,inf
+35,3,HelipadManager,outHelo,Helicopter 2 is evacuating people2
+35,3,HelipadManager,,,No helos are at ES,Stopped evacuating people
+
+35,3,HelipadManager,outHelo,Helicopter 2 has stopped
+35,3,HelipadManager,outHQ,1
+35,3,HelipadManager,,,No helos are at ES,Stopped evacuating people
+
+35,1,HelipadManagerInputHQ,,inf
+35,2,HelipadManagerInputEM,,inf
+35,3,HelipadManager,,,No helos are at ES,Stopped evacuating people
+

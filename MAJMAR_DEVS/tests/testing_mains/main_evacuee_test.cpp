@@ -4,8 +4,6 @@
 #include <cassert>
 #include <string>
 
-// We must include our "top model" which is a coupled model used to
-// that hold other models inside of it
 #include "../testing_models/evacuee_test_model.hpp"
 
 using namespace cadmium::assignment1;
@@ -29,7 +27,7 @@ int main(int argc,char* argv[]){
     auto rootCoordinator = cadmium::RootCoordinator(model);
 
     // For simulation purposes, set the name of the output file
-	auto logger = std::make_shared<cadmium::CSVLogger>("../../simulation_results/evacuee_test" + testNumber + "_model.csv",",");
+	auto logger = std::make_shared<cadmium::CSVLogger>("../simulation_results/evacuee_test" + testNumber + "_model.csv",",");
 	rootCoordinator.setLogger(logger);
 
     rootCoordinator.start();

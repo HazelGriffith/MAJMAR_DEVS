@@ -20,7 +20,7 @@ namespace cadmium::assignment1 {
             auto filterLoc = addComponent<FilterLoc>("filterLoc", 1);
 
             // Declare and initialize all simulated input files (these must exist in the file system before compilation)
-			std::string filepath = "../../input_data/filter_loc_test" + testNumber + "_input.txt";
+			std::string filepath = "../input_data/filter_loc_test" + testNumber + "_input.txt";
             auto filterLocInput = addComponent<cadmium::lib::IEStream<EvacInfo>>("filterLocInput", filepath.c_str());
 
             // Connect the input files to the rest of the simulation with coupling

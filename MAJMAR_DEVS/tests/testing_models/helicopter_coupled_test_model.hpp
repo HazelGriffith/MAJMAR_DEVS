@@ -24,8 +24,8 @@ namespace cadmium::assignment1 {
             // Declare and initialize all controller models (non-input/output)
 			shared_ptr<HelicopterCoupled> helicopterCoupled = addComponent<HelicopterCoupled>("helicopterCoupled", 1);
 			
-			std::string filepath1 = "../../input_data/helicopter_coupled_inEvac_test" + testNumber + "_input.txt";
-			std::string filepath2 = "../../input_data/helicopter_coupled_inES_test" + testNumber + "_input.txt";
+			std::string filepath1 = "../input_data/helicopter_coupled_inEvac_test" + testNumber + "_input.txt";
+			std::string filepath2 = "../input_data/helicopter_coupled_inES_test" + testNumber + "_input.txt";
 			
 			auto helicopterCoupledInputEvac = addComponent<cadmium::lib::IEStream<EvacInfo>>("helicopterCoupledInputEvac",filepath1.c_str());
 			auto helicopterCoupledInputES = addComponent<cadmium::lib::IEStream<HeloInfo>>("helicopterCoupledInputES",filepath2.c_str());

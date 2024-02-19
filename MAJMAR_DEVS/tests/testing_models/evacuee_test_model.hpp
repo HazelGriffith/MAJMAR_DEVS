@@ -21,7 +21,7 @@ namespace cadmium::assignment1 {
             auto evacuee = addComponent<Evacuee>("Evacuee", 1, 'W');
 
             // Declare and initialize all simulated input files (these must exist in the file system before compilation)
-			std::string filepath1 = "../../input_data/evacuee_in_test" + testNumber + "_input.txt";
+			std::string filepath1 = "../input_data/evacuee_in_test" + testNumber + "_input.txt";
             auto evacueeInput = addComponent<cadmium::lib::IEStream<EvacInfo>>("EvacueeInput",filepath1.c_str());
 
             // Connect the input files to the rest of the simulation with coupling

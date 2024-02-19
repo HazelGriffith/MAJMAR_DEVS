@@ -1,0 +1,15 @@
+time,model_id,model_name,port_name,data
+0,1,HelicopterQueueInputHM,,0
+0,2,HelicopterQueueInputHelo,,inf
+0,3,HelicopterQueue,,,No helos are waiting to land
+
+0,1,HelicopterQueueInputHM,out,1
+0,1,HelicopterQueueInputHM,,inf
+0,3,HelicopterQueue,,,No helos are waiting to land
+
+0,3,HelicopterQueue,,,No helos are waiting to land
+
+0,1,HelicopterQueueInputHM,,inf
+0,2,HelicopterQueueInputHelo,,inf
+0,3,HelicopterQueue,,,No helos are waiting to land
+

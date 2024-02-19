@@ -20,7 +20,7 @@ namespace cadmium::assignment1 {
             auto fol = addComponent<FOL>("fol");
 
             // Declare and initialize all simulated input files (these must exist in the file system before compilation)
-			std::string filepath = "../../input_data/fol_test" + testNumber + "_input.txt";
+			std::string filepath = "../input_data/fol_test" + testNumber + "_input.txt";
             auto folInput = addComponent<cadmium::lib::IEStream<EvacInfo>>("folInput", filepath.c_str());
 
             // Connect the input files to the rest of the simulation with coupling

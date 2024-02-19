@@ -1,0 +1,35 @@
+time,model_id,model_name,port_name,data
+0,1,EvacueeManagerInputHM,,10
+0,2,EvacueeManagerInputEvac,,0
+0,3,EvacueeManager,,,White: 0,Green: 1,Yellow: 0,Red: 1,Black: 0,Evacuees to Load: 
+
+0,2,EvacueeManagerInputEvac,out,Evacuee 1 in triage category G is not assigned a helicopter
+0,2,EvacueeManagerInputEvac,,20
+0,3,EvacueeManager,,,White: 0,Green: 0,Yellow: 1,Red: 1,Black: 0,Evacuees to Load: 
+
+10,1,EvacueeManagerInputHM,out,Helicopter 1 is evacuating people1
+10,1,EvacueeManagerInputHM,,25
+10,3,EvacueeManager,,,White: 0,Green: 0,Yellow: 0,Red: 0,Black: 0,Evacuees to Load: EvacueeID: 2HeloID: -1Triage Status: R
+EvacueeID: 1HeloID: -1Triage Status: Y
+
+
+10,3,EvacueeManager,outEvac,Evacuee 2 in triage category R is assigned helicopter 1
+10,3,EvacueeManager,outEvac,Evacuee 1 in triage category Y is assigned helicopter 1
+10,3,EvacueeManager,outHM,1
+10,3,EvacueeManager,,,White: 0,Green: 0,Yellow: 0,Red: 0,Black: 0,Evacuees to Load: 
+
+20,2,EvacueeManagerInputEvac,out,Evacuee 2 in triage category R is not assigned a helicopter
+20,2,EvacueeManagerInputEvac,,inf
+20,3,EvacueeManager,,,White: 0,Green: 0,Yellow: 0,Red: 0,Black: 0,Evacuees to Load: 
+
+35,1,EvacueeManagerInputHM,out,Helicopter 2 is evacuating people2
+35,1,EvacueeManagerInputHM,,inf
+35,3,EvacueeManager,,,White: 0,Green: 0,Yellow: 0,Red: 0,Black: 0,Evacuees to Load: 
+
+35,3,EvacueeManager,outHM,1
+35,3,EvacueeManager,,,White: 0,Green: 0,Yellow: 0,Red: 0,Black: 0,Evacuees to Load: 
+
+35,1,EvacueeManagerInputHM,,inf
+35,2,EvacueeManagerInputEvac,,inf
+35,3,EvacueeManager,,,White: 0,Green: 0,Yellow: 0,Red: 0,Black: 0,Evacuees to Load: 
+

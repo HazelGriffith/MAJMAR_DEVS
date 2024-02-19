@@ -20,8 +20,8 @@ namespace cadmium::assignment1 {
             auto helipadManager = addComponent<HelipadManager>("HelipadManager", 0.25*60);
 
             // Declare and initialize all simulated input files (these must exist in the file system before compilation)
-			std::string filepath1 = "../../input_data/helipad_manager_inHQ_test" + testNumber + "_input.txt";
-			std::string filepath2 = "../../input_data/helipad_manager_inEM_test" + testNumber + "_input.txt";
+			std::string filepath1 = "../input_data/helipad_manager_inHQ_test" + testNumber + "_input.txt";
+			std::string filepath2 = "../input_data/helipad_manager_inEM_test" + testNumber + "_input.txt";
 			
             auto helipadManagerInputHQ = addComponent<cadmium::lib::IEStream<HeloInfo>>("HelipadManagerInputHQ",filepath1.c_str());
 			auto helipadManagerInputEM = addComponent<cadmium::lib::IEStream<bool>>("HelipadManagerInputEM",filepath2.c_str());

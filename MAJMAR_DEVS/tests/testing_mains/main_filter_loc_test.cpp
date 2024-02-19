@@ -29,7 +29,7 @@ int main(int argc,char* argv[]){
     auto rootCoordinator = cadmium::RootCoordinator(model);
 
     // For simulation purposes, set the name of the output file
-	auto logger = std::make_shared<cadmium::CSVLogger>("../../simulation_results/filter_loc_test" + testNumber + "_model.csv",",");
+	auto logger = std::make_shared<cadmium::CSVLogger>("../simulation_results/filter_loc_test" + testNumber + "_model.csv",",");
 	rootCoordinator.setLogger(logger);
 
     rootCoordinator.start();

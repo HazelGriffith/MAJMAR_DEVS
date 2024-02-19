@@ -1,14 +1,15 @@
 #ifndef __EVACUEE_MANAGER_TEST_MODEL_HPP__
 #define __EVACUEE_MANAGER_TEST_MODEL_HPP__
 
-// This is a coupled model, meaning it has no internal computation, and is
-// used to connect atomic models.  So, it is necessary to include coupled.hpp
+
 #include <core/modeling/coupled.hpp>
 #include <lib/iestream.hpp>
 #include <string>
 
-// We include any models that are directly contained within this coupled model
+// Models
 #include "../../atomic_models/evacueeManager.hpp"
+
+// Data structures
 #include "../../data_structures/evacInfo.hpp"
 #include "../../data_structures/heloInfo.hpp"
 
@@ -19,23 +20,13 @@ namespace cadmium::assignment1 {
 
             // Declare and initialize all controller models (non-input/output)
 			std::vector<EvacInfo> evacuees;
-			for (int i = 1; i <= 25; i++){
-				evacuees.push_back(EvacInfo{i, -1, false, 'G'});
-			}
-			for (int i = 26; i <= 51; i++){
-				evacuees.push_back(EvacInfo{i, -1, false, 'W'});
-			}
-			for (int i = 52; i <= 77; i++){
-				evacuees.push_back(EvacInfo{i, -1, false, 'Y'});
-			}
-			for (int i = 78; i < 103; i++){
-				evacuees.push_back(EvacInfo{i, -1, false, 'R'});
-			}
+			evacuees.push_back(EvacInfo{1,-1,false,'G'});
+			evacuees.push_back(EvacInfo{2,-1,false,'R'});
             auto evacueeManager = addComponent<EvacueeManager>("EvacueeManager", evacuees);
 
             // Declare and initialize all simulated input files (these must exist in the file system before compilation)
-			std::string filepath1 = "../../input_data/evacuee_manager_inEvac_test" + testNumber + "_input.txt";
-			std::string filepath2 = "../../input_data/evacuee_manager_inHM_test" + testNumber + "_input.txt";
+			std::string filepath1 = "../input_data/evacuee_manager_inEvac_test" + testNumber + "_input.txt";
+			std::string filepath2 = "../input_data/evacuee_manager_inHM_test" + testNumber + "_input.txt";
 			
 			
             auto evacueeManagerInputEvac = addComponent<cadmium::lib::IEStream<EvacInfo>>("EvacueeManagerInputEvac",filepath1.c_str());

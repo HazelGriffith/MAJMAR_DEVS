@@ -1,0 +1,37 @@
+time,model_id,model_name,port_name,data
+0,1,EvacueeCoupledInput,,0
+0,3,filterLoc,,
+
+0,4,evacuee,,,Evacuee 1 in triage state: W is at the evacuation site
+
+0,1,EvacueeCoupledInput,out,Evacuee 1 in triage category W is not assigned a helicopter
+0,1,EvacueeCoupledInput,,10
+0,3,filterLoc,,Evacuee 1 in triage category: W is leaving helicopter 5
+
+0,4,evacuee,,,Evacuee 1 in triage state: W is at the evacuation site
+
+0,3,filterLoc,out,Evacuee 1 in triage category W is not assigned a helicopter
+0,3,filterLoc,,
+
+0,4,evacuee,,,Evacuee 1 in triage state: W is entering the FOL
+
+0,4,evacuee,outFOL,Evacuee 1 in triage category W is not assigned a helicopter
+0,4,evacuee,,,Evacuee 1 in triage state: W is at the FOL
+
+10,1,EvacueeCoupledInput,out,Evacuee 1 in triage category W is assigned helicopter 3
+10,1,EvacueeCoupledInput,,inf
+10,3,filterLoc,,Evacuee 1 in triage category: W is entering helicopter 3
+
+10,3,filterLoc,out,Evacuee 1 in triage category W is assigned helicopter 3
+10,3,filterLoc,,
+
+10,4,evacuee,,,Evacuee 1 in triage state: W is entering helicopter 3
+
+10,4,evacuee,outHelo,Evacuee 1 in triage category W is assigned helicopter 3
+10,4,evacuee,,,Evacuee 1 in triage state: W is in helicopter 3
+
+10,1,EvacueeCoupledInput,,inf
+10,3,filterLoc,,
+
+10,4,evacuee,,,Evacuee 1 in triage state: W is in helicopter 3
+

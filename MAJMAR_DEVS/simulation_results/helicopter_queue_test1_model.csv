@@ -1,0 +1,38 @@
+time,model_id,model_name,port_name,data
+0,1,HelicopterQueueInputHM,,0
+0,2,HelicopterQueueInputHelo,,165
+0,3,HelicopterQueue,,,No helos are waiting to land
+
+0,1,HelicopterQueueInputHM,out,0
+0,1,HelicopterQueueInputHM,,180
+0,3,HelicopterQueue,,,No helos are waiting to land
+
+0,3,HelicopterQueue,,,No helos are waiting to land
+
+165,2,HelicopterQueueInputHelo,out,Helicopter 1 is evacuating people1
+165,2,HelicopterQueueInputHelo,,0
+165,3,HelicopterQueue,,,1 Helos are waiting to land
+HeloID: 1
+
+165,2,HelicopterQueueInputHelo,out,Helicopter 2 is evacuating people2
+165,2,HelicopterQueueInputHelo,,inf
+165,3,HelicopterQueue,outHM,Helicopter 1 is evacuating people1
+165,3,HelicopterQueue,outHelo,Helicopter 1 is evacuating people1
+165,3,HelicopterQueue,,,1 Helos are waiting to land
+HeloID: 2
+
+165,3,HelicopterQueue,,,1 Helos are waiting to land
+HeloID: 2
+
+180,1,HelicopterQueueInputHM,out,1
+180,1,HelicopterQueueInputHM,,inf
+180,3,HelicopterQueue,,,1 Helos are waiting to land
+HeloID: 2
+
+180,3,HelicopterQueue,outHelo,Helicopter 2 has stopped
+180,3,HelicopterQueue,,,No helos are waiting to land
+
+180,1,HelicopterQueueInputHM,,inf
+180,2,HelicopterQueueInputHelo,,inf
+180,3,HelicopterQueue,,,No helos are waiting to land
+

@@ -21,7 +21,7 @@ namespace cadmium::assignment1 {
 
             // Declare and initialize all simulated input files (these must exist in the file system before compilation)
 			
-			std::string filepath1 = "../../input_data/filter_es_test" + testNumber + "_input.txt";
+			std::string filepath1 = "../input_data/filter_es_test" + testNumber + "_input.txt";
             auto filterESInput = addComponent<cadmium::lib::IEStream<HeloInfo>>("filterESInput",filepath1.c_str());
 
             // Connect the input files to the rest of the simulation with coupling

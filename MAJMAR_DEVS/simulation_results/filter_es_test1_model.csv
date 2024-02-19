@@ -1,0 +1,21 @@
+time,model_id,model_name,port_name,data
+0,1,filterESInput,,0
+0,2,filterES,,
+
+0,1,filterESInput,out,Helicopter 1 is evacuating people1
+0,1,filterESInput,,10
+0,2,filterES,,Helicopter 1 is evacuating people1
+
+0,2,filterES,out,Helicopter 1 is evacuating people1
+0,2,filterES,,
+
+10,1,filterESInput,out,Helicopter 1 has stopped
+10,1,filterESInput,,inf
+10,2,filterES,,Helicopter 1 has stopped
+
+10,2,filterES,out,Helicopter 1 has stopped
+10,2,filterES,,
+
+10,1,filterESInput,,inf
+10,2,filterES,,
+

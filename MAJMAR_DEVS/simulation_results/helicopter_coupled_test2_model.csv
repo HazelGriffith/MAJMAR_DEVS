@@ -1,0 +1,35 @@
+time,model_id,model_name,port_name,data
+0,1,helicopterCoupledInputES,,165
+0,2,helicopterCoupledInputEvac,,inf
+0,4,filterEvac,,
+
+0,5,filterES,,
+
+0,6,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+15,6,helicopter,,,Helicopter 1 Is going to the evacuation site and has 0 spots taken
+
+165,1,helicopterCoupledInputES,out,Helicopter 1 has stopped
+165,1,helicopterCoupledInputES,,inf
+165,5,filterES,,Helicopter 1 has stopped
+
+165,6,helicopter,outES,Helicopter 1 is evacuating people1
+165,6,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+165,5,filterES,out,Helicopter 1 has stopped
+165,5,filterES,,
+
+165,6,helicopter,,,Helicopter 1 is waiting to land at the evacuation site and has 0 spots taken
+
+165,6,helicopter,,,Helicopter 1 is returning to the FOL and has 0 spots taken
+
+315,6,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
+315,1,helicopterCoupledInputES,,inf
+315,2,helicopterCoupledInputEvac,,inf
+315,4,filterEvac,,
+
+315,5,filterES,,
+
+315,6,helicopter,,,Helicopter 1 is unloading people at the FOL and has 0 spots taken
+
