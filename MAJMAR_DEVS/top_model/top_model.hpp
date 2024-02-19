@@ -10,9 +10,9 @@
 #include <cassert>
 
 // We include any models that are directly contained within this coupled model
-#include "HelicopterCoupledModel.hpp"
-#include "EvacueeCoupledModel.hpp"
-#include "EvacuationSiteModel.hpp"
+#include "../coupled_models/HelicopterCoupledModel.hpp"
+#include "../coupled_models/EvacueeCoupledModel.hpp"
+#include "../coupled_models/EvacuationSiteModel.hpp"
 #include "../atomic_models/fol.hpp"
 
 // data structures
