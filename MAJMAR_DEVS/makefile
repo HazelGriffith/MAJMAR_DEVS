@@ -41,6 +41,9 @@ main_helicopter_queue_test.o: tests/testing_mains/main_helicopter_queue_test.cpp
 main_fol_test.o: tests/testing_mains/main_fol_test.cpp
 	$(CC) -g -c $(CFLAGS) $(INCLUDECADMIUM) tests/testing_mains/main_fol_test.cpp -o build/main_fol_test.o
 	
+main_coast_guard_ship_test.o: tests/testing_mains/main_coast_guard_ship_test.cpp
+	$(CC) -g -c $(CFLAGS) $(INCLUDECADMIUM) tests/testing_mains/main_coast_guard_ship_test.cpp -o build/main_coast_guard_ship_test.o
+	
 main_helicopter_coupled_test.o: tests/testing_mains/main_helicopter_coupled_test.cpp
 	$(CC) -g -c $(CFLAGS) $(INCLUDECADMIUM) tests/testing_mains/main_helicopter_coupled_test.cpp -o build/main_helicopter_coupled_test.o
 	
@@ -54,7 +57,7 @@ main.o: top_model/main.cpp
 	$(CC) -g -c $(CFLAGS) $(INCLUDECADMIUM) top_model/main.cpp -o build/main.o
 	
 #TARGET FOR TESTS ONLY
-tests: main_filter_loc_test.o main_filter_evac_test.o main_filter_es_test.o main_evacuee_manager_test.o main_helicopter_test.o main_evacuee_test.o main_helipad_manager_test.o main_helicopter_queue_test.o main_fol_test.o main_helicopter_coupled_test.o main_evacuee_coupled_test.o main_evacuation_site_test.o evacInfo.o heloInfo.o
+tests: main_filter_loc_test.o main_filter_evac_test.o main_filter_es_test.o main_evacuee_manager_test.o main_helicopter_test.o main_evacuee_test.o main_helipad_manager_test.o main_helicopter_queue_test.o main_fol_test.o main_coast_guard_ship_test.o main_helicopter_coupled_test.o main_evacuee_coupled_test.o main_evacuation_site_test.o evacInfo.o heloInfo.o
 		$(CC) -g -o bin/FILTER_LOC_TEST build/main_filter_loc_test.o build/evacInfo.o
 		$(CC) -g -o bin/FILTER_EVAC_TEST build/main_filter_evac_test.o build/evacInfo.o
 		$(CC) -g -o bin/FILTER_ES_TEST build/main_filter_es_test.o build/heloInfo.o
@@ -64,6 +67,7 @@ tests: main_filter_loc_test.o main_filter_evac_test.o main_filter_es_test.o main
 		$(CC) -g -o bin/HELIPAD_MANAGER_TEST build/main_helipad_manager_test.o build/heloInfo.o
 		$(CC) -g -o bin/HELO_QUEUE_TEST build/main_helicopter_queue_test.o build/heloInfo.o
 		$(CC) -g -o bin/FOL_TEST build/main_fol_test.o build/evacInfo.o
+		$(CC) -g -o bin/COAST_GUARD_SHIP_TEST build/main_coast_guard_ship_test.o
 		$(CC) -g -o bin/HELO_COUP_TEST build/main_helicopter_coupled_test.o build/heloInfo.o build/evacInfo.o
 		$(CC) -g -o bin/EVAC_COUP_TEST build/main_evacuee_coupled_test.o build/evacInfo.o
 		$(CC) -g -o bin/EVAC_SITE_TEST build/main_evacuation_site_test.o build/heloInfo.o build/evacInfo.o

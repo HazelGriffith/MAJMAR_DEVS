@@ -1,0 +1,13 @@
+time,model_id,model_name,port_name,data
+0,1,CoastGuardShipInput,,1440
+0,2,CoastGuardShip,,The ship will arrived in 48 hours.
+
+1440,1,CoastGuardShipInput,out,1
+1440,1,CoastGuardShipInput,,inf
+1440,2,CoastGuardShip,,The ship will arrived in 48 hours.
+
+4320,2,CoastGuardShip,,The ship has arrived and is loading evacuees.
+
+4320,1,CoastGuardShipInput,,inf
+4320,2,CoastGuardShip,,The ship has arrived and is loading evacuees.
+
