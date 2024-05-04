@@ -11,13 +11,14 @@ struct EvacInfo{
 	
 	EvacInfo() {}
 	
-	EvacInfo(int i_evacueeID, int i_heloID, bool i_enteringOrLeaving, char i_triage_status)
-				:evacueeID(i_evacueeID), heloID(i_heloID), enteringOrLeaving(i_enteringOrLeaving), triage_status(i_triage_status) {}
+	EvacInfo(int i_evacueeID, int i_heloID, bool i_cgs, bool i_enteringOrLeaving, char i_triage_status)
+				:evacueeID(i_evacueeID), heloID(i_heloID), cgs(i_cgs), enteringOrLeaving(i_enteringOrLeaving), triage_status(i_triage_status) {}
 				  
 	
 	
 	int evacueeID;
 	int heloID;
+	bool cgs;
 	bool enteringOrLeaving;
 	char triage_status;
 };

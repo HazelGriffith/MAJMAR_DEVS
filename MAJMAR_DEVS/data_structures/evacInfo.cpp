@@ -10,12 +10,19 @@
 
 ostream& operator << (ostream &out, const EvacInfo &e){
 	out << "Evacuee " << e.evacueeID << " in triage category " << e.triage_status;
-	if (e.enteringOrLeaving){
-		out << " is assigned helicopter " << e.heloID;
+	if (e.cgs){
+		if (e.enteringOrLeaving){
+			out << " is told to board the coast guard ship";
+		} else {
+			out << " is told to leave the coast guard ship";
+		}
 	} else {
-		out << " is not assigned a helicopter";
+		if (e.enteringOrLeaving){
+			out << " is assigned helicopter " << e.heloID;
+		} else {
+			out << " is not assigned a helicopter";
+		}
 	}
-	
 	return out;
 }
 
@@ -28,6 +35,13 @@ istream& operator >> (istream &in, EvacInfo &e){
 	
 	in >> e.evacueeID;
 	in >> e.heloID;
+	
+	in >> tempStr;
+	if (tempStr.compare("T") == 0){
+		e.cgs = true;
+	} else {
+		e.cgs = false;
+	}
 	
 	in >> tempStr;
 	if (tempStr.compare("T") == 0){

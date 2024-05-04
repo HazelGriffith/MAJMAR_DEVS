@@ -32,14 +32,13 @@ namespace cadmium::assignment1 {
 
 	std::ostream& operator<<(std::ostream &out, const HelicopterQueueState& state) {
 		if (!state.helosWaiting.empty()){
-			out << "," << state.helosWaiting.size() << " Helos are waiting to land\n";
+			out << state.helosWaiting.size() << ";Helos are waiting to land";
 			for (HeloInfo h : state.helosWaiting){
-				out << "HeloID: " << h.heloID;
+				out << ";HeloID;" << h.heloID;
 			}
 		} else {
-			out << ",No helos are waiting to land";
+			out << ";No helos are waiting to land";
 		}
-		out << "\n";
 		return out;
 	}
 

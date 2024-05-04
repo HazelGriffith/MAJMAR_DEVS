@@ -27,14 +27,21 @@ namespace cadmium::assignment1 {
 
 	std::ostream& operator<<(std::ostream &out, const FilterLocState& state) {
 		for (int j = 0; j < (state.msgs_passing_filter).size(); j++){
-			out << "Evacuee " << state.msgs_passing_filter[j].evacueeID << " in triage category: " << state.msgs_passing_filter[j].triage_status;
-			if (state.msgs_passing_filter[j].enteringOrLeaving){
-				out << " is entering helicopter " << state.msgs_passing_filter[j].heloID;
+			out << ";Evacuee;" << state.msgs_passing_filter[j].evacueeID << ";in triage category;" << state.msgs_passing_filter[j].triage_status;
+			if (state.msgs_passing_filter[j].cgs){
+				if (state.msgs_passing_filter[j].enteringOrLeaving){
+					out << ";is entering the coast guard ship ";
+				} else {
+					out << ";is leaving the coast guard ship ";
+				}
 			} else {
-				out << " is leaving helicopter " << state.msgs_passing_filter[j].heloID;
+				if (state.msgs_passing_filter[j].enteringOrLeaving){
+					out << ";is entering helicopter;" << state.msgs_passing_filter[j].heloID;
+				} else {
+					out << ";is leaving helicopter;" << state.msgs_passing_filter[j].heloID;
+				}
 			}
 		}
-		out << "\n";
 		return out;
 	}
 

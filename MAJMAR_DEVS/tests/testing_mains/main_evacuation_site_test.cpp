@@ -34,7 +34,7 @@ int main(int argc,char* argv[]){
 
     rootCoordinator.start();
     // For simulations, we can set the number of seconds we want to simulate
-    rootCoordinator.simulate(600.0);
+    rootCoordinator.simulate(3000.0);
 
     rootCoordinator.stop();
     return 0;

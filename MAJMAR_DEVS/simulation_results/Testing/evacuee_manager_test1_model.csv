@@ -1,0 +1,69 @@
+time,model_id,model_name,port_name,data
+0,1,EvacueeManagerInputCGS,,5
+0,2,EvacueeManagerInputHM,,10
+0,3,EvacueeManagerInputEvac,,0
+0,4,EvacueeManager,,,OFF SHIP: White 0,Green 1,Yellow 0,Red 1,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+0,3,EvacueeManagerInputEvac,out,Evacuee 1 in triage category G is not assigned a helicopter
+0,3,EvacueeManagerInputEvac,,20
+0,4,EvacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 1,Red 1,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+5,1,EvacueeManagerInputCGS,out,0
+5,1,EvacueeManagerInputCGS,,inf
+5,4,EvacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 0
+,ON SHIP: White 0,Green 0,Yellow 1,Red 1
+,Evacuees to Transfer: ,EvacueeID: 2,HeloID: -1,OnShip: 1,Triage Status: R
+,EvacueeID: 1,HeloID: -1,OnShip: 1,Triage Status: Y
+
+
+5,4,EvacueeManager,outEvac,Evacuee 2 in triage category R is told to board the coast guard ship
+5,4,EvacueeManager,outEvac,Evacuee 1 in triage category Y is told to board the coast guard ship
+5,4,EvacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 0
+,ON SHIP: White 0,Green 0,Yellow 1,Red 1
+,Evacuees to Transfer: 
+
+10,2,EvacueeManagerInputHM,out,Helicopter 1 is evacuating people1
+10,2,EvacueeManagerInputHM,,25
+10,4,EvacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: ,EvacueeID: 2,HeloID: 1,OnShip: 0,Triage Status: R
+,EvacueeID: 1,HeloID: 1,OnShip: 0,Triage Status: Y
+
+
+10,4,EvacueeManager,outEvac,Evacuee 2 in triage category R is assigned helicopter 1
+10,4,EvacueeManager,outEvac,Evacuee 1 in triage category Y is assigned helicopter 1
+10,4,EvacueeManager,outHM,1
+10,4,EvacueeManager,outCGS,1
+10,4,EvacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+20,3,EvacueeManagerInputEvac,out,Evacuee 2 in triage category R is told to leave the coast guard ship
+20,3,EvacueeManagerInputEvac,,inf
+20,4,EvacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+35,2,EvacueeManagerInputHM,out,Helicopter 2 is evacuating people2
+35,2,EvacueeManagerInputHM,,inf
+35,4,EvacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+35,4,EvacueeManager,outHM,1
+35,4,EvacueeManager,outCGS,1
+35,4,EvacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+35,1,EvacueeManagerInputCGS,,inf
+35,2,EvacueeManagerInputHM,,inf
+35,3,EvacueeManagerInputEvac,,inf
+35,4,EvacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+

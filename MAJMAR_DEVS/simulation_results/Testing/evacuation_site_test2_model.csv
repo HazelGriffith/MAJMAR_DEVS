@@ -1,0 +1,98 @@
+time,model_id,model_name,port_name,data
+0,1,evacuationSiteInputHelo,,1000
+0,2,evacuationSiteInputEvac,,0
+0,4,coastGuardShip,,The ship will arrive in 24 hours.
+
+0,5,evacueeManager,,,OFF SHIP: White 0,Green 1,Yellow 0,Red 1,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+0,6,helipadManager,,,No helos are at ES
+
+0,7,helicopterQueue,,,No helos are waiting to land
+
+0,2,evacuationSiteInputEvac,out,Evacuee 1 in triage category G is not assigned a helicopter
+0,2,evacuationSiteInputEvac,,0
+0,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 1,Red 1,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+0,6,helipadManager,outHQ,0
+0,6,helipadManager,,,No helos are at ES
+
+0,7,helicopterQueue,,,No helos are waiting to land
+
+0,2,evacuationSiteInputEvac,out,Evacuee 2 in triage category R is not assigned a helicopter
+0,2,evacuationSiteInputEvac,,0
+0,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 1,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+0,7,helicopterQueue,,,No helos are waiting to land
+
+0,2,evacuationSiteInputEvac,out,Evacuee 3 in triage category W is assigned helicopter -1
+0,2,evacuationSiteInputEvac,,inf
+0,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 1,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+1000,1,evacuationSiteInputHelo,out,Helicopter 2 is evacuating people2
+1000,1,evacuationSiteInputHelo,,1600
+1000,7,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 2
+
+1000,6,helipadManager,,,No helos are at ES
+
+1000,7,helicopterQueue,outHM,Helicopter 2 is evacuating people2
+1000,7,helicopterQueue,outHelo,Helicopter 2 is evacuating people2
+1000,7,helicopterQueue,,,No helos are waiting to land
+
+1000,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: ,EvacueeID: 1,HeloID: 2,OnShip: 0,Triage Status: Y
+
+
+1000,6,helipadManager,outEM,Helicopter 2 is evacuating people2
+1000,6,helipadManager,,,Helo: 2is at the ES
+
+1000,4,coastGuardShip,,The ship will arrive in 24 hours.
+
+1000,5,evacueeManager,outEvac,Evacuee 1 in triage category Y is assigned helicopter 2
+1000,5,evacueeManager,outHM,1
+1000,5,evacueeManager,outCGS,1
+1000,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+1000,6,helipadManager,,,Helo: 2is at the ES,Stopped evacuating people
+
+1015,6,helipadManager,outHelo,Helicopter 2 has stopped
+1015,6,helipadManager,outHQ,1
+1015,6,helipadManager,,,No helos are at ES,Stopped evacuating people
+
+1015,7,helicopterQueue,,,No helos are waiting to land
+
+1015,7,helicopterQueue,,,No helos are waiting to land
+
+2440,4,coastGuardShip,,There are no more evacuees.
+
+2600,1,evacuationSiteInputHelo,out,Helicopter 1 is evacuating people1
+2600,1,evacuationSiteInputHelo,,inf
+2600,7,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 1
+
+2600,7,helicopterQueue,outHelo,Helicopter 1 has stopped
+2600,7,helicopterQueue,,,No helos are waiting to land
+
+2600,1,evacuationSiteInputHelo,,inf
+2600,2,evacuationSiteInputEvac,,inf
+2600,4,coastGuardShip,,There are no more evacuees.
+
+2600,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+2600,6,helipadManager,,,No helos are at ES,Stopped evacuating people
+
+2600,7,helicopterQueue,,,No helos are waiting to land
+

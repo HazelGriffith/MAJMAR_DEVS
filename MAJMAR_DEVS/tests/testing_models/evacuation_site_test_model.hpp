@@ -23,10 +23,10 @@ namespace cadmium::assignment1 {
 
             // Declare and initialize all controller models (non-input/output)
 			vector<EvacInfo> evacuees;
-			evacuees.push_back(EvacInfo{1,-1,false,'G'});
-			evacuees.push_back(EvacInfo{2,-1,false,'R'});
+			evacuees.push_back(EvacInfo{1,-1,false,false,'G'});
+			evacuees.push_back(EvacInfo{2,-1,false,false,'R'});
 			
-			shared_ptr<EvacuationSite> evacuationSite = addComponent<EvacuationSite>("evacuationSite", 15, evacuees);
+			shared_ptr<EvacuationSite> evacuationSite = addComponent<EvacuationSite>("evacuationSite", 15, evacuees, 1440);
 			
 			std::string filepath1 = "../input_data/evacuation_site_inEvac_test" + testNumber + "_input.txt";
 			std::string filepath2 = "../input_data/evacuation_site_inHelo_test" + testNumber + "_input.txt";

@@ -1,0 +1,21 @@
+time,model_id,model_name,port_name,data
+0,1,EvacueeInput,,0
+0,2,Evacuee,,,Evacuee 1 in triage state: W is at the evacuation site
+
+0,1,EvacueeInput,out,Evacuee 1 in triage category R is leaving the coast guard ship
+0,1,EvacueeInput,,350
+0,2,Evacuee,,,Evacuee 1 in triage state: W is at the evacuation site
+
+0,2,Evacuee,outES,Evacuee 1 in triage category W is not assigned a helicopter
+0,2,Evacuee,,,Evacuee 1 in triage state: G is at the evacuation site
+
+350,1,EvacueeInput,out,Evacuee 1 in triage category W is boarding the coast guard ship
+350,1,EvacueeInput,,inf
+350,2,Evacuee,,,Evacuee 1 in triage state: G is on board the Coast Guard Ship
+
+350,2,Evacuee,outES,Evacuee 1 in triage category G is leaving the coast guard ship
+350,2,Evacuee,,,Evacuee 1 in triage state: G is on board the Coast Guard Ship
+
+350,1,EvacueeInput,,inf
+350,2,Evacuee,,,Evacuee 1 in triage state: G is on board the Coast Guard Ship
+

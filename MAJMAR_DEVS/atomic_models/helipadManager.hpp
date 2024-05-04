@@ -33,14 +33,13 @@ namespace cadmium::assignment1 {
 
 	std::ostream& operator<<(std::ostream &out, const HelipadManagerState& state) {
 		if (state.heloLoading){
-			out << ",Helo: " << state.currHeloID << "is at the ES";
+			out << "Helo;" << state.currHeloID << ";is at the ES";
 		} else {
-			out << ",No helos are at ES";
+			out << ";No helos are at ES";
 		} 
 		if (state.stop == true){
-			out << ",Stopped evacuating people";
+			out << ";Stopped evacuating people";
 		}
-		out << "\n";
 		return out;
 	}
 

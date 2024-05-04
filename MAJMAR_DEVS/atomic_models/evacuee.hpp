@@ -30,26 +30,27 @@ namespace cadmium::assignment1 {
 		int evacueeID;
 		bool travelling;
 		bool start;
+		bool firstTimeOnShip;
 		
 		//triage_status can be {'W' = "White", 'G' = "Green", 'Y' = "Yellow", 'R' = "Red", 'B' = "Black"}
 		
-		//curr_loc can be {'E' = "Evacuation Site", 'H' = "Helicopter", 'F' = "FOL"}
+		//curr_loc can be {'E' = "Evacuation Site", 'H' = "Helicopter", 'F' = "FOL", 'C' = "Coast Guard Ship"}
 		// Set the default values for the state constructor for this specific model
-		EvacueeState(): sigma(0), evacueeID(-1), triage_status('W'), curr_loc('E'), heloID(-1), travelling(false), start(true){};
+		EvacueeState(): sigma(0), evacueeID(-1), triage_status('W'), curr_loc('E'), heloID(-1), travelling(false), start(true), firstTimeOnShip(false){};
 	};
 
 	std::ostream& operator<<(std::ostream &out, const EvacueeState& state) {
-		out << ",Evacuee " << state.evacueeID << " in triage state: " << state.triage_status;
+		out << "Evacuee;" << state.evacueeID << ";in triage state;" << state.triage_status;
 		if (state.travelling == true){
 			switch(state.curr_loc){
 				case('H'):
-					out << " is entering helicopter " << state.heloID;
+					out << ";is entering helicopter;" << state.heloID;
 					break;
 				case('F'):
-					out << " is entering the FOL";
+					out << ";is entering the FOL";
 					break;
 				case('E'):
-					out << " is walking in circles";
+					out << ";is walking in circles";
 					break;
 				default:
 					assert(("The location is not possible", false));
@@ -58,20 +59,22 @@ namespace cadmium::assignment1 {
 		} else {
 			switch(state.curr_loc){
 				case('H'):
-					out << " is in helicopter " << state.heloID;
+					out << ";is in helicopter;" << state.heloID;
 					break;
 				case('F'):
-					out << " is at the FOL";
+					out << ";is at the FOL";
 					break;
 				case('E'):
-					out << " is at the evacuation site";
+					out << ";is at the evacuation site";
+					break;
+				case('C'):
+					out << ";is on board the Coast Guard Ship";
 					break;
 				default:
 					assert(("The location is not possible", false));
 					break;
 			}
 		}
-		out << "\n";
 		return out;
 	}
 
@@ -97,6 +100,9 @@ namespace cadmium::assignment1 {
 			float m_gToy = 48*60;
 			float m_yTor = 8*60;
 			float m_rTob = 1.5*60;
+			float m_rToy = m_wTog;
+			float m_yTog = 72*60;
+			float m_gTow = m_gToy;
 
 			/**
 			 * Constructor function for this atomic model, and its respective state object.
@@ -193,6 +199,57 @@ namespace cadmium::assignment1 {
 								//The status must be black
 						}
 					}
+				} else if (state.curr_loc == 'C'){
+					unsigned seed1 = chrono::system_clock::now().time_since_epoch().count();
+					minstd_rand0 generator(seed1);
+					exponential_distribution<float> rToyDistribution{float(1.0/m_rToy)};
+					exponential_distribution<float> yTogDistribution{float(1.0/m_yTog)};
+					exponential_distribution<float> gTowDistribution{float(1.0/m_gTow)};
+					if (state.firstTimeOnShip){
+						state.firstTimeOnShip = false;
+						switch(state.triage_status){
+							case('W'):
+								state.sigma = numeric_limits<double>::infinity();
+								break;
+							case('G'):
+								state.sigma = (double) gTowDistribution(generator);
+								break;
+							case('Y'):
+								state.sigma = (double) yTogDistribution(generator);
+								break;
+							case('R'):
+								state.sigma = (double) rToyDistribution(generator);
+								break;
+							default:
+								assert((state.triage_status == 'B'));
+								state.sigma = numeric_limits<double>::infinity();
+								break;
+								//The status must be black
+						}
+					} else {
+						switch(state.triage_status){
+							case('W'):
+								state.sigma = numeric_limits<double>::infinity();
+								break;
+							case('G'):
+								state.triage_status = 'W';
+								state.sigma = numeric_limits<double>::infinity();
+								break;
+							case('Y'):
+								state.triage_status = 'G';
+								state.sigma = (double) gTowDistribution(generator);
+								break;
+							case('R'):
+								state.triage_status = 'Y';
+								state.sigma = (double) yTogDistribution(generator);
+								break;
+							default:
+								assert((state.triage_status == 'B'));
+								state.sigma = numeric_limits<double>::infinity();
+								break;
+								//The status must be black
+						}
+					}
 				} else {
 					state.sigma = numeric_limits<double>::infinity();
 				}
@@ -201,13 +258,6 @@ namespace cadmium::assignment1 {
 			/**
 			 * The external transition function is invoked each time external data
 			 * is sent to an input port for this model.
-			 *
-			 * In this model, the value of state.fastToggle is toggled each time the
-			 * button connected to the "in" port is pressed.
-			 *
-			 * The value of state.sigma is then updated depending on the value of
-			 * state.fastToggle.  Sigma is not required to be updated in this function,
-			 * but we are changing it based on our desired logic for the program.
 			 *
 			 * @param state reference to the current model state.
 			 * @param e time elapsed since the last state transition function was triggered.
@@ -220,13 +270,24 @@ namespace cadmium::assignment1 {
 					// The variable x is created to handle the external input values in sequence.
 					// The getBag() function is used to get the next input value.
 					for( const auto x : in->getBag()){
-						if (x.enteringOrLeaving){
-							state.heloID = x.heloID;
-							state.curr_loc = 'H';
+						if (x.cgs){
+							if (x.enteringOrLeaving){
+								state.curr_loc = 'C';
+								state.firstTimeOnShip = true;
+							} else {
+								state.curr_loc = 'E';
+								state.start = true;
+							}
+							
 						} else {
-							state.curr_loc = 'F';
+							if (x.enteringOrLeaving){
+								state.heloID = x.heloID;
+								state.curr_loc = 'H';
+							} else {
+								state.curr_loc = 'F';
+							}
+							state.travelling = true;
 						}
-						state.travelling = true;
 						state.sigma = 0;
 					}
 
@@ -247,19 +308,22 @@ namespace cadmium::assignment1 {
 				if (state.travelling){
 					switch(state.curr_loc){
 						case('H'):
-							outHelo->addMessage(EvacInfo{state.evacueeID, state.heloID, true, state.triage_status});
+							outHelo->addMessage(EvacInfo{state.evacueeID, state.heloID, false, true, state.triage_status});
 							break;
 						case('F'):
-							outFOL->addMessage(EvacInfo{state.evacueeID, state.heloID, false, state.triage_status});
+							outFOL->addMessage(EvacInfo{state.evacueeID, state.heloID, false, false, state.triage_status});
 							break;
 						default:
 							assert(("The curr_loc and travelling are not lining up correctly", false));
 							break;
 					}
-				} else if (!state.start){
+				} else if ((!state.start)&&(!state.firstTimeOnShip)){
 					switch(state.curr_loc){
 						case('E'):
-							outES->addMessage(EvacInfo{state.evacueeID, state.heloID, false, state.triage_status});
+							outES->addMessage(EvacInfo{state.evacueeID, state.heloID, false, false, state.triage_status});
+							break;
+						case('C'):
+							outES->addMessage(EvacInfo(state.evacueeID, state.heloID, true, true, state.triage_status));
 							break;
 						default:
 							assert(("The curr_loc and travelling are not lining up correctly", false));

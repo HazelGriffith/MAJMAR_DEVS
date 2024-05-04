@@ -1,0 +1,114 @@
+time,model_id,model_name,port_name,data
+0,1,evacuationSiteInputHelo,,2000
+0,2,evacuationSiteInputEvac,,0
+0,4,coastGuardShip,,The ship will arrive in 24 hours.
+
+0,5,evacueeManager,,,OFF SHIP: White 0,Green 1,Yellow 0,Red 1,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+0,6,helipadManager,,,No helos are at ES
+
+0,7,helicopterQueue,,,No helos are waiting to land
+
+0,2,evacuationSiteInputEvac,out,Evacuee 1 in triage category G is not assigned a helicopter
+0,2,evacuationSiteInputEvac,,5
+0,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 1,Red 1,Black 0
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+0,6,helipadManager,outHQ,0
+0,6,helipadManager,,,No helos are at ES
+
+0,7,helicopterQueue,,,No helos are waiting to land
+
+0,7,helicopterQueue,,,No helos are waiting to land
+
+5,2,evacuationSiteInputEvac,out,Evacuee 2 in triage category R is not assigned a helicopter
+5,2,evacuationSiteInputEvac,,inf
+5,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 1,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+1440,4,coastGuardShip,out,0
+1440,4,coastGuardShip,,The ship has arrived and is unloading evacuees.
+
+1440,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 1,Red 0
+,Evacuees to Transfer: ,EvacueeID: 1,HeloID: -1,OnShip: 1,Triage Status: Y
+
+
+1440,5,evacueeManager,outEvac,Evacuee 1 in triage category Y is told to board the coast guard ship
+1440,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 1,Red 0
+,Evacuees to Transfer: 
+
+1500,4,coastGuardShip,out,1
+1500,4,coastGuardShip,,The ship has arrived and is loading evacuees.
+
+1500,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 1,Red 0
+,Evacuees to Transfer: 
+
+1500,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 1,Red 0
+,Evacuees to Transfer: 
+
+2000,1,evacuationSiteInputHelo,out,Helicopter 1 is evacuating people1
+2000,1,evacuationSiteInputHelo,,500
+2000,7,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 1
+
+2000,6,helipadManager,,,No helos are at ES
+
+2000,7,helicopterQueue,outHM,Helicopter 1 is evacuating people1
+2000,7,helicopterQueue,outHelo,Helicopter 1 is evacuating people1
+2000,7,helicopterQueue,,,No helos are waiting to land
+
+2000,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: ,EvacueeID: 1,HeloID: 1,OnShip: 0,Triage Status: Y
+
+
+2000,6,helipadManager,outEM,Helicopter 1 is evacuating people1
+2000,6,helipadManager,,,Helo: 1is at the ES
+
+2000,4,coastGuardShip,,There are no more evacuees.
+
+2000,5,evacueeManager,outEvac,Evacuee 1 in triage category Y is assigned helicopter 1
+2000,5,evacueeManager,outHM,1
+2000,5,evacueeManager,outCGS,1
+2000,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+2000,6,helipadManager,,,Helo: 1is at the ES,Stopped evacuating people
+
+2015,6,helipadManager,outHelo,Helicopter 1 has stopped
+2015,6,helipadManager,outHQ,1
+2015,6,helipadManager,,,No helos are at ES,Stopped evacuating people
+
+2015,7,helicopterQueue,,,No helos are waiting to land
+
+2015,7,helicopterQueue,,,No helos are waiting to land
+
+2500,1,evacuationSiteInputHelo,out,Helicopter 2 is evacuating people2
+2500,1,evacuationSiteInputHelo,,inf
+2500,7,helicopterQueue,,,1 Helos are waiting to land
+HeloID: 2
+
+2500,7,helicopterQueue,outHelo,Helicopter 2 has stopped
+2500,7,helicopterQueue,,,No helos are waiting to land
+
+2500,1,evacuationSiteInputHelo,,inf
+2500,2,evacuationSiteInputEvac,,inf
+2500,4,coastGuardShip,,There are no more evacuees.
+
+2500,5,evacueeManager,,,OFF SHIP: White 0,Green 0,Yellow 0,Red 0,Black 1
+,ON SHIP: White 0,Green 0,Yellow 0,Red 0
+,Evacuees to Transfer: 
+
+2500,6,helipadManager,,,No helos are at ES,Stopped evacuating people
+
+2500,7,helicopterQueue,,,No helos are waiting to land
+

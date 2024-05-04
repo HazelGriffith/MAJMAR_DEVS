@@ -13,6 +13,7 @@
 #include "../atomic_models/evacueeManager.hpp"
 #include "../atomic_models/helicopterQueue.hpp"
 #include "../atomic_models/helipadManager.hpp"
+#include "../atomic_models/coastGuardShip.hpp"
 
 // data structures
 #include "../data_structures/heloInfo.hpp"
@@ -29,12 +30,13 @@ namespace cadmium::assignment1 {
 		Port<HeloInfo> outHelo;
 		Port<EvacInfo> outEvac;
 		
-        EvacuationSite(const std::string& id, double timeToLoad, vector<EvacInfo> evacuees): Coupled(id){
+        EvacuationSite(const std::string& id, double timeToLoad, vector<EvacInfo> evacuees, double startTime): Coupled(id){
 
             // Declare and initialize all controller models (non-input/output)
 			shared_ptr<HelicopterQueue> hq = addComponent<HelicopterQueue>("helicopterQueue");
 			shared_ptr<HelipadManager> hm = addComponent<HelipadManager>("helipadManager", timeToLoad);
 			shared_ptr<EvacueeManager> em = addComponent<EvacueeManager>("evacueeManager", evacuees);
+			shared_ptr<CoastGuardShip> cgs = addComponent<CoastGuardShip>("coastGuardShip", startTime);
 			
 			// initialize coupled model ports
 			inEvac = addInPort<EvacInfo>("inEvac");
@@ -47,6 +49,8 @@ namespace cadmium::assignment1 {
 			addIC("helipadManager", "outHQ", "helicopterQueue", "inHM");
 			addIC("helipadManager", "outEM", "evacueeManager", "inHM");
 			addIC("evacueeManager", "outHM", "helipadManager", "inEM");
+			addIC("evacueeManager", "outCGS", "coastGuardShip", "in");
+			addIC("coastGuardShip", "out", "evacueeManager", "inCGS");
 			
 			// Connect the inputs of the coupled model with the inputs of some atomic model
 			addEIC("inEvac", "evacueeManager", "inEvac");

@@ -27,9 +27,9 @@ namespace cadmium::assignment1 {
 
 	std::ostream& operator<<(std::ostream &out, const FOLState& state) {
 		for (int j = 0; j < (state.evacuees).size(); j++){
-			out << ",EvacueeID " << state.evacuees[j].evacueeID << ",Triage Status: " << state.evacuees[j].triage_status;
+			out << ";EvacueeID;" << state.evacuees[j].evacueeID << ";Triage Status;" << state.evacuees[j].triage_status;
 		}
-		out << "\n";
+		out << ";Lives Saved;" << state.evacuees.size();
 		return out;
 	}
 

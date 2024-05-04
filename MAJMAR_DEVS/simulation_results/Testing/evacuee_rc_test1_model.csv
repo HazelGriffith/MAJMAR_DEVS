@@ -1,0 +1,34 @@
+time,model_id,model_name,port_name,data
+0,1,EvacueeInput,,0
+0,2,Evacuee,,,Evacuee 1 in triage state: R is at the evacuation site
+
+0,1,EvacueeInput,out,Evacuee 1 in triage category R is told to board the coast guard ship
+0,1,EvacueeInput,,15000
+0,2,Evacuee,,,Evacuee 1 in triage state: R is on board the Coast Guard Ship
+
+0,2,Evacuee,,,Evacuee 1 in triage state: R is on board the Coast Guard Ship
+
+6973.75,2,Evacuee,outES,Evacuee 1 in triage category R is told to board the coast guard ship
+6973.75,2,Evacuee,,,Evacuee 1 in triage state: Y is on board the Coast Guard Ship
+
+11789.8,2,Evacuee,outES,Evacuee 1 in triage category Y is told to board the coast guard ship
+11789.8,2,Evacuee,,,Evacuee 1 in triage state: G is on board the Coast Guard Ship
+
+15000,1,EvacueeInput,out,Evacuee 1 in triage category W is told to leave the coast guard ship
+15000,1,EvacueeInput,,inf
+15000,2,Evacuee,,,Evacuee 1 in triage state: G is at the evacuation site
+
+15000,2,Evacuee,,,Evacuee 1 in triage state: G is at the evacuation site
+
+15487.4,2,Evacuee,outES,Evacuee 1 in triage category G is not assigned a helicopter
+15487.4,2,Evacuee,,,Evacuee 1 in triage state: Y is at the evacuation site
+
+15605.7,2,Evacuee,outES,Evacuee 1 in triage category Y is not assigned a helicopter
+15605.7,2,Evacuee,,,Evacuee 1 in triage state: R is at the evacuation site
+
+15644.6,2,Evacuee,outES,Evacuee 1 in triage category R is not assigned a helicopter
+15644.6,2,Evacuee,,,Evacuee 1 in triage state: B is at the evacuation site
+
+15644.6,1,EvacueeInput,,inf
+15644.6,2,Evacuee,,,Evacuee 1 in triage state: B is at the evacuation site
+

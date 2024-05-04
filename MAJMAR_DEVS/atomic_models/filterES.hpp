@@ -27,14 +27,13 @@ namespace cadmium::assignment1 {
 
 	std::ostream& operator<<(std::ostream &out, const FilterESState& state) {
 		for (int j = 0; j < (state.msgs_passing_filter).size(); j++){
-			out << "Helicopter " << state.msgs_passing_filter[j].heloID;
+			out << "Helicopter;" << state.msgs_passing_filter[j].heloID;
 			if (!state.msgs_passing_filter[j].stop){
-				out << " is evacuating people" << state.msgs_passing_filter[j].heloID;
+				out << ";is evacuating people";
 			} else {
-				out << " has stopped";
+				out << ";has stopped";
 			}
 		}
-		out << "\n";
 		return out;
 	}
 

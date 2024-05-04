@@ -30,11 +30,11 @@ namespace cadmium::assignment1 {
 		Port<EvacInfo> outEvac;
 		
 		
-        HelicopterCoupled(const std::string& id, int helicopterID): Coupled(id){
+        HelicopterCoupled(const std::string& id, int helicopterID, double startTime): Coupled(id){
 
 
              // Declare and initialize all controller models (non-input/output)
-			shared_ptr<Helicopter> helo = addComponent<Helicopter>("helicopter", helicopterID);
+			shared_ptr<Helicopter> helo = addComponent<Helicopter>("helicopter", helicopterID, startTime);
 			shared_ptr<FilterES> filterES = addComponent<FilterES>("filterES", helicopterID);
 			shared_ptr<FilterEvac> filterEvac = addComponent<FilterEvac>("filterEvac", helicopterID);
 			

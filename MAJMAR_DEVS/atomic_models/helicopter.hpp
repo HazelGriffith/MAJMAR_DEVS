@@ -33,30 +33,29 @@ namespace cadmium::assignment1 {
 	};
 
 	std::ostream& operator<<(std::ostream &out, const HelicopterState& state) {
-		out << ",Helicopter " << state.heloID;
+		out << "Helicopter;" << state.heloID;
 		switch(state.curr_loc){
 			case('F'):
-				out << " is unloading people at the FOL";
+				out << ";is unloading people at the FOL;";
 				break;
 			case('W'):
-				out << " is waiting to land at the evacuation site";
+				out << ";is waiting to land at the evacuation site;";
 				break;
 			case('E'):
-				out << " is loading people at the evacuation site";
+				out << ";is loading people at the evacuation site;";
 				break;
 			case('T'):
 				if (state.returning){
-					out << " is returning to the FOL";
+					out << ";is returning to the FOL;";
 				} else {
-					out << " Is going to the evacuation site";
+					out << ";Is going to the evacuation site;";
 				}
 				break;
 			default:
 				assert(("Not a valid location char", false));
 				break;
 		}
-		out << " and has " << state.capacity_taken << " spots taken";
-		out << "\n";
+		out << ";and has;" << state.capacity_taken << ";spots taken";
 		return out;
 	}
 
@@ -90,7 +89,7 @@ namespace cadmium::assignment1 {
 			 *
 			 * @param id ID of the new Helicopter model object, will be used to identify results on the output file
 			 */
-			Helicopter(const string& id, int i_heloID): Atomic<HelicopterState>(id, HelicopterState()) {
+			Helicopter(const string& id, int i_heloID, double timeToArrive): Atomic<HelicopterState>(id, HelicopterState()) {
 
 				// Initialize ports for the model
 
@@ -107,7 +106,7 @@ namespace cadmium::assignment1 {
 
 				// Set a value for sigma (so it is not 0), this determines how often the
 				// internal transition occurs
-				state.sigma = time_until_leaving;
+				state.sigma = timeToArrive;
 				
 			}
 

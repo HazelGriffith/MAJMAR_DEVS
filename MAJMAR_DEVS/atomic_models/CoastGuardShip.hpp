@@ -28,7 +28,7 @@ namespace cadmium::assignment1 {
 	std::ostream& operator<<(std::ostream &out, const CoastGuardShipState& state) {
 		if (state.arrived){
 			if (!state.stop){
-				if (state.unloading){
+				if (!state.unloading){
 					out << "The ship has arrived and is unloading evacuees.";
 				} else {
 					out << "The ship has arrived and is loading evacuees.";
@@ -39,7 +39,6 @@ namespace cadmium::assignment1 {
 		} else {
 			out << "The ship will arrive in " << state.sigma/60 << " hours.";
 		}
-		out << "\n";
 		return out;
 	}
 
@@ -96,12 +95,12 @@ namespace cadmium::assignment1 {
 					state.arrived = true;
 				}
 				if (!state.stop){
-					state.unloading = !state.unloading;
-					if (state.sigma == 1440){
+					if (state.unloading){
 						state.sigma = 60;
 					} else {
 						state.sigma = 1440;
 					}
+					state.unloading = !state.unloading;
 				} else {
 					state.sigma = numeric_limits<double>::infinity();
 				}
