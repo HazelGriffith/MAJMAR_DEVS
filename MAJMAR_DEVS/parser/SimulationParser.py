@@ -10,7 +10,7 @@ import numpy as np
 import scipy.stats as st
 
 filepathBase = '../simulation_results/'
-filepathRemainder = 'Exp1(3 Helos)/ship@96h/R'
+filepathRemainder = 'Exp1(1 Helo)/ship@never/R'
 
 filepath = filepathBase + filepathRemainder
 

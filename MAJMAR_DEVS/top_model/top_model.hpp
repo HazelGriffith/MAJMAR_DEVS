@@ -29,10 +29,10 @@ namespace cadmium::assignment1 {
 
             // Declare and initialize all controller models (non-input/output)
 			double timeToLoad = 15;
-			double shipArrivalTime = 108*60;
+			double shipArrivalTime = 300*60;
 			double heloArrivalTime = 2730;
 			vector<shared_ptr<HelicopterCoupled>> heloCoupledModels;
-			int numOfHelos = 3;
+			int numOfHelos = 1;
 			vector<shared_ptr<EvacueeCoupled>> evacueeCoupledModels;
 			vector<EvacInfo> evacuees;
 			int numOfWhite = 0;
