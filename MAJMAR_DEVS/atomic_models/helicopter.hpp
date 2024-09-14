@@ -79,7 +79,7 @@ namespace cadmium::assignment1 {
 			int heloID;
 			int capacity = 10;
 			double time_until_leaving = 0.25*60;
-			double travel_time = 2.5*60;
+			double travel_time = 1.25*60;
 
 			/**
 			 * Constructor function for this atomic model, and its respective state object.
@@ -191,6 +191,9 @@ namespace cadmium::assignment1 {
 								state.capacity_taken += 3;
 							} else {
 								assert(("Not a valid triage status", false));
+							}
+							if (state.capacity_taken > capacity){
+								assert(("ES sent too many people", false));
 							}
 						} else {
 							assert(("ES sent too many people", false));

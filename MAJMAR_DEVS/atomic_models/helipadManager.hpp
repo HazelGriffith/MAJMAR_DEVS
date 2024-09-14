@@ -61,7 +61,6 @@ namespace cadmium::assignment1 {
 			Port<HeloInfo> outEM;
 
 			// Declare variables for the model's behaviour
-			string heloLoadingPolicy = "Green First";
 			double timeToLoad;
 
 			/**

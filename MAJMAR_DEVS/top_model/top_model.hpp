@@ -24,15 +24,15 @@ using namespace std;
 namespace cadmium::assignment1 {
     class Top_model : public Coupled {
         public:
-        Top_model(const std::string& id): Coupled(id){
+        Top_model(const std::string& id, double i_shipArrivalTime, int i_numOfHelos): Coupled(id){
 
 
             // Declare and initialize all controller models (non-input/output)
 			double timeToLoad = 15;
-			double shipArrivalTime = 300*60;
-			double heloArrivalTime = 2730;
+			double shipArrivalTime = i_shipArrivalTime*60;
+			double heloArrivalTime = 2805;
 			vector<shared_ptr<HelicopterCoupled>> heloCoupledModels;
-			int numOfHelos = 1;
+			int numOfHelos = i_numOfHelos;
 			vector<shared_ptr<EvacueeCoupled>> evacueeCoupledModels;
 			vector<EvacInfo> evacuees;
 			int numOfWhite = 0;

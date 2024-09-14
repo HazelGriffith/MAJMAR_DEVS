@@ -1,34 +1,36 @@
 #ifndef __COAST_GUARD_SHIP_HPP__
 #define __COAST_GUARD_SHIP_HPP__
 
-// This is an atomic model, meaning it has its' own internal logic/computation
-// So, it is necessary to include atomic.hpp
 #include <core/modeling/atomic.hpp>
 #include <iostream>
 
 using namespace std;
 
 namespace cadmium::assignment1 {
-	// A class to represent the state of this specific model
-	// All atomic models will have their own state
+	
+	// Contains state variables for coast guard ship
 	struct CoastGuardShipState {
 
-		// sigma is a mandatory variable, used to advance the time of the simulation
+		// time advance variable sigma
 		double sigma;
 
-		// Declare model-specific variables
+		//unloading is true when evacuees are being unloaded from the ship
 		bool unloading;
+		
+		//arrived is true when the ship has arrived at the evacuation site
 		bool arrived;
+		
+		//stop is true when there are no more evacuees at the evacuation site so the coast guard ship should stop
 		bool stop;
 		
-		// Set the default values for the state constructor for this specific model
+		// these are the default state values
 		CoastGuardShipState(): sigma(0), unloading(false), arrived(false), stop(false){};
 	};
 
 	std::ostream& operator<<(std::ostream &out, const CoastGuardShipState& state) {
 		if (state.arrived){
 			if (!state.stop){
-				if (!state.unloading){
+				if (state.unloading){
 					out << "The ship has arrived and is unloading evacuees.";
 				} else {
 					out << "The ship has arrived and is loading evacuees.";
@@ -48,20 +50,16 @@ namespace cadmium::assignment1 {
 
 		public:
 
-			// Declare ports for the model
-
-			// Input ports
+			// Input port from EvacueeManager
 			Port<bool> in;
 
-			// Output ports
+			// Output port to EvacueeManager
 			Port<bool> out;
-
-			// Declare variables for the model's behaviour
 
 			/**
 			 * Constructor function for this atomic model, and its respective state object.
 			 *
-			 * For this model, both a CoastGuardShip object and a CoastGuardShip object
+			 * For this model, both a CoastGuardShip object and a CoastGuardShipState object
 			 * are created, using the same id.
 			 *
 			 * @param id ID of the new CoastGuardShip model object, will be used to identify results on the output file
@@ -70,10 +68,10 @@ namespace cadmium::assignment1 {
 
 				// Initialize ports for the model
 
-				// Input Ports
+				// Input port from EvacueeManager
 				in  = addInPort<bool>("in");
 
-				// Output Ports
+				// Output port to EvacueeManager
 				out = addOutPort<bool>("out");
 
 				// Initialize variables for the model's behaviour
