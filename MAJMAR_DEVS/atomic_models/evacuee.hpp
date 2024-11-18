@@ -1,14 +1,13 @@
 #ifndef __EVACUEE_HPP__
 #define __EVACUEE_HPP__
 
-// This is an atomic model, meaning it has its' own internal logic/computation
-// So, it is necessary to include atomic.hpp
 #include <core/modeling/atomic.hpp>
 #include <iostream>
 #include <string>
 #include <cassert>
 #include <random>
 #include <chrono>
+#include <unordered_map>
 
 
 #include "../data_structures/evacInfo.hpp"
@@ -16,6 +15,57 @@
 using namespace std;
 
 namespace cadmium::assignment1 {
+	
+	enum triage_category{
+		WHITE,
+		GREEN,
+		YELLOW,
+		RED,
+		BLACK
+	};
+	
+	inline triage_category operator++ (triage_category& tc){
+		tc = static_cast<triage_category>(abs(static_cast<int>(tc) + 1) % 5);
+		return tc;
+	}
+	
+	inline triage_category operator-- (triage_category& tc){
+		tc = static_cast<triage_category>(abs(static_cast<int>(tc) - 1) % 5);
+		return tc;
+	}
+	
+	struct transition_time_key{
+		bool multiOrSingle;
+		bool EorC;
+		bool changingTS;
+		triage_category TS;
+	};
+	
+	struct KeyHash{
+		size_t operator()(const transition_time_key& k) const{
+			return ((((hash<bool>()(k.multiOrSingle)
+						^ (hash<bool>()(k.EorC) << 1)) >> 1)
+						^ (hash<bool>()(k.changingTS) << 1)) >> 1)
+						^ (hash<int>()(k.TS) << 1);
+		}
+	};
+	
+	struct KeyEqual{
+		bool operator ()(const transition_time_key& lhs, const transition_time_key& rhs) const {
+			if (lhs.multiOrSingle != rhs.multiOrSingle){
+				return false;
+			} else if (lhs.EorC != rhs.EorC){
+				return false;
+			} else if (lhs.changingTS != rhs.changingTS){
+				return false;
+			} else if (lhs.TS != rhs.TS){
+				return false;
+			} else {
+				return true;
+			}
+		}
+	};
+	
 	// A class to represent the state of this specific model
 	// All atomic models will have their own state
 	struct EvacueeState {
@@ -24,7 +74,8 @@ namespace cadmium::assignment1 {
 		double sigma;
 
 		// Declare model-specific variables
-		char triage_status;
+		triage_category triage_status;
+		vector<char> triage_categories;
 		char curr_loc;
 		int heloID;
 		int evacueeID;
@@ -36,11 +87,12 @@ namespace cadmium::assignment1 {
 		
 		//curr_loc can be {'E' = "Evacuation Site", 'H' = "Helicopter", 'F' = "FOL", 'C' = "Coast Guard Ship"}
 		// Set the default values for the state constructor for this specific model
-		EvacueeState(): sigma(0), evacueeID(-1), triage_status('W'), curr_loc('E'), heloID(-1), travelling(false), start(true), firstTimeOnShip(false){};
+		EvacueeState(): sigma(0), evacueeID(-1), triage_status(WHITE), triage_categories({'W', 'G', 'Y', 'R', 'B'}), 
+		curr_loc('E'), heloID(-1), travelling(false), start(true), firstTimeOnShip(false){};
 	};
 
 	std::ostream& operator<<(std::ostream &out, const EvacueeState& state) {
-		out << "Evacuee;" << state.evacueeID << ";in triage state;" << state.triage_status;
+		out << "Evacuee;" << state.evacueeID << ";in triage state;" << state.triage_categories[state.triage_status];
 		if (state.travelling == true){
 			switch(state.curr_loc){
 				case('H'):
@@ -96,14 +148,19 @@ namespace cadmium::assignment1 {
 
 			// Declare variables for the model's behaviour
 			int evacueeID;
-			float m_wTog = 120*60;
-			float m_gToy = 48*60;
-			float m_yTor = 8*60;
-			float m_rTob = 1.5*60;
-			float m_rToy = m_wTog;
-			float m_yTog = 72*60;
-			float m_gTow = m_gToy;
-
+			double m_wTog = 120*60;
+			double m_gToy = 48*60;
+			double m_yTor = 8*60;
+			double m_rTob = 1.5*60;
+			double m_rToy = m_wTog;
+			double m_yTog = 72*60;
+			double m_gTow = m_gToy;
+			bool multiOrSingleState;
+			
+			vector<float> transition_times = {7200,2880,480,90,7200,4320,2880};
+			
+			unordered_map<transition_time_key, double, KeyHash, KeyEqual> transition_time_map;
+			
 			/**
 			 * Constructor function for this atomic model, and its respective state object.
 			 *
@@ -112,7 +169,7 @@ namespace cadmium::assignment1 {
 			 *
 			 * @param id ID of the new Evacuee model object, will be used to identify results on the output file
 			 */
-			Evacuee(const string& id, int i_evacueeID, char i_triage_status): Atomic<EvacueeState>(id, EvacueeState()) {
+			Evacuee(const string& id, int i_evacueeID, char i_triage_status, bool i_multiOrSingleState): Atomic<EvacueeState>(id, EvacueeState()) {
 
 				// Initialize ports for the model
 
@@ -125,13 +182,82 @@ namespace cadmium::assignment1 {
 				outES = addOutPort<EvacInfo>("outES");
 
 				// Initialize variables for the model's behaviour
-				state.evacueeID = i_evacueeID;
-				state.triage_status = i_triage_status;
-
-				// Set a value for sigma (so it is not 0), this determines how often the
-				// internal transition occurs
-				state.sigma = 0;
 				
+				state.evacueeID = i_evacueeID;
+				
+				switch(i_triage_status){
+					case('W'):
+						state.triage_status = WHITE;
+						break;
+					case('G'):
+						state.triage_status = GREEN;
+						break;
+					case('Y'):
+						state.triage_status = YELLOW;
+						break;
+					case('R'):
+						state.triage_status = RED;
+						break;
+					case('B'):
+						state.triage_status = BLACK;
+						break;
+					default:
+						assert(("The char is not a valid triage_status", false));
+						break;
+				}
+				
+				transition_time_map = {{{true, true, true, WHITE}, m_wTog},
+									{{true, true, true, GREEN}, m_gToy},
+									{{true, true, true, YELLOW}, m_yTor},
+									{{true, true, true, RED}, m_rTob},
+									{{true, true, true, BLACK}, numeric_limits<double>::infinity()},
+									{{true, true, false, WHITE}, m_gToy},
+									{{true, true, false, GREEN}, m_yTor},
+									{{true, true, false, YELLOW}, m_rTob},
+									{{true, true, false, RED}, numeric_limits<double>::infinity()},
+									{{true, false, true, WHITE}, numeric_limits<double>::infinity()},
+									{{true, false, true, GREEN}, m_gTow},
+									{{true, false, true, YELLOW}, m_yTog},
+									{{true, false, true, RED}, m_rToy},
+									{{true, false, false, GREEN}, numeric_limits<double>::infinity()},
+									{{true, false, false, YELLOW}, m_gTow},
+									{{true, false, false, RED}, m_yTog}};
+				//Determines whether all evacuees share same transition times or not
+				multiOrSingleState = i_multiOrSingleState;
+				if (!multiOrSingleState){
+					
+					
+					//handle init here
+					//Generating? Evac site? Not Changing TS?
+					transition_time_map.insert({{{false, true, true, WHITE}, transition_times[0]},
+									{{false, true, true, GREEN}, transition_times[1]},
+									{{false, true, true, YELLOW}, transition_times[2]},
+									{{false, true, true, RED}, transition_times[3]},
+									{{false, true, false, WHITE}, transition_times[1]},
+									{{false, true, false, GREEN}, transition_times[2]},
+									{{false, true, false, YELLOW}, transition_times[3]},
+									{{false, true, false, RED}, numeric_limits<double>::infinity()},
+									{{false, false, true, WHITE}, numeric_limits<double>::infinity()},
+									{{false, false, true, GREEN}, transition_times[6]},
+									{{false, false, true, YELLOW}, transition_times[5]},
+									{{false, false, true, RED}, transition_times[4]},
+									{{false, false, false, GREEN}, numeric_limits<double>::infinity()},
+									{{false, false, false, YELLOW}, transition_times[6]},
+									{{false, false, false, RED}, transition_times[5]}});
+					
+					state.start = false;
+					transition_time_key key = {false, true, true, state.triage_status};
+					double time;
+					try {
+						time = transition_time_map.at(key);
+					} catch(const out_of_range& e){
+						assert(("Tried to access non-existent key", false));
+					}
+					state.sigma = time;
+					
+				} else {
+					state.sigma = 0;
+				}
 			}
 
 			/**
@@ -146,112 +272,103 @@ namespace cadmium::assignment1 {
 				if (state.travelling){
 					state.travelling = false;
 				}
-				if (state.curr_loc == 'E'){
-					unsigned seed1 = chrono::system_clock::now().time_since_epoch().count();
-					minstd_rand0 generator(seed1);
-					exponential_distribution<float> wTogDistribution{float(1.0/m_wTog)};
-					exponential_distribution<float> gToyDistribution{float(1.0/m_gToy)};
-					exponential_distribution<float> yTorDistribution{float(1.0/m_yTor)};
-					exponential_distribution<float> rTobDistribution{float(1.0/m_rTob)};
-					if (state.start){
-						state.start = false;
-						switch(state.triage_status){
-							case('W'):
-								state.sigma = (double) wTogDistribution(generator);
-								break;
-							case('G'):
-								state.sigma = (double) gToyDistribution(generator);
-								break;
-							case('Y'):
-								state.sigma = (double) yTorDistribution(generator);
-								break;
-							case('R'):
-								state.sigma = (double) rTobDistribution(generator);
-								break;
-							default:
-								assert((state.triage_status == 'B'));
-								state.sigma = numeric_limits<double>::infinity();
-								break;
-								//The status must be black
+				
+				unsigned seed1 = chrono::system_clock::now().time_since_epoch().count();
+				minstd_rand0 generator(seed1);
+				
+				if (multiOrSingleState){
+					if (state.curr_loc == 'E'){
+						if ((!state.start)&&(state.triage_status == BLACK)){
+							assert(("Cannot change triage state past Black at ES", false));
 						}
+						transition_time_key key = {true, true, state.start, state.triage_status};
+						double mean;
+						try {
+							mean = transition_time_map.at(key);
+						} catch(const out_of_range& e){
+							assert(("Tried to access non-existent key", false));
+						}
+						exponential_distribution<float> time_distribution{float(1.0/mean)};
+						if (!state.start){
+							++state.triage_status;
+						} else {
+							state.start = false;
+						}
+						state.sigma = (double) time_distribution(generator);
+					} else if (state.curr_loc == 'C'){
+						if (state.triage_status == BLACK){
+							assert(("Cannot have triage status B on CGS", false));
+						}
+						if ((state.triage_status == WHITE)&&(!state.firstTimeOnShip)){
+							assert(("Cannot improve health beyond W", false));
+						}
+						transition_time_key key = {true, false, state.firstTimeOnShip, state.triage_status};
+						if (!state.firstTimeOnShip){
+							--state.triage_status;
+						} else {
+							state.firstTimeOnShip = false;
+						}
+						double mean;
+						try {
+							mean = transition_time_map.at(key);
+						} catch(const out_of_range& e){
+							assert(("Tried to access non-existent key", false));
+						}
+						exponential_distribution<float> time_distribution{float(1.0/mean)};
+						state.sigma = (double) time_distribution(generator);
 					} else {
-						switch(state.triage_status){
-							case('W'):
-								state.triage_status = 'G';
-								state.sigma = (double) gToyDistribution(generator);
-								break;
-							case('G'):
-								state.triage_status = 'Y';
-								state.sigma = (double) yTorDistribution(generator);
-								break;
-							case('Y'):
-								state.triage_status = 'R';
-								state.sigma = (double) rTobDistribution(generator);
-								break;
-							case('R'):
-								state.triage_status = 'B';
-								state.sigma = numeric_limits<double>::infinity();
-								break;
-							default:
-								assert((state.triage_status == 'B'));
-								state.sigma = numeric_limits<double>::infinity();
-								break;
-								//The status must be black
-						}
-					}
-				} else if (state.curr_loc == 'C'){
-					unsigned seed1 = chrono::system_clock::now().time_since_epoch().count();
-					minstd_rand0 generator(seed1);
-					exponential_distribution<float> rToyDistribution{float(1.0/m_rToy)};
-					exponential_distribution<float> yTogDistribution{float(1.0/m_yTog)};
-					exponential_distribution<float> gTowDistribution{float(1.0/m_gTow)};
-					if (state.firstTimeOnShip){
-						state.firstTimeOnShip = false;
-						switch(state.triage_status){
-							case('W'):
-								state.sigma = numeric_limits<double>::infinity();
-								break;
-							case('G'):
-								state.sigma = (double) gTowDistribution(generator);
-								break;
-							case('Y'):
-								state.sigma = (double) yTogDistribution(generator);
-								break;
-							case('R'):
-								state.sigma = (double) rToyDistribution(generator);
-								break;
-							default:
-								assert((state.triage_status == 'B'));
-								state.sigma = numeric_limits<double>::infinity();
-								break;
-								//The status must be black
-						}
-					} else {
-						switch(state.triage_status){
-							case('W'):
-								state.sigma = numeric_limits<double>::infinity();
-								break;
-							case('G'):
-								state.triage_status = 'W';
-								state.sigma = numeric_limits<double>::infinity();
-								break;
-							case('Y'):
-								state.triage_status = 'G';
-								state.sigma = (double) gTowDistribution(generator);
-								break;
-							case('R'):
-								state.triage_status = 'Y';
-								state.sigma = (double) yTogDistribution(generator);
-								break;
-							default:
-								assert((state.triage_status == 'B'));
-								state.sigma = numeric_limits<double>::infinity();
-								break;
-								//The status must be black
-						}
+						state.sigma = numeric_limits<double>::infinity();
 					}
 				} else {
-					state.sigma = numeric_limits<double>::infinity();
+					if (state.curr_loc == 'E'){
+						if (state.start){
+							state.start = false;
+							transition_time_key key = {true, true, state.start, state.triage_status};
+							double mean;
+							try {
+								mean = transition_time_map.at(key);
+							} catch(const out_of_range& e){
+								assert(("Tried to access non-existent key", false));
+							}
+							exponential_distribution<float> time_distribution{float(1.0/mean)};
+							state.sigma = (double) time_distribution(generator);
+						} else {
+							if (state.triage_status == BLACK){
+								assert(("Cannot change triage state past Black at ES", false));
+							}
+							transition_time_key key = {false, true, state.start, state.triage_status};
+							++state.triage_status;
+							double time;
+							try {
+								time = transition_time_map.at(key);
+							} catch(const out_of_range& e){
+								assert(("Tried to access non-existent key", false));
+							}
+							state.sigma = time;
+						}
+					} else if (state.curr_loc == 'C'){
+						if (state.triage_status == BLACK){
+							assert(("Cannot have triagestatus B on CGS", false));
+						}
+						if ((state.triage_status == WHITE)&&(!state.firstTimeOnShip)){
+							assert(("Cannot improve health beyond W", false));
+						}
+						transition_time_key key = {false, false, state.firstTimeOnShip, state.triage_status};
+						if (!state.firstTimeOnShip){
+							--state.triage_status;
+						} else {
+							state.firstTimeOnShip = false;
+						}
+						double time;
+						try {
+							time = transition_time_map.at(key);
+						} catch(const out_of_range& e){
+							assert(("Tried to access non-existent key", false));
+						}
+						state.sigma = time;
+					} else {
+						state.sigma = numeric_limits<double>::infinity();
+					}
 				}
 			}
 
@@ -308,10 +425,10 @@ namespace cadmium::assignment1 {
 				if (state.travelling){
 					switch(state.curr_loc){
 						case('H'):
-							outHelo->addMessage(EvacInfo{state.evacueeID, state.heloID, false, true, state.triage_status});
+							outHelo->addMessage(EvacInfo{state.evacueeID, state.heloID, false, true, state.triage_categories[state.triage_status]});
 							break;
 						case('F'):
-							outFOL->addMessage(EvacInfo{state.evacueeID, state.heloID, false, false, state.triage_status});
+							outFOL->addMessage(EvacInfo{state.evacueeID, state.heloID, false, false, state.triage_categories[state.triage_status]});
 							break;
 						default:
 							assert(("The curr_loc and travelling are not lining up correctly", false));
@@ -320,10 +437,10 @@ namespace cadmium::assignment1 {
 				} else if ((!state.start)&&(!state.firstTimeOnShip)){
 					switch(state.curr_loc){
 						case('E'):
-							outES->addMessage(EvacInfo{state.evacueeID, state.heloID, false, false, state.triage_status});
+							outES->addMessage(EvacInfo{state.evacueeID, state.heloID, false, false, state.triage_categories[state.triage_status]});
 							break;
 						case('C'):
-							outES->addMessage(EvacInfo(state.evacueeID, state.heloID, true, true, state.triage_status));
+							outES->addMessage(EvacInfo(state.evacueeID, state.heloID, true, true, state.triage_categories[state.triage_status]));
 							break;
 						default:
 							assert(("The curr_loc and travelling are not lining up correctly", false));

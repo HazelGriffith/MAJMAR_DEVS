@@ -376,8 +376,9 @@ namespace cadmium::assignment1 {
 					} else {
 						state.currHeloID = x[0].heloID;
 						state.sigma = 0;
+						int numOfCGSTransfers = state.evacueesToTransfer.size();
 						loadEvacuees(state, true);
-						for (int i = 0; i < state.evacueesToTransfer.size(); i++){
+						for (int i = numOfCGSTransfers; i < state.evacueesToTransfer.size(); i++){
 							state.evacueesToTransfer[i].cgs = false;
 							state.evacueesToTransfer[i].enteringOrLeaving = true;
 							state.evacueesToTransfer[i].heloID = state.currHeloID;

@@ -31,9 +31,9 @@ namespace cadmium::assignment1 {
 		if (state.arrived){
 			if (!state.stop){
 				if (state.unloading){
-					out << "The ship has arrived and is unloading evacuees.";
-				} else {
 					out << "The ship has arrived and is loading evacuees.";
+				} else {
+					out << "The ship has arrived and is unloading evacuees.";
 				}
 			} else {
 				out << "There are no more evacuees.";

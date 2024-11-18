@@ -27,11 +27,11 @@ namespace cadmium::assignment1 {
 		Port<EvacInfo> outFOL;
 		Port<EvacInfo> outES;
 		
-        EvacueeCoupled(const std::string& id, int evacueeID, char triage_status): Coupled(id){
+        EvacueeCoupled(const std::string& id, int evacueeID, char triage_status, bool multiOrSingleState): Coupled(id){
 
 
             // Declare and initialize all controller models (non-input/output)
-			shared_ptr<Evacuee> evac = addComponent<Evacuee>("evacuee", evacueeID, triage_status);
+			shared_ptr<Evacuee> evac = addComponent<Evacuee>("evacuee", evacueeID, triage_status, multiOrSingleState);
 			shared_ptr<FilterLoc> filterLoc = addComponent<FilterLoc>("filterLoc", evacueeID);
 			
 			// initialize coupled model ports

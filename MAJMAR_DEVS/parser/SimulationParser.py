@@ -15,7 +15,7 @@ shiptimes = [0,12,24,36,48,60,72,84,96,108,120,132,144,156,168,200000]
 
 for k in helos:
     for j in shiptimes:
-        filepathRemainder = 'Exp1V2/'+str(k)+' Helos/ship@'+str(j)+'h/R'
+        filepathRemainder = 'Exp1V6/'+str(k)+' Helos/ship@'+str(j)+'h/R'
         filepath = filepathBase + filepathRemainder
         simulation_results = []
         livesSaved = []

@@ -30,11 +30,11 @@ int main(int argc,char* argv[]){
 	}
 	
     // Declare and initialize the top model
-    auto model = std::make_shared<Top_model>("top_model", shipArrivalTime, numOfHelos);
+    auto model = std::make_shared<Top_model>("top_model", shipArrivalTime, numOfHelos, false);
     auto rootCoordinator = cadmium::RootCoordinator(model);
 	
     // For simulation purposes, set the name of the output file
-	auto logger = std::make_shared<cadmium::CSVLogger>("../simulation_results/Exp1V3/" + to_string(numOfHelos) + " Helos/ship@" + to_string(shipArrivalTime) + "h/" + replicationName + ".csv",",");
+	auto logger = std::make_shared<cadmium::CSVLogger>("../simulation_results/Exp1V6/" + to_string(numOfHelos) + " Helos/ship@" + to_string(shipArrivalTime) + "h/" + replicationName + ".csv",",");
 	rootCoordinator.setLogger(logger);
 
     rootCoordinator.start();

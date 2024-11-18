@@ -22,17 +22,16 @@ namespace cadmium::assignment1 {
 
 		// Declare model-specific variables
 		bool stop;
-		bool heloLoading;
 		bool requesting;
 		int currHeloID;
 		
 		
 		// Set the default values for the state constructor for this specific model
-		HelipadManagerState(): sigma(0), stop(false), heloLoading(false), requesting(true), currHeloID(-1){};
+		HelipadManagerState(): sigma(0), stop(false), requesting(true), currHeloID(-1){};
 	};
 
 	std::ostream& operator<<(std::ostream &out, const HelipadManagerState& state) {
-		if (state.heloLoading){
+		if (state.currHeloID != -1){
 			out << "Helo;" << state.currHeloID << ";is at the ES";
 		} else {
 			out << ";No helos are at ES";
@@ -104,26 +103,15 @@ namespace cadmium::assignment1 {
 			void internalTransition(HelipadManagerState& state) const override {
 				if (!state.stop){
 					if (!state.requesting){
-						if (state.heloLoading){
-							state.heloLoading = false;
-							state.requesting = true;
-							state.sigma = 0;
-						} else {
-							state.heloLoading = true;
-							state.sigma = timeToLoad;
-						}
+						state.requesting = true;
+						state.currHeloID = -1;
+						state.sigma = 0;
 					} else {
 						state.requesting = false;
 						state.sigma = numeric_limits<double>::infinity();
 					}
 				} else {
-					if (state.heloLoading){
-						state.heloLoading = false;
-						state.sigma = numeric_limits<double>::infinity();;
-					} else {
-						state.heloLoading = true;
-						state.sigma = timeToLoad;
-					}
+					state.sigma = numeric_limits<double>::infinity();
 				}
 			}
 
@@ -156,12 +144,8 @@ namespace cadmium::assignment1 {
 				
 				if(!inHQ->empty()){
 					for( const auto x : inHQ->getBag()){
-						if (state.heloLoading == false){
-							state.currHeloID = x.heloID;
-							state.sigma = 0;
-						} else {
-							assert(("No room for a helo", false));
-						}
+						state.currHeloID = x.heloID;
+						state.sigma = timeToLoad;
 					}
 				}
 			}
@@ -178,16 +162,13 @@ namespace cadmium::assignment1 {
 			void output(const HelipadManagerState& state) const override {
 				if (!state.stop){
 					if (!state.requesting){
-						if (state.heloLoading){
-							outHelo->addMessage(HeloInfo{state.currHeloID, false});
-						} else {
-							outEM->addMessage(HeloInfo{state.currHeloID, false});
-						}
+						outEM->addMessage(HeloInfo{state.currHeloID, false});
+						outHelo->addMessage(HeloInfo{state.currHeloID, false});
 					} else {
 						outHQ->addMessage(false);
 					}
 				} else {
-					if (state.heloLoading){
+					if (state.currHeloID != -1){
 						outHelo->addMessage(HeloInfo{state.currHeloID, true});
 					}
 					outHQ->addMessage(true);

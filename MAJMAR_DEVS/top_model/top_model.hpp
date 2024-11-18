@@ -8,6 +8,8 @@
 #include <iostream>
 #include <string>
 #include <cassert>
+#include <random>
+#include <chrono>
 
 // We include any models that are directly contained within this coupled model
 #include "../coupled_models/HelicopterCoupledModel.hpp"
@@ -24,13 +26,15 @@ using namespace std;
 namespace cadmium::assignment1 {
     class Top_model : public Coupled {
         public:
-        Top_model(const std::string& id, double i_shipArrivalTime, int i_numOfHelos): Coupled(id){
+        Top_model(const std::string& id, double i_shipArrivalTime, int i_numOfHelos, bool i_multiOrSingleInitState): Coupled(id){
 
 
             // Declare and initialize all controller models (non-input/output)
+			
+			bool multiOrSingleInitState = i_multiOrSingleInitState;
 			double timeToLoad = 15;
 			double shipArrivalTime = i_shipArrivalTime*60;
-			double heloArrivalTime = 2805;
+			double heloArrivalTime = 2790;
 			vector<shared_ptr<HelicopterCoupled>> heloCoupledModels;
 			int numOfHelos = i_numOfHelos;
 			vector<shared_ptr<EvacueeCoupled>> evacueeCoupledModels;
@@ -40,41 +44,23 @@ namespace cadmium::assignment1 {
 			int numOfYellow = 20;
 			int numOfRed = 5;
 			int numOfBlack = 0;
-			int i = 0;
-			int initial = i+1;
-			for (i = initial; i < initial+numOfWhite; i++){
-				string id = to_string(i);
-				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'W'));
-				evacuees.push_back(EvacInfo{i,-1,false,false,'W'});
-			}
-			initial = i+1;
-			for (i = initial; i < initial+numOfGreen; i++){
-				string id = to_string(i);
-				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'G'));
-				evacuees.push_back(EvacInfo{i,-1,false,false,'G'});
-			}
-			initial = i+1;
-			for (i = initial; i < initial+numOfYellow; i++){
-				string id = to_string(i);
-				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'Y'));
-				evacuees.push_back(EvacInfo{i,-1,false,false,'Y'});
-			}
-			initial = i+1;
-			for (i = initial; i < initial+numOfRed; i++){
-				string id = to_string(i);
-				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'R'));
-				evacuees.push_back(EvacInfo{i,-1,false,false,'R'});
-			}
-			initial = i+1;
-			for (i = initial; i < initial+numOfBlack; i++){
-				string id = to_string(i);
-				evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, i, 'B'));
-				evacuees.push_back(EvacInfo{i,-1,false,false,'B'});
+			vector<int> evacDistribution = {numOfWhite, numOfGreen, numOfYellow, numOfRed, numOfBlack};
+			vector<char> triageStatuses = {'W', 'G', 'Y', 'R', 'B'};
+			int totalEvacs = numOfWhite + numOfGreen + numOfYellow + numOfRed + numOfBlack;
+			
+			int previous = 0;
+			for (int i = 0; i < evacDistribution.size(); i++){
+				for (int j = 0; j < evacDistribution[i]; j++){
+					string id = to_string(previous + 1);
+					evacueeCoupledModels.push_back(addComponent<EvacueeCoupled>("evacueeCoupled"+id, previous+1, triageStatuses[i], multiOrSingleInitState));
+					evacuees.push_back(EvacInfo{previous+1,-1,false,false,triageStatuses[i]});
+					previous++;
+				}
 			}
 			
-			for (int j = 1; j < numOfHelos+1; j++){
-				string id = to_string(j);
-				heloCoupledModels.push_back(addComponent<HelicopterCoupled>("helicopterCoupled"+id, j, heloArrivalTime));
+			for (int i = 1; i < numOfHelos+1; i++){
+				string id = to_string(i);
+				heloCoupledModels.push_back(addComponent<HelicopterCoupled>("helicopterCoupled"+id, i, heloArrivalTime));
 				heloArrivalTime += 60;
 			}
 
