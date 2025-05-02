@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/main.dir/main.cpp.o -o /home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/bin/main  libdata_structures.a 
