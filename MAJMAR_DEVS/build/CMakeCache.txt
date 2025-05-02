@@ -374,6 +374,24 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/include/python3.12][/usr/lib/x86_64-linux-gnu/libpython3.12.so][cfound components: Development Development.Module Development.Embed ][v3.12.3()]
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+//Path to a program.
+_Python_CONFIG:INTERNAL=/usr/bin/x86_64-linux-gnu-python3.12-config
+//Compiler reason failure
+_Python_Compiler_REASON_FAILURE:INTERNAL=
+_Python_DEVELOPMENT_EMBED_SIGNATURE:INTERNAL=ca5d01059675c54b1df9ae9ce33468c1
+_Python_DEVELOPMENT_MODULE_SIGNATURE:INTERNAL=95a6b3a905b31a053078ff046e537c6d
+//Development reason failure
+_Python_Development_REASON_FAILURE:INTERNAL=
+//Path to a file.
+_Python_INCLUDE_DIR:INTERNAL=/usr/include/python3.12
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
+//Path to a library.
+_Python_LIBRARY_RELEASE:INTERNAL=/usr/lib/x86_64-linux-gnu/libpython3.12.so
+//NumPy reason failure
+_Python_NumPy_REASON_FAILURE:INTERNAL=
 

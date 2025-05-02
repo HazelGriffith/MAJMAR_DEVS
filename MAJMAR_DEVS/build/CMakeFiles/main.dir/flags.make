@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/. -I/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/include -I/home/hazel/cadmium_v2/include -I/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/data_structures
+CXX_INCLUDES = -I/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/. -I/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/include -I/home/hazel/cadmium_v2/include -I/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/data_structures -isystem /usr/include/python3.12
 
 CXX_FLAGS = -std=gnu++2b
 

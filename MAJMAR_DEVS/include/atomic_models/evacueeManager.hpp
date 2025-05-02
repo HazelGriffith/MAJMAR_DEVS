@@ -3,13 +3,15 @@
 
 // This is an atomic model, meaning it has its' own internal logic/computation
 // So, it is necessary to include atomic.hpp
-#include "cadmium/modeling/devs/atomic.hpp"
+#include <cadmium/modeling/devs/atomic.hpp>
 #include <iostream>
 #include <string>
 #include <cassert>
 #include <stdio.h>
 #include <random>
 #include <chrono>
+
+#include "Python.h"
 
 #include "../evacInfo.hpp"
 #include "../heloInfo.hpp"
