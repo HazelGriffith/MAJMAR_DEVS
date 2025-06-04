@@ -13,7 +13,7 @@
 #include "../atomic_models/evacueeManager.hpp"
 #include "../atomic_models/helicopterQueue.hpp"
 #include "../atomic_models/helipadManager.hpp"
-#include "../atomic_models/coastGuardShip.hpp"
+#include "../atomic_models/CoastGuardShip.hpp"
 
 // data structures
 #include "../data_structures/heloInfo.hpp"
