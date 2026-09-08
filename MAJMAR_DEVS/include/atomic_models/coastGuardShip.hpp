@@ -1,7 +1,7 @@
 #ifndef __COAST_GUARD_SHIP_HPP__
 #define __COAST_GUARD_SHIP_HPP__
 
-#include <core/modeling/atomic.hpp>
+#include "cadmium/modeling/devs/atomic.hpp"
 #include <iostream>
 
 using namespace std;

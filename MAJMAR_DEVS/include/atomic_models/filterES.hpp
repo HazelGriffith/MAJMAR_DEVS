@@ -1,44 +1,44 @@
-#ifndef __FILTER_EVAC_HPP__
-#define __FILTER_EVAC_HPP__
+#ifndef __FILTER_ES_HPP__
+#define __FILTER_ES_HPP__
 
 // This is an atomic model, meaning it has its' own internal logic/computation
 // So, it is necessary to include atomic.hpp
-#include <core/modeling/atomic.hpp>
+#include "cadmium/modeling/devs/atomic.hpp"
 #include <iostream>
 
-#include "../data_structures/evacInfo.hpp"
+#include "../heloInfo.hpp"
 
 using namespace std;
 
 namespace cadmium::assignment1 {
 	// A class to represent the state of this specific model
 	// All atomic models will have their own state
-	struct FilterEvacState {
+	struct FilterESState {
 
 		// sigma is a mandatory variable, used to advance the time of the simulation
 		double sigma;
 
 		// Declare model-specific variables
-		vector<EvacInfo> msgs_passing_filter;
+		vector<HeloInfo> msgs_passing_filter;
 		
 		// Set the default values for the state constructor for this specific model
-		FilterEvacState(): sigma(0){};
+		FilterESState(): sigma(0){};
 	};
 
-	std::ostream& operator<<(std::ostream &out, const FilterEvacState& state) {
+	std::ostream& operator<<(std::ostream &out, const FilterESState& state) {
 		for (int j = 0; j < (state.msgs_passing_filter).size(); j++){
-			out << ";Evacuee;" << state.msgs_passing_filter[j].evacueeID << ";in triage category;" << state.msgs_passing_filter[j].triage_status;
-			if (state.msgs_passing_filter[j].enteringOrLeaving){
-				out << ";is entering helicopter;" << state.msgs_passing_filter[j].heloID;
+			out << "Helicopter;" << state.msgs_passing_filter[j].heloID;
+			if (!state.msgs_passing_filter[j].stop){
+				out << ";is evacuating people";
 			} else {
-				out << ";is leaving helicopter;" << state.msgs_passing_filter[j].heloID;
+				out << ";has stopped";
 			}
 		}
 		return out;
 	}
 
-	// Atomic model of FilterEvac
-	class FilterEvac: public Atomic<FilterEvacState> {
+	// Atomic model of FilterES
+	class FilterES: public Atomic<FilterESState> {
 		private:
 
 		public:
@@ -46,10 +46,10 @@ namespace cadmium::assignment1 {
 			// Declare ports for the model
 
 			// Input ports
-			Port<EvacInfo> in;
+			Port<HeloInfo> in;
 
 			// Output ports
-			Port<EvacInfo> out;
+			Port<HeloInfo> out;
 
 			// Declare variables for the model's behaviour
 			int heloID;
@@ -57,20 +57,20 @@ namespace cadmium::assignment1 {
 			/**
 			 * Constructor function for this atomic model, and its respective state object.
 			 *
-			 * For this model, both a FilterEvac object and a FilterEvac object
+			 * For this model, both a FilterES object and a FilterES object
 			 * are created, using the same id.
 			 *
-			 * @param id ID of the new FilterEvac model object, will be used to identify results on the output file
+			 * @param id ID of the new FilterES model object, will be used to identify results on the output file
 			 */
-			FilterEvac(const string& id, int i_heloID): Atomic<FilterEvacState>(id, FilterEvacState()) {
+			FilterES(const string& id, int i_heloID): Atomic<FilterESState>(id, FilterESState()) {
 
 				// Initialize ports for the model
 
 				// Input Ports
-				in  = addInPort<EvacInfo>("in");
+				in  = addInPort<HeloInfo>("in");
 
 				// Output Ports
-				out = addOutPort<EvacInfo>("out");
+				out = addOutPort<HeloInfo>("out");
 
 				// Initialize variables for the model's behaviour
 				heloID = i_heloID;
@@ -89,7 +89,7 @@ namespace cadmium::assignment1 {
 			 *
 			 * @param state reference to the current state of the model.
 			 */
-			void internalTransition(FilterEvacState& state) const override {
+			void internalTransition(FilterESState& state) const override {
 				state.msgs_passing_filter.clear();
 				state.sigma = numeric_limits<double>::infinity();
 			}
@@ -108,7 +108,7 @@ namespace cadmium::assignment1 {
 			 * @param state reference to the current model state.
 			 * @param e time elapsed since the last state transition function was triggered.
 			 */
-			void externalTransition(FilterEvacState& state, double e) const override {
+			void externalTransition(FilterESState& state, double e) const override {
 
 				// First check if there are un-handled inputs for the "in" port
 				if(!in->empty()){
@@ -116,7 +116,7 @@ namespace cadmium::assignment1 {
 					// The variable x is created to handle the external input values in sequence.
 					// The getBag() function is used to get the next input value.
 					for( const auto x : in->getBag()){
-						if ((x.heloID == heloID)&&(x.enteringOrLeaving == true)){
+						if (x.heloID == heloID){
 							state.msgs_passing_filter.push_back(x);
 							state.sigma = 0;
 						}
@@ -135,7 +135,7 @@ namespace cadmium::assignment1 {
 			 *
 			 * @param state reference to the current model state.
 			 */
-			void output(const FilterEvacState& state) const override {
+			void output(const FilterESState& state) const override {
 				for (int j = 0; j < (state.msgs_passing_filter).size(); j++){
 					out->addMessage(state.msgs_passing_filter[j]);
 				}
@@ -149,9 +149,9 @@ namespace cadmium::assignment1 {
 			 * @param state reference to the current model state.
 			 * @return the sigma value.
 			 */
-			[[nodiscard]] double timeAdvance(const FilterEvacState& state) const override {
+			[[nodiscard]] double timeAdvance(const FilterESState& state) const override {
 				return state.sigma;
 			}
 	};
-	#endif // __FILTER_EVAC_HPP__
+	#endif // __FILTER_ES_HPP__
 }

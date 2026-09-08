@@ -3,21 +3,21 @@
 
 // This is a coupled model, meaning it has no internal computation, and is
 // used to connect atomic models.  So, it is necessary to include coupled.hpp
-#include <core/modeling/coupled.hpp>
-#include <lib/iestream.hpp>
+#include "cadmium/modeling/devs/coupled.hpp"
+#include "cadmium/lib/iestream.hpp"
 #include <iostream>
 #include <string>
 #include <cassert>
 
 // We include any models that are directly contained within this coupled model
-#include "../coupled_models/HelicopterCoupledModel.hpp"
-#include "../coupled_models/EvacueeCoupledModel.hpp"
-#include "../coupled_models/EvacuationSiteModel.hpp"
+#include "HelicopterCoupledModel.hpp"
+#include "EvacueeCoupledModel.hpp"
+#include "EvacuationSiteModel.hpp"
 #include "../atomic_models/fol.hpp"
 
 // data structures
-#include "../data_structures/heloInfo.hpp"
-#include "../data_structures/evacInfo.hpp"
+#include "../heloInfo.hpp"
+#include "../evacInfo.hpp"
 
 using namespace std;
 

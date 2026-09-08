@@ -3,15 +3,15 @@
 
 // This is an atomic model, meaning it has its' own internal logic/computation
 // So, it is necessary to include atomic.hpp
-#include <core/modeling/atomic.hpp>
+
 #include <iostream>
 #include <string>
 #include <cassert>
 #include <random>
 #include <chrono>
 
-
-#include "../data_structures/evacInfo.hpp"
+#include "cadmium/modeling/devs/atomic.hpp"
+#include "../evacInfo.hpp"
 
 using namespace std;
 

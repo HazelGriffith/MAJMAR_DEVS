@@ -1,52 +1,40 @@
-#ifndef __FILTER_LOC_HPP__
-#define __FILTER_LOC_HPP__
+#ifndef __FOL_HPP__
+#define __FOL_HPP__
 
 // This is an atomic model, meaning it has its' own internal logic/computation
 // So, it is necessary to include atomic.hpp
-#include <core/modeling/atomic.hpp>
+#include "cadmium/modeling/devs/atomic.hpp"
 #include <iostream>
 
-#include "../data_structures/evacInfo.hpp"
+#include "../evacInfo.hpp"
 
 using namespace std;
 
 namespace cadmium::assignment1 {
 	// A class to represent the state of this specific model
 	// All atomic models will have their own state
-	struct FilterLocState {
+	struct FOLState {
 
 		// sigma is a mandatory variable, used to advance the time of the simulation
 		double sigma;
 
 		// Declare model-specific variables
-		vector<EvacInfo> msgs_passing_filter;
+		vector<EvacInfo> evacuees;
 		
 		// Set the default values for the state constructor for this specific model
-		FilterLocState(): sigma(0){};
+		FOLState(): sigma(0){};
 	};
 
-	std::ostream& operator<<(std::ostream &out, const FilterLocState& state) {
-		for (int j = 0; j < (state.msgs_passing_filter).size(); j++){
-			out << ";Evacuee;" << state.msgs_passing_filter[j].evacueeID << ";in triage category;" << state.msgs_passing_filter[j].triage_status;
-			if (state.msgs_passing_filter[j].cgs){
-				if (state.msgs_passing_filter[j].enteringOrLeaving){
-					out << ";is entering the coast guard ship ";
-				} else {
-					out << ";is leaving the coast guard ship ";
-				}
-			} else {
-				if (state.msgs_passing_filter[j].enteringOrLeaving){
-					out << ";is entering helicopter;" << state.msgs_passing_filter[j].heloID;
-				} else {
-					out << ";is leaving helicopter;" << state.msgs_passing_filter[j].heloID;
-				}
-			}
+	std::ostream& operator<<(std::ostream &out, const FOLState& state) {
+		for (int j = 0; j < (state.evacuees).size(); j++){
+			out << ";EvacueeID;" << state.evacuees[j].evacueeID << ";Triage Status;" << state.evacuees[j].triage_status;
 		}
+		out << ";Lives Saved;" << state.evacuees.size();
 		return out;
 	}
 
-	// Atomic model of FilterLoc
-	class FilterLoc: public Atomic<FilterLocState> {
+	// Atomic model of FOL
+	class FOL: public Atomic<FOLState> {
 		private:
 
 		public:
@@ -57,20 +45,18 @@ namespace cadmium::assignment1 {
 			Port<EvacInfo> in;
 
 			// Output ports
-			Port<EvacInfo> out;
 
 			// Declare variables for the model's behaviour
-			int evacueeID;
 
 			/**
 			 * Constructor function for this atomic model, and its respective state object.
 			 *
-			 * For this model, both a FilterLoc object and a FilterLoc object
+			 * For this model, both a FOL object and a FOL object
 			 * are created, using the same id.
 			 *
-			 * @param id ID of the new FilterLoc model object, will be used to identify results on the output file
+			 * @param id ID of the new FOL model object, will be used to identify results on the output file
 			 */
-			FilterLoc(const string& id, int i_evacueeID): Atomic<FilterLocState>(id, FilterLocState()) {
+			FOL(const string& id): Atomic<FOLState>(id, FOLState()) {
 
 				// Initialize ports for the model
 
@@ -78,10 +64,8 @@ namespace cadmium::assignment1 {
 				in  = addInPort<EvacInfo>("in");
 
 				// Output Ports
-				out = addOutPort<EvacInfo>("out");
 
 				// Initialize variables for the model's behaviour
-				evacueeID = i_evacueeID;
 
 				// Set a value for sigma (so it is not 0), this determines how often the
 				// internal transition occurs
@@ -97,8 +81,7 @@ namespace cadmium::assignment1 {
 			 *
 			 * @param state reference to the current state of the model.
 			 */
-			void internalTransition(FilterLocState& state) const override {
-				state.msgs_passing_filter.clear();
+			void internalTransition(FOLState& state) const override {
 				state.sigma = numeric_limits<double>::infinity();
 			}
 
@@ -116,7 +99,7 @@ namespace cadmium::assignment1 {
 			 * @param state reference to the current model state.
 			 * @param e time elapsed since the last state transition function was triggered.
 			 */
-			void externalTransition(FilterLocState& state, double e) const override {
+			void externalTransition(FOLState& state, double e) const override {
 
 				// First check if there are un-handled inputs for the "in" port
 				if(!in->empty()){
@@ -124,11 +107,9 @@ namespace cadmium::assignment1 {
 					// The variable x is created to handle the external input values in sequence.
 					// The getBag() function is used to get the next input value.
 					for( const auto x : in->getBag()){
-						if (x.evacueeID == evacueeID){
-							state.msgs_passing_filter.push_back(x);
-							state.sigma = 0;
-						}
+						state.evacuees.push_back(x);
 					}
+					state.sigma = 0;
 
 				}
 
@@ -143,10 +124,8 @@ namespace cadmium::assignment1 {
 			 *
 			 * @param state reference to the current model state.
 			 */
-			void output(const FilterLocState& state) const override {
-				for (int j = 0; j < (state.msgs_passing_filter).size(); j++){
-					out->addMessage(state.msgs_passing_filter[j]);
-				}
+			void output(const FOLState& state) const override {
+				
 			}
 
 			/**
@@ -157,9 +136,9 @@ namespace cadmium::assignment1 {
 			 * @param state reference to the current model state.
 			 * @return the sigma value.
 			 */
-			[[nodiscard]] double timeAdvance(const FilterLocState& state) const override {
+			[[nodiscard]] double timeAdvance(const FOLState& state) const override {
 				return state.sigma;
 			}
 	};
-	#endif // __FILTER_LOC_HPP__
+	#endif // __FOL_HPP__
 }

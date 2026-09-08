@@ -1,13 +1,13 @@
-#include <core/simulation/root_coordinator.hpp>
+#include "cadmium/simulation/root_coordinator.hpp"
 #include <limits>
-#include <core/logger/csv.hpp>
+#include "cadmium/simulation/logger/csv.hpp"
 #include <iostream>
 #include <string>
 
 
 // We must include our "top model" which is a coupled model used to
 // that hold other models inside of it
-#include "top_model.hpp"
+#include "include/coupled_models/top_model.hpp"
 
 using namespace cadmium::assignment1;
 
@@ -35,7 +35,7 @@ int main(int argc,char* argv[]){
 	
     // For simulation purposes, set the name of the output file
 	auto logger = std::make_shared<cadmium::CSVLogger>("../simulation_results/Exp1V3/" + to_string(numOfHelos) + " Helos/ship@" + to_string(shipArrivalTime) + "h/" + replicationName + ".csv",",");
-	rootCoordinator.setLogger(logger);
+	rootCoordinator.setLogger<cadmium::CSVLogger>("simulation_results/test.csv",",");
 
     rootCoordinator.start();
 

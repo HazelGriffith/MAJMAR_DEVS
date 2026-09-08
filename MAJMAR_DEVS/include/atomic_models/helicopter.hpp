@@ -3,12 +3,12 @@
 
 // This is an atomic model, meaning it has its' own internal logic/computation
 // So, it is necessary to include atomic.hpp
-#include <core/modeling/atomic.hpp>
+#include "cadmium/modeling/devs/atomic.hpp"
 #include <iostream>
 #include <cassert>
 
-#include "../data_structures/evacInfo.hpp"
-#include "../data_structures/heloInfo.hpp"
+#include "../evacInfo.hpp"
+#include "../heloInfo.hpp"
 
 using namespace std;
 

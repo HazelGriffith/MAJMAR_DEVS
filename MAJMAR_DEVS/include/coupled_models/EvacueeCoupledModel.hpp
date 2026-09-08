@@ -3,8 +3,8 @@
 
 // This is a coupled model, meaning it has no internal computation, and is
 // used to connect atomic models.  So, it is necessary to include coupled.hpp
-#include <core/modeling/coupled.hpp>
-#include <lib/iestream.hpp>
+#include "cadmium/modeling/devs/coupled.hpp"
+#include "cadmium/lib/iestream.hpp"
 #include <iostream>
 #include <string>
 #include <cassert>
@@ -14,7 +14,7 @@
 #include "../atomic_models/filterLoc.hpp"
 
 // data structures
-#include "../data_structures/evacInfo.hpp"
+#include "../evacInfo.hpp"
 
 using namespace std;
 
