@@ -1,4 +1,0 @@
-/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/build/CMakeFiles/data_structures.dir
-/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/build/CMakeFiles/main.dir
-/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/build/CMakeFiles/edit_cache.dir
-/home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/build/CMakeFiles/rebuild_cache.dir

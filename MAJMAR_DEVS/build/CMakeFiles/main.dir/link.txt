@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/main.dir/main.cpp.o -o /home/hazel/MAJMAR_DEVS/MAJMAR_DEVS/bin/main  libdata_structures.a /usr/lib/x86_64-linux-gnu/libpython3.12.so 
